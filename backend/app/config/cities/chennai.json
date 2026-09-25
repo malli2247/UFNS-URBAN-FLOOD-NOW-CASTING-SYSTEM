@@ -1,0 +1,2028 @@
+{
+  "city_id": "chennai",
+  "city": "Chennai",
+  "state": "Tamil Nadu",
+  "country": "India",
+  "timezone": "Asia/Kolkata",
+  "center": {
+    "latitude": 12.98,
+    "longitude": 80.218
+  },
+  "bounding_box": {
+    "min_lat": 12.955,
+    "max_lat": 13.005,
+    "min_lon": 80.183,
+    "max_lon": 80.253,
+    "center_lat": 12.98,
+    "center_lon": 80.218
+  },
+  "focus_basin": {
+    "name": "Velachery \u2013 Madipakkam \u2013 Pallikaranai Basin",
+    "area_sqkm": 31.5,
+    "description": "Low-lying coastal plain connecting southern IT expressway to the Pallikaranai Ramsar wetland."
+  },
+  "data_sources": {
+    "rainfall": {
+      "dataset": "Chennai Real-Time Precipitation Feed",
+      "source": "Open-Meteo REST API / IMD Doppler Radar Feed",
+      "api_endpoint": "https://api.open-meteo.com/v1/forecast?latitude=12.98&longitude=80.218&hourly=precipitation",
+      "spatial_resolution": "0.1\u00b0 (~10km) / Downscaled 350m",
+      "temporal_resolution": "15 minutes",
+      "status": "LIVE",
+      "radar_station": "IMD Chennai Meenambakkam & Port Radar"
+    },
+    "dem": {
+      "dataset": "Chennai High-Resolution Urban Terrain Model",
+      "source": "Copernicus DEM GLO-30 / ISRO Cartosat-1 DSM",
+      "spatial_resolution": "30m",
+      "vertical_accuracy": "\u00b11.5m",
+      "status": "AVAILABLE",
+      "license": "Open Access (Copernicus / ISRO Bhuvan)"
+    },
+    "drainage": {
+      "dataset": "Chennai Stormwater Trunk Network",
+      "source": "Greater Chennai Corporation Storm Water Drain Dept Master Drainage Plan",
+      "status": "AVAILABLE",
+      "completeness": "Primary Arterial Conduits (12 Nodes, 11 Outfalls)",
+      "modeling_standard": "Manning-Strickler 1D Pipe Flow with 2-Way Surface Spill"
+    },
+    "roads": {
+      "dataset": "Chennai Arterial Highway & Transport Graph",
+      "source": "OpenStreetMap Road Network (OSM 2024)",
+      "status": "AVAILABLE",
+      "features_count": 20,
+      "routing_profile": "Emergency Multi-Modal Clearance-Aware"
+    }
+  },
+  "dem": {
+    "source": "Copernicus DEM GLO-30",
+    "status": "AVAILABLE",
+    "base_elevation_m": 14.0,
+    "min_elevation_m": 2.0,
+    "max_elevation_m": 24.0,
+    "contour_interval_m": 3.0,
+    "markers": [
+      {
+        "lat": 12.9975,
+        "lon": 80.1935,
+        "elevM": 14.0,
+        "label": "14 m AMSL",
+        "tag": "\u25b2 HIGH (Ridge)"
+      },
+      {
+        "lat": 12.9875,
+        "lon": 80.2075,
+        "elevM": 11.0,
+        "label": "11 m AMSL",
+        "tag": "\u25b2 UPPER SLOPE"
+      },
+      {
+        "lat": 12.98,
+        "lon": 80.218,
+        "elevM": 8.0,
+        "label": "8 m AMSL",
+        "tag": "\u25cf MID SLOPE"
+      },
+      {
+        "lat": 12.9725,
+        "lon": 80.2285,
+        "elevM": 5.0,
+        "label": "5 m AMSL",
+        "tag": "\u25cf LOWER BASIN"
+      },
+      {
+        "lat": 12.965,
+        "lon": 80.2425,
+        "elevM": 2.0,
+        "label": "2 m AMSL",
+        "tag": "\u25bc LOW POINT (Trough)"
+      }
+    ],
+    "troughs": [
+      {
+        "lat": 12.979,
+        "lon": 80.2096,
+        "depth_m": 6.5,
+        "name": "Velachery 100ft Road Trough"
+      },
+      {
+        "lat": 12.976,
+        "lon": 80.2376,
+        "depth_m": 8.5,
+        "name": "Pallikaranai Marshland Sump"
+      }
+    ]
+  },
+  "rainfall": {
+    "source": "Open-Meteo & IMD Radar",
+    "status": "LIVE",
+    "default_intensity_mm_hr": 78.5,
+    "radar_station": "IMD Chennai Meenambakkam & Port Radar",
+    "horizons": [
+      "0m",
+      "15m",
+      "30m",
+      "45m",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "drainage": {
+    "source": "Greater Chennai Corporation Storm Water Drain Dept",
+    "status": "AVAILABLE",
+    "capacity_multiplier": 1.0,
+    "surcharge_node_id": "CHE_M02",
+    "nodes": [
+      {
+        "id": "CHE_M01",
+        "name": "Chennai Western Trunk Inlet",
+        "node_type": "Inlet",
+        "lat": 12.995,
+        "lon": 80.197,
+        "elev": 12.5,
+        "inlet_cap": 2.5,
+        "row": 12,
+        "col": 3
+      },
+      {
+        "id": "CHE_M02",
+        "name": "Velachery MRTS Storm Collector",
+        "node_type": "Junction",
+        "lat": 12.979,
+        "lon": 80.2096,
+        "elev": 10.4,
+        "inlet_cap": 3.2,
+        "row": 7,
+        "col": 5
+      },
+      {
+        "id": "CHE_M03",
+        "name": "Chennai Central Crossing Manhole",
+        "node_type": "Manhole",
+        "lat": 12.9825,
+        "lon": 80.2145,
+        "elev": 8.6,
+        "inlet_cap": 4.0,
+        "row": 8,
+        "col": 7
+      },
+      {
+        "id": "CHE_M04",
+        "name": "Chennai Arterial Sump Junction",
+        "node_type": "Junction",
+        "lat": 12.985,
+        "lon": 80.2236,
+        "elev": 7.4,
+        "inlet_cap": 4.5,
+        "row": 9,
+        "col": 9
+      },
+      {
+        "id": "CHE_M05",
+        "name": "Chennai North Relief Collector",
+        "node_type": "Manhole",
+        "lat": 12.99,
+        "lon": 80.211,
+        "elev": 9.5,
+        "inlet_cap": 3.8,
+        "row": 10,
+        "col": 6
+      },
+      {
+        "id": "CHE_M06",
+        "name": "Chennai South Basin Sluice",
+        "node_type": "Inlet",
+        "lat": 12.9675,
+        "lon": 80.211,
+        "elev": 6.8,
+        "inlet_cap": 5.0,
+        "row": 4,
+        "col": 6
+      },
+      {
+        "id": "CHE_M07",
+        "name": "Chennai Ring Road Storm Conduit",
+        "node_type": "Manhole",
+        "lat": 12.97,
+        "lon": 80.2215,
+        "elev": 5.6,
+        "inlet_cap": 3.5,
+        "row": 4,
+        "col": 8
+      },
+      {
+        "id": "CHE_M08",
+        "name": "Chennai Mid-Channel Sump Pit",
+        "node_type": "Manhole",
+        "lat": 12.974,
+        "lon": 80.2285,
+        "elev": 4.7,
+        "inlet_cap": 3.0,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "CHE_M09",
+        "name": "Chennai Intermediate Chamber",
+        "node_type": "Junction",
+        "lat": 12.9775,
+        "lon": 80.232,
+        "elev": 3.8,
+        "inlet_cap": 4.2,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "CHE_M10",
+        "name": "Chennai Trough Inflow Pit",
+        "node_type": "Manhole",
+        "lat": 12.9735,
+        "lon": 80.2341,
+        "elev": 2.9,
+        "inlet_cap": 3.8,
+        "row": 6,
+        "col": 11
+      },
+      {
+        "id": "CHE_M11",
+        "name": "Chennai Floodplain Storm Bypass",
+        "node_type": "Inlet",
+        "lat": 12.964,
+        "lon": 80.2376,
+        "elev": 2.6,
+        "inlet_cap": 2.8,
+        "row": 2,
+        "col": 12
+      },
+      {
+        "id": "CHE_M12",
+        "name": "Pallikaranai Marshland Sump Outfall Sluice",
+        "node_type": "Outfall",
+        "lat": 12.976,
+        "lon": 80.2376,
+        "elev": 2.0,
+        "inlet_cap": 7.5,
+        "row": 8,
+        "col": 14
+      }
+    ],
+    "pipes": [
+      {
+        "from": "CHE_M01",
+        "to": "CHE_M02",
+        "pipe_id": "P-CH-01",
+        "diameter_m": 1.2,
+        "slope": 0.007,
+        "length_m": 1100
+      },
+      {
+        "from": "CHE_M02",
+        "to": "CHE_M03",
+        "pipe_id": "P-CH-02",
+        "diameter_m": 1.5,
+        "slope": 0.006,
+        "length_m": 850
+      },
+      {
+        "from": "CHE_M05",
+        "to": "CHE_M03",
+        "pipe_id": "P-CH-03",
+        "diameter_m": 1.2,
+        "slope": 0.005,
+        "length_m": 650
+      },
+      {
+        "from": "CHE_M03",
+        "to": "CHE_M04",
+        "pipe_id": "P-CH-04",
+        "diameter_m": 1.8,
+        "slope": 0.005,
+        "length_m": 920
+      },
+      {
+        "from": "CHE_M06",
+        "to": "CHE_M07",
+        "pipe_id": "P-CH-05",
+        "diameter_m": 1.4,
+        "slope": 0.004,
+        "length_m": 780
+      },
+      {
+        "from": "CHE_M07",
+        "to": "CHE_M08",
+        "pipe_id": "P-CH-06",
+        "diameter_m": 1.5,
+        "slope": 0.004,
+        "length_m": 1100
+      },
+      {
+        "from": "CHE_M08",
+        "to": "CHE_M09",
+        "pipe_id": "P-CH-07",
+        "diameter_m": 1.6,
+        "slope": 0.003,
+        "length_m": 820
+      },
+      {
+        "from": "CHE_M04",
+        "to": "CHE_M09",
+        "pipe_id": "P-CH-08",
+        "diameter_m": 2.0,
+        "slope": 0.004,
+        "length_m": 1450
+      },
+      {
+        "from": "CHE_M09",
+        "to": "CHE_M10",
+        "pipe_id": "P-CH-09",
+        "diameter_m": 1.8,
+        "slope": 0.003,
+        "length_m": 900
+      },
+      {
+        "from": "CHE_M11",
+        "to": "CHE_M10",
+        "pipe_id": "P-CH-10",
+        "diameter_m": 1.4,
+        "slope": 0.002,
+        "length_m": 850
+      },
+      {
+        "from": "CHE_M10",
+        "to": "CHE_M12",
+        "pipe_id": "P-CH-11",
+        "diameter_m": 2.4,
+        "slope": 0.003,
+        "length_m": 1200
+      }
+    ]
+  },
+  "roads": {
+    "source": "OpenStreetMap",
+    "status": "AVAILABLE",
+    "critical_hotspot_road_id": "R_CHE_04",
+    "intersections": {
+      "INT_CHE_01": {
+        "name": "Chennai West Highway Junction",
+        "lat": 12.9975,
+        "lon": 80.1935
+      },
+      "INT_CHE_02": {
+        "name": "Chennai Central Commercial Crossing",
+        "lat": 12.9825,
+        "lon": 80.2075
+      },
+      "INT_CHE_03": {
+        "name": "Chennai Market West Intersection",
+        "lat": 12.979,
+        "lon": 80.2026
+      },
+      "INT_CHE_04": {
+        "name": "Chennai North Relief Signal",
+        "lat": 12.99,
+        "lon": 80.211
+      },
+      "INT_CHE_05": {
+        "name": "Chennai Ring Road North Junction",
+        "lat": 12.9925,
+        "lon": 80.225
+      },
+      "INT_CHE_06": {
+        "name": "Chennai South Canal Junction",
+        "lat": 12.97,
+        "lon": 80.2075
+      },
+      "INT_CHE_07": {
+        "name": "Chennai Residential Sector 1",
+        "lat": 12.9675,
+        "lon": 80.218
+      },
+      "INT_CHE_08": {
+        "name": "Chennai Expressway Interchange",
+        "lat": 12.975,
+        "lon": 80.2285
+      },
+      "INT_CHE_09": {
+        "name": "Chennai Tech Corridor Gate",
+        "lat": 12.9775,
+        "lon": 80.239
+      },
+      "INT_CHE_10": {
+        "name": "Chennai Lake Overpass Crossing",
+        "lat": 12.9875,
+        "lon": 80.2355
+      },
+      "INT_CHE_11": {
+        "name": "Chennai Low-Lying Access Road",
+        "lat": 12.971,
+        "lon": 80.2341
+      },
+      "INT_CHE_12": {
+        "name": "Chennai East Terminal Bridge",
+        "lat": 12.9975,
+        "lon": 80.2425
+      },
+      "INT_CHE_13": {
+        "name": "Apollo Hospital Greams Road Gate",
+        "lat": 12.9975,
+        "lon": 80.2285
+      },
+      "INT_CHE_14": {
+        "name": "Chennai Central Police Station",
+        "lat": 12.98,
+        "lon": 80.2026
+      },
+      "INT_CHE_15": {
+        "name": "Chennai South Tech Hub",
+        "lat": 12.969,
+        "lon": 80.2264
+      },
+      "INT_CHE_16": {
+        "name": "Gleneagles Global Health City Gate",
+        "lat": 12.965,
+        "lon": 80.2425
+      }
+    },
+    "road_segments": [
+      {
+        "u": "INT_CHE_01",
+        "v": "INT_CHE_13",
+        "road_id": "R_CHE_01",
+        "name": "Chennai Western Arterial",
+        "length_km": 1.1,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_13",
+        "v": "INT_CHE_14",
+        "road_id": "R_CHE_02",
+        "name": "Apollo Hospital Greams Road Link",
+        "length_km": 0.8,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_14",
+        "v": "INT_CHE_02",
+        "road_id": "R_CHE_03",
+        "name": "Chennai Civic Avenue",
+        "length_km": 0.7,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_02",
+        "v": "INT_CHE_03",
+        "road_id": "R_CHE_04",
+        "name": "Velachery 100ft Road Trough",
+        "length_km": 0.9,
+        "speed_kmh": 40,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_02",
+        "v": "INT_CHE_04",
+        "road_id": "R_CHE_05",
+        "name": "Chennai North Relief Road",
+        "length_km": 1.1,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_04",
+        "v": "INT_CHE_05",
+        "road_id": "R_CHE_06",
+        "name": "Chennai Ring Road Arterial",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_02",
+        "v": "INT_CHE_06",
+        "road_id": "R_CHE_07",
+        "name": "Chennai South Canal Link",
+        "length_km": 1.6,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_06",
+        "v": "INT_CHE_07",
+        "road_id": "R_CHE_08",
+        "name": "Chennai Sector 1 Collector",
+        "length_km": 1.0,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_07",
+        "v": "INT_CHE_15",
+        "road_id": "R_CHE_09",
+        "name": "Chennai Tech Access Way",
+        "length_km": 1.2,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_15",
+        "v": "INT_CHE_08",
+        "road_id": "R_CHE_10",
+        "name": "Chennai Sector Arterial",
+        "length_km": 1.3,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_06",
+        "v": "INT_CHE_08",
+        "road_id": "R_CHE_11",
+        "name": "Chennai Southern Corridor",
+        "length_km": 2.1,
+        "speed_kmh": 55,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_05",
+        "v": "INT_CHE_10",
+        "road_id": "R_CHE_12",
+        "name": "Velachery \u2013 Tambaram Elevated Bypass Corridor",
+        "length_km": 2.3,
+        "speed_kmh": 60,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_CHE_08",
+        "v": "INT_CHE_09",
+        "road_id": "R_CHE_13",
+        "name": "Chennai Tech Corridor Road",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_09",
+        "v": "INT_CHE_10",
+        "road_id": "R_CHE_14",
+        "name": "Chennai Basin Flyover",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_08",
+        "v": "INT_CHE_11",
+        "road_id": "R_CHE_15",
+        "name": "Chennai Low-Lying Causeway",
+        "length_km": 1.3,
+        "speed_kmh": 30,
+        "road_type": "LOCAL"
+      },
+      {
+        "u": "INT_CHE_11",
+        "v": "INT_CHE_16",
+        "road_id": "R_CHE_16",
+        "name": "Gleneagles Global Health City Southern Link",
+        "length_km": 1.5,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_09",
+        "v": "INT_CHE_16",
+        "road_id": "R_CHE_17",
+        "name": "Chennai Eastern Medical Corridor",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_CHE_10",
+        "v": "INT_CHE_12",
+        "road_id": "R_CHE_18",
+        "name": "Chennai Outer Elevated Expressway",
+        "length_km": 1.8,
+        "speed_kmh": 65,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_CHE_03",
+        "v": "INT_CHE_04",
+        "road_id": "R_CHE_19",
+        "name": "Chennai Central Bypass Overpass",
+        "length_km": 0.9,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_CHE_16",
+        "v": "INT_CHE_12",
+        "road_id": "R_CHE_20",
+        "name": "Chennai East Terminal Flyover",
+        "length_km": 1.9,
+        "speed_kmh": 55,
+        "road_type": "ELEVATED_BYPASS"
+      }
+    ]
+  },
+  "facilities": {
+    "source": "Chennai Disaster Management Authority",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "HOSP_CHE_01",
+        "name": "Apollo Hospital Greams Road",
+        "type": "HOSPITAL",
+        "lat": 12.9975,
+        "lon": 80.2285,
+        "capacity_beds": 600,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_CHE_02",
+        "name": "Gleneagles Global Health City",
+        "type": "HOSPITAL",
+        "lat": 12.965,
+        "lon": 80.2425,
+        "capacity_beds": 1000,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_CHE_03",
+        "name": "Prashanth Super Speciality Hospital",
+        "type": "HOSPITAL",
+        "lat": 12.9825,
+        "lon": 80.2054,
+        "capacity_beds": 300,
+        "has_emergency_trauma": false,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_CHE_04",
+        "name": "Fortis Malar Hospital Adyar",
+        "type": "HOSPITAL",
+        "lat": 12.9925,
+        "lon": 80.239,
+        "capacity_beds": 250,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "FIRE_CHE_01",
+        "name": "Chennai Central Fire & Rescue Station",
+        "type": "FIRE_STATION",
+        "lat": 12.979,
+        "lon": 80.204,
+        "engines": 4,
+        "boats": 2
+      },
+      {
+        "id": "FIRE_CHE_02",
+        "name": "Chennai East Industrial Fire Post",
+        "type": "FIRE_STATION",
+        "lat": 12.974,
+        "lon": 80.2355,
+        "engines": 3,
+        "boats": 1
+      },
+      {
+        "id": "POL_CHE_01",
+        "name": "Chennai Central Division Police HQ",
+        "type": "POLICE_STATION",
+        "lat": 12.981,
+        "lon": 80.2026,
+        "personnel": 45
+      },
+      {
+        "id": "POL_CHE_02",
+        "name": "Chennai Basin Traffic Police Post",
+        "type": "POLICE_STATION",
+        "lat": 12.976,
+        "lon": 80.2264,
+        "personnel": 25
+      },
+      {
+        "id": "SHELTER_CHE_01",
+        "name": "Chennai Community Flood Relief Shelter",
+        "type": "SHELTER",
+        "lat": 12.99,
+        "lon": 80.2005,
+        "capacity_people": 800
+      },
+      {
+        "id": "SHELTER_CHE_02",
+        "name": "Chennai Indoor Stadium Emergency Camp",
+        "type": "SHELTER",
+        "lat": 12.985,
+        "lon": 80.239,
+        "capacity_people": 1500
+      }
+    ]
+  },
+  "sensors": {
+    "source": "Chennai Smart City IoT Telemetry Network",
+    "status": "ONLINE",
+    "items": [
+      {
+        "id": "SENS_CHE_01",
+        "name": "Velachery 100ft Road Trough Ultrasonic Depth Gauge",
+        "type": "ULTRASONIC_DEPTH",
+        "lat": 12.979,
+        "lon": 80.2096,
+        "unit": "cm",
+        "sampling_rate_sec": 30,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_CHE_02",
+        "name": "Velachery MRTS Storm Collector Invert Pressure Sensor",
+        "type": "PRESSURE_TRANSDUCER",
+        "lat": 12.979,
+        "lon": 80.2096,
+        "unit": "kPa",
+        "sampling_rate_sec": 15,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_CHE_03",
+        "name": "Pallikaranai Marshland Sump Outfall Flow Sensor",
+        "type": "DOPPLER_FLOW",
+        "lat": 12.976,
+        "lon": 80.2376,
+        "unit": "m3/s",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_CHE_04",
+        "name": "Chennai Western Ridge Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 12.9975,
+        "lon": 80.1935,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_CHE_05",
+        "name": "Chennai Basin Central Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 12.98,
+        "lon": 80.218,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_CHE_06",
+        "name": "Chennai Traffic Inundation CCTV AI Camera",
+        "type": "AI_SURVEILLANCE_CAMERA",
+        "lat": 12.978,
+        "lon": 80.211,
+        "unit": "status",
+        "sampling_rate_sec": 5,
+        "status": "ONLINE"
+      }
+    ]
+  },
+  "water_bodies": {
+    "features": [
+      {
+        "name": "Pallikaranai Marsh Wetland",
+        "type": "WETLAND",
+        "coords": [
+          [
+            80.205,
+            12.945
+          ],
+          [
+            80.22,
+            12.94
+          ],
+          [
+            80.235,
+            12.955
+          ],
+          [
+            80.225,
+            12.965
+          ],
+          [
+            80.21,
+            12.96
+          ],
+          [
+            80.205,
+            12.945
+          ]
+        ]
+      },
+      {
+        "name": "Velachery Lake",
+        "type": "LAKE",
+        "coords": [
+          [
+            80.21,
+            12.975
+          ],
+          [
+            80.218,
+            12.972
+          ],
+          [
+            80.222,
+            12.978
+          ],
+          [
+            80.215,
+            12.982
+          ],
+          [
+            80.21,
+            12.975
+          ]
+        ]
+      }
+    ]
+  },
+  "buildings": {
+    "source": "OpenStreetMap 3D Urban Fabric",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "BLD_CHE_001",
+        "name": "Chennai Urban Parcel #1",
+        "height_m": 12.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.1958,
+            12.9638
+          ],
+          [
+            80.1982,
+            12.9638
+          ],
+          [
+            80.1982,
+            12.9662
+          ],
+          [
+            80.1958,
+            12.9662
+          ],
+          [
+            80.1958,
+            12.9638
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_002",
+        "name": "Chennai Urban Parcel #2",
+        "height_m": 19.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2035,
+            12.9638
+          ],
+          [
+            80.2059,
+            12.9638
+          ],
+          [
+            80.2059,
+            12.9662
+          ],
+          [
+            80.2035,
+            12.9662
+          ],
+          [
+            80.2035,
+            12.9638
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_003",
+        "name": "Chennai Urban Parcel #3",
+        "height_m": 26.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2112,
+            12.9638
+          ],
+          [
+            80.2136,
+            12.9638
+          ],
+          [
+            80.2136,
+            12.9662
+          ],
+          [
+            80.2112,
+            12.9662
+          ],
+          [
+            80.2112,
+            12.9638
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_004",
+        "name": "Chennai Urban Parcel #4",
+        "height_m": 33.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.2189,
+            12.9638
+          ],
+          [
+            80.2213,
+            12.9638
+          ],
+          [
+            80.2213,
+            12.9662
+          ],
+          [
+            80.2189,
+            12.9662
+          ],
+          [
+            80.2189,
+            12.9638
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_005",
+        "name": "Chennai Urban Parcel #5",
+        "height_m": 40.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2266,
+            12.9638
+          ],
+          [
+            80.229,
+            12.9638
+          ],
+          [
+            80.229,
+            12.9662
+          ],
+          [
+            80.2266,
+            12.9662
+          ],
+          [
+            80.2266,
+            12.9638
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_006",
+        "name": "Chennai Urban Parcel #6",
+        "height_m": 47.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2343,
+            12.9638
+          ],
+          [
+            80.2367,
+            12.9638
+          ],
+          [
+            80.2367,
+            12.9662
+          ],
+          [
+            80.2343,
+            12.9662
+          ],
+          [
+            80.2343,
+            12.9638
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_007",
+        "name": "Chennai Urban Parcel #7",
+        "height_m": 16.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.1958,
+            12.9693
+          ],
+          [
+            80.1982,
+            12.9693
+          ],
+          [
+            80.1982,
+            12.9717
+          ],
+          [
+            80.1958,
+            12.9717
+          ],
+          [
+            80.1958,
+            12.9693
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_008",
+        "name": "Chennai Urban Parcel #8",
+        "height_m": 23.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2035,
+            12.9693
+          ],
+          [
+            80.2059,
+            12.9693
+          ],
+          [
+            80.2059,
+            12.9717
+          ],
+          [
+            80.2035,
+            12.9717
+          ],
+          [
+            80.2035,
+            12.9693
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_009",
+        "name": "Chennai Urban Parcel #9",
+        "height_m": 30.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2112,
+            12.9693
+          ],
+          [
+            80.2136,
+            12.9693
+          ],
+          [
+            80.2136,
+            12.9717
+          ],
+          [
+            80.2112,
+            12.9717
+          ],
+          [
+            80.2112,
+            12.9693
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_010",
+        "name": "Chennai Urban Parcel #10",
+        "height_m": 37.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.2189,
+            12.9693
+          ],
+          [
+            80.2213,
+            12.9693
+          ],
+          [
+            80.2213,
+            12.9717
+          ],
+          [
+            80.2189,
+            12.9717
+          ],
+          [
+            80.2189,
+            12.9693
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_011",
+        "name": "Chennai Urban Parcel #11",
+        "height_m": 44.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2266,
+            12.9693
+          ],
+          [
+            80.229,
+            12.9693
+          ],
+          [
+            80.229,
+            12.9717
+          ],
+          [
+            80.2266,
+            12.9717
+          ],
+          [
+            80.2266,
+            12.9693
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_012",
+        "name": "Chennai Urban Parcel #12",
+        "height_m": 13.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2343,
+            12.9693
+          ],
+          [
+            80.2367,
+            12.9693
+          ],
+          [
+            80.2367,
+            12.9717
+          ],
+          [
+            80.2343,
+            12.9717
+          ],
+          [
+            80.2343,
+            12.9693
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_013",
+        "name": "Chennai Urban Parcel #13",
+        "height_m": 20.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.1958,
+            12.9748
+          ],
+          [
+            80.1982,
+            12.9748
+          ],
+          [
+            80.1982,
+            12.9772
+          ],
+          [
+            80.1958,
+            12.9772
+          ],
+          [
+            80.1958,
+            12.9748
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_014",
+        "name": "Chennai Urban Parcel #14",
+        "height_m": 27.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2035,
+            12.9748
+          ],
+          [
+            80.2059,
+            12.9748
+          ],
+          [
+            80.2059,
+            12.9772
+          ],
+          [
+            80.2035,
+            12.9772
+          ],
+          [
+            80.2035,
+            12.9748
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_015",
+        "name": "Chennai Urban Parcel #15",
+        "height_m": 34.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2112,
+            12.9748
+          ],
+          [
+            80.2136,
+            12.9748
+          ],
+          [
+            80.2136,
+            12.9772
+          ],
+          [
+            80.2112,
+            12.9772
+          ],
+          [
+            80.2112,
+            12.9748
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_016",
+        "name": "Chennai Urban Parcel #16",
+        "height_m": 41.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.2189,
+            12.9748
+          ],
+          [
+            80.2213,
+            12.9748
+          ],
+          [
+            80.2213,
+            12.9772
+          ],
+          [
+            80.2189,
+            12.9772
+          ],
+          [
+            80.2189,
+            12.9748
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_017",
+        "name": "Chennai Urban Parcel #17",
+        "height_m": 48.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2266,
+            12.9748
+          ],
+          [
+            80.229,
+            12.9748
+          ],
+          [
+            80.229,
+            12.9772
+          ],
+          [
+            80.2266,
+            12.9772
+          ],
+          [
+            80.2266,
+            12.9748
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_018",
+        "name": "Chennai Urban Parcel #18",
+        "height_m": 17.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2343,
+            12.9748
+          ],
+          [
+            80.2367,
+            12.9748
+          ],
+          [
+            80.2367,
+            12.9772
+          ],
+          [
+            80.2343,
+            12.9772
+          ],
+          [
+            80.2343,
+            12.9748
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_019",
+        "name": "Chennai Urban Parcel #19",
+        "height_m": 24.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.1958,
+            12.9803
+          ],
+          [
+            80.1982,
+            12.9803
+          ],
+          [
+            80.1982,
+            12.9827
+          ],
+          [
+            80.1958,
+            12.9827
+          ],
+          [
+            80.1958,
+            12.9803
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_020",
+        "name": "Chennai Urban Parcel #20",
+        "height_m": 31.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2035,
+            12.9803
+          ],
+          [
+            80.2059,
+            12.9803
+          ],
+          [
+            80.2059,
+            12.9827
+          ],
+          [
+            80.2035,
+            12.9827
+          ],
+          [
+            80.2035,
+            12.9803
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_021",
+        "name": "Chennai Urban Parcel #21",
+        "height_m": 38.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2112,
+            12.9803
+          ],
+          [
+            80.2136,
+            12.9803
+          ],
+          [
+            80.2136,
+            12.9827
+          ],
+          [
+            80.2112,
+            12.9827
+          ],
+          [
+            80.2112,
+            12.9803
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_022",
+        "name": "Chennai Urban Parcel #22",
+        "height_m": 45.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.2189,
+            12.9803
+          ],
+          [
+            80.2213,
+            12.9803
+          ],
+          [
+            80.2213,
+            12.9827
+          ],
+          [
+            80.2189,
+            12.9827
+          ],
+          [
+            80.2189,
+            12.9803
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_023",
+        "name": "Chennai Urban Parcel #23",
+        "height_m": 14.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2266,
+            12.9803
+          ],
+          [
+            80.229,
+            12.9803
+          ],
+          [
+            80.229,
+            12.9827
+          ],
+          [
+            80.2266,
+            12.9827
+          ],
+          [
+            80.2266,
+            12.9803
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_024",
+        "name": "Chennai Urban Parcel #24",
+        "height_m": 21.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2343,
+            12.9803
+          ],
+          [
+            80.2367,
+            12.9803
+          ],
+          [
+            80.2367,
+            12.9827
+          ],
+          [
+            80.2343,
+            12.9827
+          ],
+          [
+            80.2343,
+            12.9803
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_025",
+        "name": "Chennai Urban Parcel #25",
+        "height_m": 28.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.1958,
+            12.9858
+          ],
+          [
+            80.1982,
+            12.9858
+          ],
+          [
+            80.1982,
+            12.9882
+          ],
+          [
+            80.1958,
+            12.9882
+          ],
+          [
+            80.1958,
+            12.9858
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_026",
+        "name": "Chennai Urban Parcel #26",
+        "height_m": 35.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2035,
+            12.9858
+          ],
+          [
+            80.2059,
+            12.9858
+          ],
+          [
+            80.2059,
+            12.9882
+          ],
+          [
+            80.2035,
+            12.9882
+          ],
+          [
+            80.2035,
+            12.9858
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_027",
+        "name": "Chennai Urban Parcel #27",
+        "height_m": 42.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2112,
+            12.9858
+          ],
+          [
+            80.2136,
+            12.9858
+          ],
+          [
+            80.2136,
+            12.9882
+          ],
+          [
+            80.2112,
+            12.9882
+          ],
+          [
+            80.2112,
+            12.9858
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_028",
+        "name": "Chennai Urban Parcel #28",
+        "height_m": 49.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.2189,
+            12.9858
+          ],
+          [
+            80.2213,
+            12.9858
+          ],
+          [
+            80.2213,
+            12.9882
+          ],
+          [
+            80.2189,
+            12.9882
+          ],
+          [
+            80.2189,
+            12.9858
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_029",
+        "name": "Chennai Urban Parcel #29",
+        "height_m": 18.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2266,
+            12.9858
+          ],
+          [
+            80.229,
+            12.9858
+          ],
+          [
+            80.229,
+            12.9882
+          ],
+          [
+            80.2266,
+            12.9882
+          ],
+          [
+            80.2266,
+            12.9858
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_030",
+        "name": "Chennai Urban Parcel #30",
+        "height_m": 25.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2343,
+            12.9858
+          ],
+          [
+            80.2367,
+            12.9858
+          ],
+          [
+            80.2367,
+            12.9882
+          ],
+          [
+            80.2343,
+            12.9882
+          ],
+          [
+            80.2343,
+            12.9858
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_031",
+        "name": "Chennai Urban Parcel #31",
+        "height_m": 32.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.1958,
+            12.9913
+          ],
+          [
+            80.1982,
+            12.9913
+          ],
+          [
+            80.1982,
+            12.9937
+          ],
+          [
+            80.1958,
+            12.9937
+          ],
+          [
+            80.1958,
+            12.9913
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_032",
+        "name": "Chennai Urban Parcel #32",
+        "height_m": 39.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2035,
+            12.9913
+          ],
+          [
+            80.2059,
+            12.9913
+          ],
+          [
+            80.2059,
+            12.9937
+          ],
+          [
+            80.2035,
+            12.9937
+          ],
+          [
+            80.2035,
+            12.9913
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_033",
+        "name": "Chennai Urban Parcel #33",
+        "height_m": 46.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2112,
+            12.9913
+          ],
+          [
+            80.2136,
+            12.9913
+          ],
+          [
+            80.2136,
+            12.9937
+          ],
+          [
+            80.2112,
+            12.9937
+          ],
+          [
+            80.2112,
+            12.9913
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_034",
+        "name": "Chennai Urban Parcel #34",
+        "height_m": 15.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.2189,
+            12.9913
+          ],
+          [
+            80.2213,
+            12.9913
+          ],
+          [
+            80.2213,
+            12.9937
+          ],
+          [
+            80.2189,
+            12.9937
+          ],
+          [
+            80.2189,
+            12.9913
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_035",
+        "name": "Chennai Urban Parcel #35",
+        "height_m": 22.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2266,
+            12.9913
+          ],
+          [
+            80.229,
+            12.9913
+          ],
+          [
+            80.229,
+            12.9937
+          ],
+          [
+            80.2266,
+            12.9937
+          ],
+          [
+            80.2266,
+            12.9913
+          ]
+        ]
+      },
+      {
+        "id": "BLD_CHE_036",
+        "name": "Chennai Urban Parcel #36",
+        "height_m": 29.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.2343,
+            12.9913
+          ],
+          [
+            80.2367,
+            12.9913
+          ],
+          [
+            80.2367,
+            12.9937
+          ],
+          [
+            80.2343,
+            12.9937
+          ],
+          [
+            80.2343,
+            12.9913
+          ]
+        ]
+      }
+    ]
+  },
+  "flood_model": {
+    "level1_model": "UFNS Kinematic Wave & Horton Infiltration Engine (v2.4)",
+    "level2_city_adaptation": {
+      "imperviousness_mean": 0.82,
+      "soil_infiltration_rate_mm_hr": 3.8,
+      "manning_surface_roughness": 0.028,
+      "calibration_factor": 1.04
+    }
+  },
+  "routing": {
+    "default_origin_node": "INT_CHE_13",
+    "default_destination_node": "INT_CHE_16",
+    "critical_blocked_road": "R_CHE_04",
+    "recommended_safe_road": "R_CHE_12",
+    "vehicle_clearance_limits_cm": {
+      "ambulance": 25.0,
+      "fire_truck": 50.0,
+      "police": 35.0,
+      "standard_vehicle": 20.0,
+      "pedestrian": 10.0
+    }
+  },
+  "predicted_flood_zone": [
+    [
+      80.2026,
+      12.973
+    ],
+    [
+      80.204,
+      12.984
+    ],
+    [
+      80.2166,
+      12.9865
+    ],
+    [
+      80.2411,
+      12.982
+    ],
+    [
+      80.2481,
+      12.9785
+    ],
+    [
+      80.246,
+      12.971
+    ],
+    [
+      80.2341,
+      12.9685
+    ],
+    [
+      80.2131,
+      12.975
+    ],
+    [
+      80.2026,
+      12.973
+    ]
+  ],
+  "story": {
+    "basin_name": "Velachery \u2013 Madipakkam \u2013 Pallikaranai Basin",
+    "hotspot_road": "Velachery 100ft Road Trough",
+    "surcharge_node": "Junction CH02 (Velachery MRTS Storm Collector)",
+    "hospital_origin": "Apollo Hospital Greams Road",
+    "hospital_dest": "Gleneagles Global Health City",
+    "safe_bypass": "Velachery \u2013 Tambaram Elevated Bypass Corridor",
+    "elevation_high": 14.0,
+    "elevation_low": 2.0,
+    "camera_poses": {
+      "city_view": {
+        "center": [
+          12.98,
+          80.218
+        ],
+        "zoom": 13.0,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "storm_focus": {
+        "center": [
+          12.979,
+          80.2096
+        ],
+        "zoom": 13.8,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "altitude_focus": {
+        "center": [
+          12.98,
+          80.218
+        ],
+        "zoom": 14.4,
+        "pitch": 50,
+        "bearing": 20
+      },
+      "runoff_focus": {
+        "center": [
+          12.9765,
+          80.2061
+        ],
+        "zoom": 14.5,
+        "pitch": 55,
+        "bearing": 25
+      },
+      "flood_trough": {
+        "center": [
+          12.979,
+          80.2096
+        ],
+        "zoom": 14.8,
+        "pitch": 50,
+        "bearing": 15
+      },
+      "drainage_subterranean": {
+        "center": [
+          12.979,
+          80.2096
+        ],
+        "zoom": 15.0,
+        "pitch": 60,
+        "bearing": 30
+      },
+      "surcharge_manhole": {
+        "center": [
+          12.979,
+          80.2096
+        ],
+        "zoom": 15.8,
+        "pitch": 65,
+        "bearing": 35
+      },
+      "road_submerged": {
+        "center": [
+          12.979,
+          80.2096
+        ],
+        "zoom": 15.0,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "route_tracking": {
+        "center": [
+          12.98,
+          80.2215
+        ],
+        "zoom": 13.8,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "solution_overview": {
+        "center": [
+          12.98,
+          80.218
+        ],
+        "zoom": 13.0,
+        "pitch": 35,
+        "bearing": 0
+      }
+    }
+  }
+}

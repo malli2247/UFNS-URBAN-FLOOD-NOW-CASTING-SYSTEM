@@ -1,0 +1,2008 @@
+{
+  "city_id": "ahmedabad",
+  "city": "Ahmedabad",
+  "state": "Gujarat",
+  "country": "India",
+  "timezone": "Asia/Kolkata",
+  "center": {
+    "latitude": 23.045,
+    "longitude": 72.572
+  },
+  "bounding_box": {
+    "min_lat": 23.02,
+    "max_lat": 23.07,
+    "min_lon": 72.537,
+    "max_lon": 72.607,
+    "center_lat": 23.045,
+    "center_lon": 72.572
+  },
+  "focus_basin": {
+    "name": "Akhbarnagar \u2013 Subhash Bridge \u2013 Sabarmati Basin",
+    "area_sqkm": 33.2,
+    "description": "High-capacity urban transit corridor adjacent to the engineered Sabarmati Riverfront barrage system."
+  },
+  "data_sources": {
+    "rainfall": {
+      "dataset": "Ahmedabad Real-Time Precipitation Feed",
+      "source": "Open-Meteo REST API / IMD Doppler Radar Feed",
+      "api_endpoint": "https://api.open-meteo.com/v1/forecast?latitude=23.045&longitude=72.572&hourly=precipitation",
+      "spatial_resolution": "0.1\u00b0 (~10km) / Downscaled 350m",
+      "temporal_resolution": "15 minutes",
+      "status": "LIVE",
+      "radar_station": "IMD Ahmedabad Hansol Doppler Radar"
+    },
+    "dem": {
+      "dataset": "Ahmedabad High-Resolution Urban Terrain Model",
+      "source": "Copernicus DEM GLO-30 / ISRO Cartosat-1 DSM",
+      "spatial_resolution": "30m",
+      "vertical_accuracy": "\u00b11.5m",
+      "status": "AVAILABLE",
+      "license": "Open Access (Copernicus / ISRO Bhuvan)"
+    },
+    "drainage": {
+      "dataset": "Ahmedabad Stormwater Trunk Network",
+      "source": "AMC Stormwater Drainage Department Master Drainage Plan",
+      "status": "AVAILABLE",
+      "completeness": "Primary Arterial Conduits (12 Nodes, 11 Outfalls)",
+      "modeling_standard": "Manning-Strickler 1D Pipe Flow with 2-Way Surface Spill"
+    },
+    "roads": {
+      "dataset": "Ahmedabad Arterial Highway & Transport Graph",
+      "source": "OpenStreetMap Road Network (OSM 2024)",
+      "status": "AVAILABLE",
+      "features_count": 20,
+      "routing_profile": "Emergency Multi-Modal Clearance-Aware"
+    }
+  },
+  "dem": {
+    "source": "Copernicus DEM GLO-30",
+    "status": "AVAILABLE",
+    "base_elevation_m": 58.0,
+    "min_elevation_m": 45.0,
+    "max_elevation_m": 68.0,
+    "contour_interval_m": 3.2,
+    "markers": [
+      {
+        "lat": 23.0625,
+        "lon": 72.5475,
+        "elevM": 58.0,
+        "label": "58 m AMSL",
+        "tag": "\u25b2 HIGH (Ridge)"
+      },
+      {
+        "lat": 23.0525,
+        "lon": 72.5615,
+        "elevM": 54.8,
+        "label": "55 m AMSL",
+        "tag": "\u25b2 UPPER SLOPE"
+      },
+      {
+        "lat": 23.045,
+        "lon": 72.572,
+        "elevM": 51.5,
+        "label": "52 m AMSL",
+        "tag": "\u25cf MID SLOPE"
+      },
+      {
+        "lat": 23.0375,
+        "lon": 72.5825,
+        "elevM": 48.2,
+        "label": "48 m AMSL",
+        "tag": "\u25cf LOWER BASIN"
+      },
+      {
+        "lat": 23.03,
+        "lon": 72.5965,
+        "elevM": 45.0,
+        "label": "45 m AMSL",
+        "tag": "\u25bc LOW POINT (Trough)"
+      }
+    ],
+    "troughs": [
+      {
+        "lat": 23.046,
+        "lon": 72.5636,
+        "depth_m": 6.5,
+        "name": "Akhbarnagar Railway Underpass"
+      },
+      {
+        "lat": 23.041,
+        "lon": 72.5874,
+        "depth_m": 8.5,
+        "name": "Sabarmati Riverfront Drainage Sump"
+      }
+    ]
+  },
+  "rainfall": {
+    "source": "Open-Meteo & IMD Radar",
+    "status": "LIVE",
+    "default_intensity_mm_hr": 78.5,
+    "radar_station": "IMD Ahmedabad Hansol Doppler Radar",
+    "horizons": [
+      "0m",
+      "15m",
+      "30m",
+      "45m",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "drainage": {
+    "source": "AMC Stormwater Drainage Department",
+    "status": "AVAILABLE",
+    "capacity_multiplier": 1.0,
+    "surcharge_node_id": "AHM_M02",
+    "nodes": [
+      {
+        "id": "AHM_M01",
+        "name": "Ahmedabad Western Trunk Inlet",
+        "node_type": "Inlet",
+        "lat": 23.06,
+        "lon": 72.551,
+        "elev": 56.4,
+        "inlet_cap": 2.5,
+        "row": 12,
+        "col": 3
+      },
+      {
+        "id": "AHM_M02",
+        "name": "Sabarmati East Interceptor Sluice",
+        "node_type": "Junction",
+        "lat": 23.046,
+        "lon": 72.5636,
+        "elev": 54.1,
+        "inlet_cap": 3.2,
+        "row": 7,
+        "col": 5
+      },
+      {
+        "id": "AHM_M03",
+        "name": "Ahmedabad Central Crossing Manhole",
+        "node_type": "Manhole",
+        "lat": 23.0475,
+        "lon": 72.5685,
+        "elev": 52.1,
+        "inlet_cap": 4.0,
+        "row": 8,
+        "col": 7
+      },
+      {
+        "id": "AHM_M04",
+        "name": "Ahmedabad Arterial Sump Junction",
+        "node_type": "Junction",
+        "lat": 23.05,
+        "lon": 72.5776,
+        "elev": 50.9,
+        "inlet_cap": 4.5,
+        "row": 9,
+        "col": 9
+      },
+      {
+        "id": "AHM_M05",
+        "name": "Ahmedabad North Relief Collector",
+        "node_type": "Manhole",
+        "lat": 23.055,
+        "lon": 72.565,
+        "elev": 53.1,
+        "inlet_cap": 3.8,
+        "row": 10,
+        "col": 6
+      },
+      {
+        "id": "AHM_M06",
+        "name": "Ahmedabad South Basin Sluice",
+        "node_type": "Inlet",
+        "lat": 23.0325,
+        "lon": 72.565,
+        "elev": 50.2,
+        "inlet_cap": 5.0,
+        "row": 4,
+        "col": 6
+      },
+      {
+        "id": "AHM_M07",
+        "name": "Ahmedabad Ring Road Storm Conduit",
+        "node_type": "Manhole",
+        "lat": 23.035,
+        "lon": 72.5755,
+        "elev": 48.9,
+        "inlet_cap": 3.5,
+        "row": 4,
+        "col": 8
+      },
+      {
+        "id": "AHM_M08",
+        "name": "Ahmedabad Mid-Channel Sump Pit",
+        "node_type": "Manhole",
+        "lat": 23.039,
+        "lon": 72.5825,
+        "elev": 47.9,
+        "inlet_cap": 3.0,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "AHM_M09",
+        "name": "Ahmedabad Intermediate Chamber",
+        "node_type": "Junction",
+        "lat": 23.0425,
+        "lon": 72.586,
+        "elev": 47.0,
+        "inlet_cap": 4.2,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "AHM_M10",
+        "name": "Ahmedabad Trough Inflow Pit",
+        "node_type": "Manhole",
+        "lat": 23.0385,
+        "lon": 72.5839,
+        "elev": 46.0,
+        "inlet_cap": 3.8,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "AHM_M11",
+        "name": "Ahmedabad Floodplain Storm Bypass",
+        "node_type": "Inlet",
+        "lat": 23.029,
+        "lon": 72.5916,
+        "elev": 45.6,
+        "inlet_cap": 2.8,
+        "row": 2,
+        "col": 12
+      },
+      {
+        "id": "AHM_M12",
+        "name": "Sabarmati Riverfront Drainage Sump Outfall Sluice",
+        "node_type": "Outfall",
+        "lat": 23.041,
+        "lon": 72.5874,
+        "elev": 45.0,
+        "inlet_cap": 7.5,
+        "row": 8,
+        "col": 14
+      }
+    ],
+    "pipes": [
+      {
+        "from": "AHM_M01",
+        "to": "AHM_M02",
+        "pipe_id": "P-AH-01",
+        "diameter_m": 1.2,
+        "slope": 0.007,
+        "length_m": 1100
+      },
+      {
+        "from": "AHM_M02",
+        "to": "AHM_M03",
+        "pipe_id": "P-AH-02",
+        "diameter_m": 1.5,
+        "slope": 0.006,
+        "length_m": 850
+      },
+      {
+        "from": "AHM_M05",
+        "to": "AHM_M03",
+        "pipe_id": "P-AH-03",
+        "diameter_m": 1.2,
+        "slope": 0.005,
+        "length_m": 650
+      },
+      {
+        "from": "AHM_M03",
+        "to": "AHM_M04",
+        "pipe_id": "P-AH-04",
+        "diameter_m": 1.8,
+        "slope": 0.005,
+        "length_m": 920
+      },
+      {
+        "from": "AHM_M06",
+        "to": "AHM_M07",
+        "pipe_id": "P-AH-05",
+        "diameter_m": 1.4,
+        "slope": 0.004,
+        "length_m": 780
+      },
+      {
+        "from": "AHM_M07",
+        "to": "AHM_M08",
+        "pipe_id": "P-AH-06",
+        "diameter_m": 1.5,
+        "slope": 0.004,
+        "length_m": 1100
+      },
+      {
+        "from": "AHM_M08",
+        "to": "AHM_M09",
+        "pipe_id": "P-AH-07",
+        "diameter_m": 1.6,
+        "slope": 0.003,
+        "length_m": 820
+      },
+      {
+        "from": "AHM_M04",
+        "to": "AHM_M09",
+        "pipe_id": "P-AH-08",
+        "diameter_m": 2.0,
+        "slope": 0.004,
+        "length_m": 1450
+      },
+      {
+        "from": "AHM_M09",
+        "to": "AHM_M10",
+        "pipe_id": "P-AH-09",
+        "diameter_m": 1.8,
+        "slope": 0.003,
+        "length_m": 900
+      },
+      {
+        "from": "AHM_M11",
+        "to": "AHM_M10",
+        "pipe_id": "P-AH-10",
+        "diameter_m": 1.4,
+        "slope": 0.002,
+        "length_m": 850
+      },
+      {
+        "from": "AHM_M10",
+        "to": "AHM_M12",
+        "pipe_id": "P-AH-11",
+        "diameter_m": 2.4,
+        "slope": 0.003,
+        "length_m": 1200
+      }
+    ]
+  },
+  "roads": {
+    "source": "OpenStreetMap",
+    "status": "AVAILABLE",
+    "critical_hotspot_road_id": "R_AHM_04",
+    "intersections": {
+      "INT_AHM_01": {
+        "name": "Ahmedabad West Highway Junction",
+        "lat": 23.0625,
+        "lon": 72.5475
+      },
+      "INT_AHM_02": {
+        "name": "Ahmedabad Central Commercial Crossing",
+        "lat": 23.0475,
+        "lon": 72.5615
+      },
+      "INT_AHM_03": {
+        "name": "Ahmedabad Market West Intersection",
+        "lat": 23.046,
+        "lon": 72.5566
+      },
+      "INT_AHM_04": {
+        "name": "Ahmedabad North Relief Signal",
+        "lat": 23.055,
+        "lon": 72.565
+      },
+      "INT_AHM_05": {
+        "name": "Ahmedabad Ring Road North Junction",
+        "lat": 23.0575,
+        "lon": 72.579
+      },
+      "INT_AHM_06": {
+        "name": "Ahmedabad South Canal Junction",
+        "lat": 23.035,
+        "lon": 72.5615
+      },
+      "INT_AHM_07": {
+        "name": "Ahmedabad Residential Sector 1",
+        "lat": 23.0325,
+        "lon": 72.572
+      },
+      "INT_AHM_08": {
+        "name": "Ahmedabad Expressway Interchange",
+        "lat": 23.04,
+        "lon": 72.5825
+      },
+      "INT_AHM_09": {
+        "name": "Ahmedabad Tech Corridor Gate",
+        "lat": 23.0425,
+        "lon": 72.593
+      },
+      "INT_AHM_10": {
+        "name": "Ahmedabad Lake Overpass Crossing",
+        "lat": 23.0525,
+        "lon": 72.5895
+      },
+      "INT_AHM_11": {
+        "name": "Ahmedabad Low-Lying Access Road",
+        "lat": 23.036,
+        "lon": 72.5839
+      },
+      "INT_AHM_12": {
+        "name": "Ahmedabad East Terminal Bridge",
+        "lat": 23.0625,
+        "lon": 72.5965
+      },
+      "INT_AHM_13": {
+        "name": "Civil Hospital Asarwa Gate",
+        "lat": 23.0525,
+        "lon": 72.5895
+      },
+      "INT_AHM_14": {
+        "name": "Ahmedabad Central Police Station",
+        "lat": 23.045,
+        "lon": 72.5566
+      },
+      "INT_AHM_15": {
+        "name": "Ahmedabad South Tech Hub",
+        "lat": 23.034,
+        "lon": 72.5804
+      },
+      "INT_AHM_16": {
+        "name": "SVP Hospital Ellisbridge Gate",
+        "lat": 23.034,
+        "lon": 72.5685
+      }
+    },
+    "road_segments": [
+      {
+        "u": "INT_AHM_01",
+        "v": "INT_AHM_13",
+        "road_id": "R_AHM_01",
+        "name": "Ahmedabad Western Arterial",
+        "length_km": 1.1,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_13",
+        "v": "INT_AHM_14",
+        "road_id": "R_AHM_02",
+        "name": "Civil Hospital Asarwa Link",
+        "length_km": 0.8,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_14",
+        "v": "INT_AHM_02",
+        "road_id": "R_AHM_03",
+        "name": "Ahmedabad Civic Avenue",
+        "length_km": 0.7,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_02",
+        "v": "INT_AHM_03",
+        "road_id": "R_AHM_04",
+        "name": "Akhbarnagar Railway Underpass",
+        "length_km": 0.9,
+        "speed_kmh": 40,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_02",
+        "v": "INT_AHM_04",
+        "road_id": "R_AHM_05",
+        "name": "Ahmedabad North Relief Road",
+        "length_km": 1.1,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_04",
+        "v": "INT_AHM_05",
+        "road_id": "R_AHM_06",
+        "name": "Ahmedabad Ring Road Arterial",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_02",
+        "v": "INT_AHM_06",
+        "road_id": "R_AHM_07",
+        "name": "Ahmedabad South Canal Link",
+        "length_km": 1.6,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_06",
+        "v": "INT_AHM_07",
+        "road_id": "R_AHM_08",
+        "name": "Ahmedabad Sector 1 Collector",
+        "length_km": 1.0,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_07",
+        "v": "INT_AHM_15",
+        "road_id": "R_AHM_09",
+        "name": "Ahmedabad Tech Access Way",
+        "length_km": 1.2,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_15",
+        "v": "INT_AHM_08",
+        "road_id": "R_AHM_10",
+        "name": "Ahmedabad Sector Arterial",
+        "length_km": 1.3,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_06",
+        "v": "INT_AHM_08",
+        "road_id": "R_AHM_11",
+        "name": "Ahmedabad Southern Corridor",
+        "length_km": 2.1,
+        "speed_kmh": 55,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_05",
+        "v": "INT_AHM_10",
+        "road_id": "R_AHM_12",
+        "name": "132ft Ring Road Elevated Overpass",
+        "length_km": 2.3,
+        "speed_kmh": 60,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_AHM_08",
+        "v": "INT_AHM_09",
+        "road_id": "R_AHM_13",
+        "name": "Ahmedabad Tech Corridor Road",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_09",
+        "v": "INT_AHM_10",
+        "road_id": "R_AHM_14",
+        "name": "Ahmedabad Basin Flyover",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_08",
+        "v": "INT_AHM_11",
+        "road_id": "R_AHM_15",
+        "name": "Ahmedabad Low-Lying Causeway",
+        "length_km": 1.3,
+        "speed_kmh": 30,
+        "road_type": "LOCAL"
+      },
+      {
+        "u": "INT_AHM_11",
+        "v": "INT_AHM_16",
+        "road_id": "R_AHM_16",
+        "name": "SVP Hospital Ellisbridge Southern Link",
+        "length_km": 1.5,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_09",
+        "v": "INT_AHM_16",
+        "road_id": "R_AHM_17",
+        "name": "Ahmedabad Eastern Medical Corridor",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_AHM_10",
+        "v": "INT_AHM_12",
+        "road_id": "R_AHM_18",
+        "name": "Ahmedabad Outer Elevated Expressway",
+        "length_km": 1.8,
+        "speed_kmh": 65,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_AHM_03",
+        "v": "INT_AHM_04",
+        "road_id": "R_AHM_19",
+        "name": "Ahmedabad Central Bypass Overpass",
+        "length_km": 0.9,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_AHM_16",
+        "v": "INT_AHM_12",
+        "road_id": "R_AHM_20",
+        "name": "Ahmedabad East Terminal Flyover",
+        "length_km": 1.9,
+        "speed_kmh": 55,
+        "road_type": "ELEVATED_BYPASS"
+      }
+    ]
+  },
+  "facilities": {
+    "source": "Ahmedabad Disaster Management Authority",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "HOSP_AHM_01",
+        "name": "Civil Hospital Asarwa",
+        "type": "HOSPITAL",
+        "lat": 23.0525,
+        "lon": 72.5895,
+        "capacity_beds": 2800,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_AHM_02",
+        "name": "SVP Hospital Ellisbridge",
+        "type": "HOSPITAL",
+        "lat": 23.034,
+        "lon": 72.5685,
+        "capacity_beds": 1500,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_AHM_03",
+        "name": "Apollo City Centre",
+        "type": "HOSPITAL",
+        "lat": 23.0425,
+        "lon": 72.558,
+        "capacity_beds": 350,
+        "has_emergency_trauma": false,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_AHM_04",
+        "name": "Sterling Hospital Memnagar",
+        "type": "HOSPITAL",
+        "lat": 23.04,
+        "lon": 72.551,
+        "capacity_beds": 300,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "FIRE_AHM_01",
+        "name": "Ahmedabad Central Fire & Rescue Station",
+        "type": "FIRE_STATION",
+        "lat": 23.044,
+        "lon": 72.558,
+        "engines": 4,
+        "boats": 2
+      },
+      {
+        "id": "FIRE_AHM_02",
+        "name": "Ahmedabad East Industrial Fire Post",
+        "type": "FIRE_STATION",
+        "lat": 23.039,
+        "lon": 72.5895,
+        "engines": 3,
+        "boats": 1
+      },
+      {
+        "id": "POL_AHM_01",
+        "name": "Ahmedabad Central Division Police HQ",
+        "type": "POLICE_STATION",
+        "lat": 23.046,
+        "lon": 72.5566,
+        "personnel": 45
+      },
+      {
+        "id": "POL_AHM_02",
+        "name": "Ahmedabad Basin Traffic Police Post",
+        "type": "POLICE_STATION",
+        "lat": 23.041,
+        "lon": 72.5804,
+        "personnel": 25
+      },
+      {
+        "id": "SHELTER_AHM_01",
+        "name": "Ahmedabad Community Flood Relief Shelter",
+        "type": "SHELTER",
+        "lat": 23.055,
+        "lon": 72.5545,
+        "capacity_people": 800
+      },
+      {
+        "id": "SHELTER_AHM_02",
+        "name": "Ahmedabad Indoor Stadium Emergency Camp",
+        "type": "SHELTER",
+        "lat": 23.05,
+        "lon": 72.593,
+        "capacity_people": 1500
+      }
+    ]
+  },
+  "sensors": {
+    "source": "Ahmedabad Smart City IoT Telemetry Network",
+    "status": "ONLINE",
+    "items": [
+      {
+        "id": "SENS_AHM_01",
+        "name": "Akhbarnagar Railway Underpass Ultrasonic Depth Gauge",
+        "type": "ULTRASONIC_DEPTH",
+        "lat": 23.046,
+        "lon": 72.5636,
+        "unit": "cm",
+        "sampling_rate_sec": 30,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_AHM_02",
+        "name": "Sabarmati East Interceptor Sluice Invert Pressure Sensor",
+        "type": "PRESSURE_TRANSDUCER",
+        "lat": 23.046,
+        "lon": 72.5636,
+        "unit": "kPa",
+        "sampling_rate_sec": 15,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_AHM_03",
+        "name": "Sabarmati Riverfront Drainage Sump Outfall Flow Sensor",
+        "type": "DOPPLER_FLOW",
+        "lat": 23.041,
+        "lon": 72.5874,
+        "unit": "m3/s",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_AHM_04",
+        "name": "Ahmedabad Western Ridge Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 23.0625,
+        "lon": 72.5475,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_AHM_05",
+        "name": "Ahmedabad Basin Central Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 23.045,
+        "lon": 72.572,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_AHM_06",
+        "name": "Ahmedabad Traffic Inundation CCTV AI Camera",
+        "type": "AI_SURVEILLANCE_CAMERA",
+        "lat": 23.045,
+        "lon": 72.565,
+        "unit": "status",
+        "sampling_rate_sec": 5,
+        "status": "ONLINE"
+      }
+    ]
+  },
+  "water_bodies": {
+    "features": [
+      {
+        "name": "Sabarmati Riverfront Reservoir",
+        "type": "RIVER",
+        "coords": [
+          [
+            72.56,
+            23.065
+          ],
+          [
+            72.568,
+            23.05
+          ],
+          [
+            72.575,
+            23.035
+          ],
+          [
+            72.58,
+            23.02
+          ]
+        ]
+      },
+      {
+        "name": "Chandrabhaga Storm Outfall Nala",
+        "type": "CANAL",
+        "coords": [
+          [
+            72.55,
+            23.06
+          ],
+          [
+            72.562,
+            23.058
+          ]
+        ]
+      }
+    ]
+  },
+  "buildings": {
+    "source": "OpenStreetMap 3D Urban Fabric",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "BLD_AHM_001",
+        "name": "Ahmedabad Urban Parcel #1",
+        "height_m": 12.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5498,
+            23.0288
+          ],
+          [
+            72.5522,
+            23.0288
+          ],
+          [
+            72.5522,
+            23.0312
+          ],
+          [
+            72.5498,
+            23.0312
+          ],
+          [
+            72.5498,
+            23.0288
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_002",
+        "name": "Ahmedabad Urban Parcel #2",
+        "height_m": 19.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5575,
+            23.0288
+          ],
+          [
+            72.5599,
+            23.0288
+          ],
+          [
+            72.5599,
+            23.0312
+          ],
+          [
+            72.5575,
+            23.0312
+          ],
+          [
+            72.5575,
+            23.0288
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_003",
+        "name": "Ahmedabad Urban Parcel #3",
+        "height_m": 26.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5652,
+            23.0288
+          ],
+          [
+            72.5676,
+            23.0288
+          ],
+          [
+            72.5676,
+            23.0312
+          ],
+          [
+            72.5652,
+            23.0312
+          ],
+          [
+            72.5652,
+            23.0288
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_004",
+        "name": "Ahmedabad Urban Parcel #4",
+        "height_m": 33.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5729,
+            23.0288
+          ],
+          [
+            72.5753,
+            23.0288
+          ],
+          [
+            72.5753,
+            23.0312
+          ],
+          [
+            72.5729,
+            23.0312
+          ],
+          [
+            72.5729,
+            23.0288
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_005",
+        "name": "Ahmedabad Urban Parcel #5",
+        "height_m": 40.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5806,
+            23.0288
+          ],
+          [
+            72.583,
+            23.0288
+          ],
+          [
+            72.583,
+            23.0312
+          ],
+          [
+            72.5806,
+            23.0312
+          ],
+          [
+            72.5806,
+            23.0288
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_006",
+        "name": "Ahmedabad Urban Parcel #6",
+        "height_m": 47.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5883,
+            23.0288
+          ],
+          [
+            72.5907,
+            23.0288
+          ],
+          [
+            72.5907,
+            23.0312
+          ],
+          [
+            72.5883,
+            23.0312
+          ],
+          [
+            72.5883,
+            23.0288
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_007",
+        "name": "Ahmedabad Urban Parcel #7",
+        "height_m": 16.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5498,
+            23.0343
+          ],
+          [
+            72.5522,
+            23.0343
+          ],
+          [
+            72.5522,
+            23.0367
+          ],
+          [
+            72.5498,
+            23.0367
+          ],
+          [
+            72.5498,
+            23.0343
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_008",
+        "name": "Ahmedabad Urban Parcel #8",
+        "height_m": 23.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5575,
+            23.0343
+          ],
+          [
+            72.5599,
+            23.0343
+          ],
+          [
+            72.5599,
+            23.0367
+          ],
+          [
+            72.5575,
+            23.0367
+          ],
+          [
+            72.5575,
+            23.0343
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_009",
+        "name": "Ahmedabad Urban Parcel #9",
+        "height_m": 30.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5652,
+            23.0343
+          ],
+          [
+            72.5676,
+            23.0343
+          ],
+          [
+            72.5676,
+            23.0367
+          ],
+          [
+            72.5652,
+            23.0367
+          ],
+          [
+            72.5652,
+            23.0343
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_010",
+        "name": "Ahmedabad Urban Parcel #10",
+        "height_m": 37.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5729,
+            23.0343
+          ],
+          [
+            72.5753,
+            23.0343
+          ],
+          [
+            72.5753,
+            23.0367
+          ],
+          [
+            72.5729,
+            23.0367
+          ],
+          [
+            72.5729,
+            23.0343
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_011",
+        "name": "Ahmedabad Urban Parcel #11",
+        "height_m": 44.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5806,
+            23.0343
+          ],
+          [
+            72.583,
+            23.0343
+          ],
+          [
+            72.583,
+            23.0367
+          ],
+          [
+            72.5806,
+            23.0367
+          ],
+          [
+            72.5806,
+            23.0343
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_012",
+        "name": "Ahmedabad Urban Parcel #12",
+        "height_m": 13.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5883,
+            23.0343
+          ],
+          [
+            72.5907,
+            23.0343
+          ],
+          [
+            72.5907,
+            23.0367
+          ],
+          [
+            72.5883,
+            23.0367
+          ],
+          [
+            72.5883,
+            23.0343
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_013",
+        "name": "Ahmedabad Urban Parcel #13",
+        "height_m": 20.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5498,
+            23.0398
+          ],
+          [
+            72.5522,
+            23.0398
+          ],
+          [
+            72.5522,
+            23.0422
+          ],
+          [
+            72.5498,
+            23.0422
+          ],
+          [
+            72.5498,
+            23.0398
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_014",
+        "name": "Ahmedabad Urban Parcel #14",
+        "height_m": 27.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5575,
+            23.0398
+          ],
+          [
+            72.5599,
+            23.0398
+          ],
+          [
+            72.5599,
+            23.0422
+          ],
+          [
+            72.5575,
+            23.0422
+          ],
+          [
+            72.5575,
+            23.0398
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_015",
+        "name": "Ahmedabad Urban Parcel #15",
+        "height_m": 34.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5652,
+            23.0398
+          ],
+          [
+            72.5676,
+            23.0398
+          ],
+          [
+            72.5676,
+            23.0422
+          ],
+          [
+            72.5652,
+            23.0422
+          ],
+          [
+            72.5652,
+            23.0398
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_016",
+        "name": "Ahmedabad Urban Parcel #16",
+        "height_m": 41.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5729,
+            23.0398
+          ],
+          [
+            72.5753,
+            23.0398
+          ],
+          [
+            72.5753,
+            23.0422
+          ],
+          [
+            72.5729,
+            23.0422
+          ],
+          [
+            72.5729,
+            23.0398
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_017",
+        "name": "Ahmedabad Urban Parcel #17",
+        "height_m": 48.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5806,
+            23.0398
+          ],
+          [
+            72.583,
+            23.0398
+          ],
+          [
+            72.583,
+            23.0422
+          ],
+          [
+            72.5806,
+            23.0422
+          ],
+          [
+            72.5806,
+            23.0398
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_018",
+        "name": "Ahmedabad Urban Parcel #18",
+        "height_m": 17.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5883,
+            23.0398
+          ],
+          [
+            72.5907,
+            23.0398
+          ],
+          [
+            72.5907,
+            23.0422
+          ],
+          [
+            72.5883,
+            23.0422
+          ],
+          [
+            72.5883,
+            23.0398
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_019",
+        "name": "Ahmedabad Urban Parcel #19",
+        "height_m": 24.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5498,
+            23.0453
+          ],
+          [
+            72.5522,
+            23.0453
+          ],
+          [
+            72.5522,
+            23.0477
+          ],
+          [
+            72.5498,
+            23.0477
+          ],
+          [
+            72.5498,
+            23.0453
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_020",
+        "name": "Ahmedabad Urban Parcel #20",
+        "height_m": 31.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5575,
+            23.0453
+          ],
+          [
+            72.5599,
+            23.0453
+          ],
+          [
+            72.5599,
+            23.0477
+          ],
+          [
+            72.5575,
+            23.0477
+          ],
+          [
+            72.5575,
+            23.0453
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_021",
+        "name": "Ahmedabad Urban Parcel #21",
+        "height_m": 38.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5652,
+            23.0453
+          ],
+          [
+            72.5676,
+            23.0453
+          ],
+          [
+            72.5676,
+            23.0477
+          ],
+          [
+            72.5652,
+            23.0477
+          ],
+          [
+            72.5652,
+            23.0453
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_022",
+        "name": "Ahmedabad Urban Parcel #22",
+        "height_m": 45.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5729,
+            23.0453
+          ],
+          [
+            72.5753,
+            23.0453
+          ],
+          [
+            72.5753,
+            23.0477
+          ],
+          [
+            72.5729,
+            23.0477
+          ],
+          [
+            72.5729,
+            23.0453
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_023",
+        "name": "Ahmedabad Urban Parcel #23",
+        "height_m": 14.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5806,
+            23.0453
+          ],
+          [
+            72.583,
+            23.0453
+          ],
+          [
+            72.583,
+            23.0477
+          ],
+          [
+            72.5806,
+            23.0477
+          ],
+          [
+            72.5806,
+            23.0453
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_024",
+        "name": "Ahmedabad Urban Parcel #24",
+        "height_m": 21.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5883,
+            23.0453
+          ],
+          [
+            72.5907,
+            23.0453
+          ],
+          [
+            72.5907,
+            23.0477
+          ],
+          [
+            72.5883,
+            23.0477
+          ],
+          [
+            72.5883,
+            23.0453
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_025",
+        "name": "Ahmedabad Urban Parcel #25",
+        "height_m": 28.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5498,
+            23.0508
+          ],
+          [
+            72.5522,
+            23.0508
+          ],
+          [
+            72.5522,
+            23.0532
+          ],
+          [
+            72.5498,
+            23.0532
+          ],
+          [
+            72.5498,
+            23.0508
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_026",
+        "name": "Ahmedabad Urban Parcel #26",
+        "height_m": 35.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5575,
+            23.0508
+          ],
+          [
+            72.5599,
+            23.0508
+          ],
+          [
+            72.5599,
+            23.0532
+          ],
+          [
+            72.5575,
+            23.0532
+          ],
+          [
+            72.5575,
+            23.0508
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_027",
+        "name": "Ahmedabad Urban Parcel #27",
+        "height_m": 42.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5652,
+            23.0508
+          ],
+          [
+            72.5676,
+            23.0508
+          ],
+          [
+            72.5676,
+            23.0532
+          ],
+          [
+            72.5652,
+            23.0532
+          ],
+          [
+            72.5652,
+            23.0508
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_028",
+        "name": "Ahmedabad Urban Parcel #28",
+        "height_m": 49.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5729,
+            23.0508
+          ],
+          [
+            72.5753,
+            23.0508
+          ],
+          [
+            72.5753,
+            23.0532
+          ],
+          [
+            72.5729,
+            23.0532
+          ],
+          [
+            72.5729,
+            23.0508
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_029",
+        "name": "Ahmedabad Urban Parcel #29",
+        "height_m": 18.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5806,
+            23.0508
+          ],
+          [
+            72.583,
+            23.0508
+          ],
+          [
+            72.583,
+            23.0532
+          ],
+          [
+            72.5806,
+            23.0532
+          ],
+          [
+            72.5806,
+            23.0508
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_030",
+        "name": "Ahmedabad Urban Parcel #30",
+        "height_m": 25.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5883,
+            23.0508
+          ],
+          [
+            72.5907,
+            23.0508
+          ],
+          [
+            72.5907,
+            23.0532
+          ],
+          [
+            72.5883,
+            23.0532
+          ],
+          [
+            72.5883,
+            23.0508
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_031",
+        "name": "Ahmedabad Urban Parcel #31",
+        "height_m": 32.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5498,
+            23.0563
+          ],
+          [
+            72.5522,
+            23.0563
+          ],
+          [
+            72.5522,
+            23.0587
+          ],
+          [
+            72.5498,
+            23.0587
+          ],
+          [
+            72.5498,
+            23.0563
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_032",
+        "name": "Ahmedabad Urban Parcel #32",
+        "height_m": 39.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5575,
+            23.0563
+          ],
+          [
+            72.5599,
+            23.0563
+          ],
+          [
+            72.5599,
+            23.0587
+          ],
+          [
+            72.5575,
+            23.0587
+          ],
+          [
+            72.5575,
+            23.0563
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_033",
+        "name": "Ahmedabad Urban Parcel #33",
+        "height_m": 46.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5652,
+            23.0563
+          ],
+          [
+            72.5676,
+            23.0563
+          ],
+          [
+            72.5676,
+            23.0587
+          ],
+          [
+            72.5652,
+            23.0587
+          ],
+          [
+            72.5652,
+            23.0563
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_034",
+        "name": "Ahmedabad Urban Parcel #34",
+        "height_m": 15.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            72.5729,
+            23.0563
+          ],
+          [
+            72.5753,
+            23.0563
+          ],
+          [
+            72.5753,
+            23.0587
+          ],
+          [
+            72.5729,
+            23.0587
+          ],
+          [
+            72.5729,
+            23.0563
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_035",
+        "name": "Ahmedabad Urban Parcel #35",
+        "height_m": 22.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5806,
+            23.0563
+          ],
+          [
+            72.583,
+            23.0563
+          ],
+          [
+            72.583,
+            23.0587
+          ],
+          [
+            72.5806,
+            23.0587
+          ],
+          [
+            72.5806,
+            23.0563
+          ]
+        ]
+      },
+      {
+        "id": "BLD_AHM_036",
+        "name": "Ahmedabad Urban Parcel #36",
+        "height_m": 29.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            72.5883,
+            23.0563
+          ],
+          [
+            72.5907,
+            23.0563
+          ],
+          [
+            72.5907,
+            23.0587
+          ],
+          [
+            72.5883,
+            23.0587
+          ],
+          [
+            72.5883,
+            23.0563
+          ]
+        ]
+      }
+    ]
+  },
+  "flood_model": {
+    "level1_model": "UFNS Kinematic Wave & Horton Infiltration Engine (v2.4)",
+    "level2_city_adaptation": {
+      "imperviousness_mean": 0.82,
+      "soil_infiltration_rate_mm_hr": 3.8,
+      "manning_surface_roughness": 0.028,
+      "calibration_factor": 1.04
+    }
+  },
+  "routing": {
+    "default_origin_node": "INT_AHM_13",
+    "default_destination_node": "INT_AHM_16",
+    "critical_blocked_road": "R_AHM_04",
+    "recommended_safe_road": "R_AHM_12",
+    "vehicle_clearance_limits_cm": {
+      "ambulance": 25.0,
+      "fire_truck": 50.0,
+      "police": 35.0,
+      "standard_vehicle": 20.0,
+      "pedestrian": 10.0
+    }
+  },
+  "predicted_flood_zone": [
+    [
+      72.5566,
+      23.04
+    ],
+    [
+      72.558,
+      23.051
+    ],
+    [
+      72.5706,
+      23.0535
+    ],
+    [
+      72.5909,
+      23.047
+    ],
+    [
+      72.5979,
+      23.0435
+    ],
+    [
+      72.5958,
+      23.036
+    ],
+    [
+      72.5839,
+      23.0335
+    ],
+    [
+      72.5671,
+      23.042
+    ],
+    [
+      72.5566,
+      23.04
+    ]
+  ],
+  "story": {
+    "basin_name": "Akhbarnagar \u2013 Subhash Bridge \u2013 Sabarmati Basin",
+    "hotspot_road": "Akhbarnagar Railway Underpass",
+    "surcharge_node": "Junction AHM02 (Sabarmati East Interceptor Sluice)",
+    "hospital_origin": "Civil Hospital Asarwa",
+    "hospital_dest": "Civil Hospital Asarwa",
+    "safe_bypass": "132ft Ring Road Elevated Overpass",
+    "elevation_high": 58.0,
+    "elevation_low": 45.0,
+    "camera_poses": {
+      "city_view": {
+        "center": [
+          23.045,
+          72.572
+        ],
+        "zoom": 13.0,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "storm_focus": {
+        "center": [
+          23.046,
+          72.5636
+        ],
+        "zoom": 13.8,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "altitude_focus": {
+        "center": [
+          23.045,
+          72.572
+        ],
+        "zoom": 14.4,
+        "pitch": 50,
+        "bearing": 20
+      },
+      "runoff_focus": {
+        "center": [
+          23.0435,
+          72.5601
+        ],
+        "zoom": 14.5,
+        "pitch": 55,
+        "bearing": 25
+      },
+      "flood_trough": {
+        "center": [
+          23.046,
+          72.5636
+        ],
+        "zoom": 14.8,
+        "pitch": 50,
+        "bearing": 15
+      },
+      "drainage_subterranean": {
+        "center": [
+          23.046,
+          72.5636
+        ],
+        "zoom": 15.0,
+        "pitch": 60,
+        "bearing": 30
+      },
+      "surcharge_manhole": {
+        "center": [
+          23.046,
+          72.5636
+        ],
+        "zoom": 15.8,
+        "pitch": 65,
+        "bearing": 35
+      },
+      "road_submerged": {
+        "center": [
+          23.046,
+          72.5636
+        ],
+        "zoom": 15.0,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "route_tracking": {
+        "center": [
+          23.045,
+          72.5755
+        ],
+        "zoom": 13.8,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "solution_overview": {
+        "center": [
+          23.045,
+          72.572
+        ],
+        "zoom": 13.0,
+        "pitch": 35,
+        "bearing": 0
+      }
+    }
+  }
+}

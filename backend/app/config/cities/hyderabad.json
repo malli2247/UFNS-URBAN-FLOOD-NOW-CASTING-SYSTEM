@@ -1,0 +1,2020 @@
+{
+  "city_id": "hyderabad",
+  "city": "Hyderabad",
+  "state": "Telangana",
+  "country": "India",
+  "timezone": "Asia/Kolkata",
+  "center": {
+    "latitude": 17.442,
+    "longitude": 78.472
+  },
+  "bounding_box": {
+    "min_lat": 17.417,
+    "max_lat": 17.467,
+    "min_lon": 78.437,
+    "max_lon": 78.507,
+    "center_lat": 17.442,
+    "center_lon": 78.472
+  },
+  "focus_basin": {
+    "name": "Begumpet \u2013 Hussain Sagar \u2013 Musi Basin",
+    "area_sqkm": 34.1,
+    "description": "Central commercial arterial linking Secunderabad with Hyderabad around the historic Hussain Sagar Lake."
+  },
+  "data_sources": {
+    "rainfall": {
+      "dataset": "Hyderabad Real-Time Precipitation Feed",
+      "source": "Open-Meteo REST API / IMD Doppler Radar Feed",
+      "api_endpoint": "https://api.open-meteo.com/v1/forecast?latitude=17.442&longitude=78.472&hourly=precipitation",
+      "spatial_resolution": "0.1\u00b0 (~10km) / Downscaled 350m",
+      "temporal_resolution": "15 minutes",
+      "status": "LIVE",
+      "radar_station": "IMD Hyderabad Doppler Weather Radar"
+    },
+    "dem": {
+      "dataset": "Hyderabad High-Resolution Urban Terrain Model",
+      "source": "Copernicus DEM GLO-30 / ISRO Cartosat-1 DSM",
+      "spatial_resolution": "30m",
+      "vertical_accuracy": "\u00b11.5m",
+      "status": "AVAILABLE",
+      "license": "Open Access (Copernicus / ISRO Bhuvan)"
+    },
+    "drainage": {
+      "dataset": "Hyderabad Stormwater Trunk Network",
+      "source": "GHMC Stormwater Drainage Wing Master Drainage Plan",
+      "status": "AVAILABLE",
+      "completeness": "Primary Arterial Conduits (12 Nodes, 11 Outfalls)",
+      "modeling_standard": "Manning-Strickler 1D Pipe Flow with 2-Way Surface Spill"
+    },
+    "roads": {
+      "dataset": "Hyderabad Arterial Highway & Transport Graph",
+      "source": "OpenStreetMap Road Network (OSM 2024)",
+      "status": "AVAILABLE",
+      "features_count": 20,
+      "routing_profile": "Emergency Multi-Modal Clearance-Aware"
+    }
+  },
+  "dem": {
+    "source": "Copernicus DEM GLO-30",
+    "status": "AVAILABLE",
+    "base_elevation_m": 535.0,
+    "min_elevation_m": 495.0,
+    "max_elevation_m": 552.0,
+    "contour_interval_m": 10.0,
+    "markers": [
+      {
+        "lat": 17.4595,
+        "lon": 78.4475,
+        "elevM": 535.0,
+        "label": "535 m AMSL",
+        "tag": "\u25b2 HIGH (Ridge)"
+      },
+      {
+        "lat": 17.4495,
+        "lon": 78.4615,
+        "elevM": 525.0,
+        "label": "525 m AMSL",
+        "tag": "\u25b2 UPPER SLOPE"
+      },
+      {
+        "lat": 17.442,
+        "lon": 78.472,
+        "elevM": 515.0,
+        "label": "515 m AMSL",
+        "tag": "\u25cf MID SLOPE"
+      },
+      {
+        "lat": 17.4345,
+        "lon": 78.4825,
+        "elevM": 505.0,
+        "label": "505 m AMSL",
+        "tag": "\u25cf LOWER BASIN"
+      },
+      {
+        "lat": 17.427,
+        "lon": 78.4965,
+        "elevM": 495.0,
+        "label": "495 m AMSL",
+        "tag": "\u25bc LOW POINT (Trough)"
+      }
+    ],
+    "troughs": [
+      {
+        "lat": 17.443,
+        "lon": 78.4636,
+        "depth_m": 6.5,
+        "name": "Begumpet SP Road Railway Underpass"
+      },
+      {
+        "lat": 17.437,
+        "lon": 78.486,
+        "depth_m": 8.5,
+        "name": "Hussain Sagar Wetland Discharge Basin"
+      }
+    ]
+  },
+  "rainfall": {
+    "source": "Open-Meteo & IMD Radar",
+    "status": "LIVE",
+    "default_intensity_mm_hr": 78.5,
+    "radar_station": "IMD Hyderabad Doppler Weather Radar",
+    "horizons": [
+      "0m",
+      "15m",
+      "30m",
+      "45m",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "drainage": {
+    "source": "GHMC Stormwater Drainage Wing",
+    "status": "AVAILABLE",
+    "capacity_multiplier": 1.0,
+    "surcharge_node_id": "HYD_M02",
+    "nodes": [
+      {
+        "id": "HYD_M01",
+        "name": "Hyderabad Western Trunk Inlet",
+        "node_type": "Inlet",
+        "lat": 17.457,
+        "lon": 78.451,
+        "elev": 530.0,
+        "inlet_cap": 2.5,
+        "row": 12,
+        "col": 3
+      },
+      {
+        "id": "HYD_M02",
+        "name": "Balkapur Nala Main Sluice",
+        "node_type": "Junction",
+        "lat": 17.443,
+        "lon": 78.4636,
+        "elev": 523.0,
+        "inlet_cap": 3.2,
+        "row": 7,
+        "col": 5
+      },
+      {
+        "id": "HYD_M03",
+        "name": "Hyderabad Central Crossing Manhole",
+        "node_type": "Manhole",
+        "lat": 17.4445,
+        "lon": 78.4685,
+        "elev": 517.0,
+        "inlet_cap": 4.0,
+        "row": 8,
+        "col": 7
+      },
+      {
+        "id": "HYD_M04",
+        "name": "Hyderabad Arterial Sump Junction",
+        "node_type": "Junction",
+        "lat": 17.447,
+        "lon": 78.4776,
+        "elev": 513.0,
+        "inlet_cap": 4.5,
+        "row": 9,
+        "col": 9
+      },
+      {
+        "id": "HYD_M05",
+        "name": "Hyderabad North Relief Collector",
+        "node_type": "Manhole",
+        "lat": 17.452,
+        "lon": 78.465,
+        "elev": 520.0,
+        "inlet_cap": 3.8,
+        "row": 10,
+        "col": 6
+      },
+      {
+        "id": "HYD_M06",
+        "name": "Hyderabad South Basin Sluice",
+        "node_type": "Inlet",
+        "lat": 17.4295,
+        "lon": 78.465,
+        "elev": 511.0,
+        "inlet_cap": 5.0,
+        "row": 4,
+        "col": 6
+      },
+      {
+        "id": "HYD_M07",
+        "name": "Hyderabad Ring Road Storm Conduit",
+        "node_type": "Manhole",
+        "lat": 17.432,
+        "lon": 78.4755,
+        "elev": 507.0,
+        "inlet_cap": 3.5,
+        "row": 4,
+        "col": 8
+      },
+      {
+        "id": "HYD_M08",
+        "name": "Hyderabad Mid-Channel Sump Pit",
+        "node_type": "Manhole",
+        "lat": 17.436,
+        "lon": 78.4825,
+        "elev": 504.0,
+        "inlet_cap": 3.0,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "HYD_M09",
+        "name": "Hyderabad Intermediate Chamber",
+        "node_type": "Junction",
+        "lat": 17.4395,
+        "lon": 78.486,
+        "elev": 501.0,
+        "inlet_cap": 4.2,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "HYD_M10",
+        "name": "Hyderabad Trough Inflow Pit",
+        "node_type": "Manhole",
+        "lat": 17.4345,
+        "lon": 78.4825,
+        "elev": 498.0,
+        "inlet_cap": 3.8,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "HYD_M11",
+        "name": "Hyderabad Floodplain Storm Bypass",
+        "node_type": "Inlet",
+        "lat": 17.426,
+        "lon": 78.4916,
+        "elev": 497.0,
+        "inlet_cap": 2.8,
+        "row": 2,
+        "col": 12
+      },
+      {
+        "id": "HYD_M12",
+        "name": "Hussain Sagar Wetland Discharge Basin Outfall Sluice",
+        "node_type": "Outfall",
+        "lat": 17.437,
+        "lon": 78.486,
+        "elev": 495.0,
+        "inlet_cap": 7.5,
+        "row": 8,
+        "col": 14
+      }
+    ],
+    "pipes": [
+      {
+        "from": "HYD_M01",
+        "to": "HYD_M02",
+        "pipe_id": "P-HY-01",
+        "diameter_m": 1.2,
+        "slope": 0.007,
+        "length_m": 1100
+      },
+      {
+        "from": "HYD_M02",
+        "to": "HYD_M03",
+        "pipe_id": "P-HY-02",
+        "diameter_m": 1.5,
+        "slope": 0.006,
+        "length_m": 850
+      },
+      {
+        "from": "HYD_M05",
+        "to": "HYD_M03",
+        "pipe_id": "P-HY-03",
+        "diameter_m": 1.2,
+        "slope": 0.005,
+        "length_m": 650
+      },
+      {
+        "from": "HYD_M03",
+        "to": "HYD_M04",
+        "pipe_id": "P-HY-04",
+        "diameter_m": 1.8,
+        "slope": 0.005,
+        "length_m": 920
+      },
+      {
+        "from": "HYD_M06",
+        "to": "HYD_M07",
+        "pipe_id": "P-HY-05",
+        "diameter_m": 1.4,
+        "slope": 0.004,
+        "length_m": 780
+      },
+      {
+        "from": "HYD_M07",
+        "to": "HYD_M08",
+        "pipe_id": "P-HY-06",
+        "diameter_m": 1.5,
+        "slope": 0.004,
+        "length_m": 1100
+      },
+      {
+        "from": "HYD_M08",
+        "to": "HYD_M09",
+        "pipe_id": "P-HY-07",
+        "diameter_m": 1.6,
+        "slope": 0.003,
+        "length_m": 820
+      },
+      {
+        "from": "HYD_M04",
+        "to": "HYD_M09",
+        "pipe_id": "P-HY-08",
+        "diameter_m": 2.0,
+        "slope": 0.004,
+        "length_m": 1450
+      },
+      {
+        "from": "HYD_M09",
+        "to": "HYD_M10",
+        "pipe_id": "P-HY-09",
+        "diameter_m": 1.8,
+        "slope": 0.003,
+        "length_m": 900
+      },
+      {
+        "from": "HYD_M11",
+        "to": "HYD_M10",
+        "pipe_id": "P-HY-10",
+        "diameter_m": 1.4,
+        "slope": 0.002,
+        "length_m": 850
+      },
+      {
+        "from": "HYD_M10",
+        "to": "HYD_M12",
+        "pipe_id": "P-HY-11",
+        "diameter_m": 2.4,
+        "slope": 0.003,
+        "length_m": 1200
+      }
+    ]
+  },
+  "roads": {
+    "source": "OpenStreetMap",
+    "status": "AVAILABLE",
+    "critical_hotspot_road_id": "R_HYD_04",
+    "intersections": {
+      "INT_HYD_01": {
+        "name": "Hyderabad West Highway Junction",
+        "lat": 17.4595,
+        "lon": 78.4475
+      },
+      "INT_HYD_02": {
+        "name": "Hyderabad Central Commercial Crossing",
+        "lat": 17.4445,
+        "lon": 78.4615
+      },
+      "INT_HYD_03": {
+        "name": "Hyderabad Market West Intersection",
+        "lat": 17.443,
+        "lon": 78.4566
+      },
+      "INT_HYD_04": {
+        "name": "Hyderabad North Relief Signal",
+        "lat": 17.452,
+        "lon": 78.465
+      },
+      "INT_HYD_05": {
+        "name": "Hyderabad Ring Road North Junction",
+        "lat": 17.4545,
+        "lon": 78.479
+      },
+      "INT_HYD_06": {
+        "name": "Hyderabad South Canal Junction",
+        "lat": 17.432,
+        "lon": 78.4615
+      },
+      "INT_HYD_07": {
+        "name": "Hyderabad Residential Sector 1",
+        "lat": 17.4295,
+        "lon": 78.472
+      },
+      "INT_HYD_08": {
+        "name": "Hyderabad Expressway Interchange",
+        "lat": 17.437,
+        "lon": 78.4825
+      },
+      "INT_HYD_09": {
+        "name": "Hyderabad Tech Corridor Gate",
+        "lat": 17.4395,
+        "lon": 78.493
+      },
+      "INT_HYD_10": {
+        "name": "Hyderabad Lake Overpass Crossing",
+        "lat": 17.4495,
+        "lon": 78.4895
+      },
+      "INT_HYD_11": {
+        "name": "Hyderabad Low-Lying Access Road",
+        "lat": 17.432,
+        "lon": 78.4825
+      },
+      "INT_HYD_12": {
+        "name": "Hyderabad East Terminal Bridge",
+        "lat": 17.4595,
+        "lon": 78.4965
+      },
+      "INT_HYD_13": {
+        "name": "Yashoda Hospital Secunderabad Gate",
+        "lat": 17.4495,
+        "lon": 78.4874
+      },
+      "INT_HYD_14": {
+        "name": "Hyderabad Central Police Station",
+        "lat": 17.442,
+        "lon": 78.4566
+      },
+      "INT_HYD_15": {
+        "name": "Hyderabad South Tech Hub",
+        "lat": 17.431,
+        "lon": 78.4804
+      },
+      "INT_HYD_16": {
+        "name": "KIMS Hospital Ministers Road Gate",
+        "lat": 17.442,
+        "lon": 78.4734
+      }
+    },
+    "road_segments": [
+      {
+        "u": "INT_HYD_01",
+        "v": "INT_HYD_13",
+        "road_id": "R_HYD_01",
+        "name": "Hyderabad Western Arterial",
+        "length_km": 1.1,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_13",
+        "v": "INT_HYD_14",
+        "road_id": "R_HYD_02",
+        "name": "Yashoda Hospital Secunderabad Link",
+        "length_km": 0.8,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_14",
+        "v": "INT_HYD_02",
+        "road_id": "R_HYD_03",
+        "name": "Hyderabad Civic Avenue",
+        "length_km": 0.7,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_02",
+        "v": "INT_HYD_03",
+        "road_id": "R_HYD_04",
+        "name": "Begumpet SP Road Railway Underpass",
+        "length_km": 0.9,
+        "speed_kmh": 40,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_02",
+        "v": "INT_HYD_04",
+        "road_id": "R_HYD_05",
+        "name": "Hyderabad North Relief Road",
+        "length_km": 1.1,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_04",
+        "v": "INT_HYD_05",
+        "road_id": "R_HYD_06",
+        "name": "Hyderabad Ring Road Arterial",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_02",
+        "v": "INT_HYD_06",
+        "road_id": "R_HYD_07",
+        "name": "Hyderabad South Canal Link",
+        "length_km": 1.6,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_06",
+        "v": "INT_HYD_07",
+        "road_id": "R_HYD_08",
+        "name": "Hyderabad Sector 1 Collector",
+        "length_km": 1.0,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_07",
+        "v": "INT_HYD_15",
+        "road_id": "R_HYD_09",
+        "name": "Hyderabad Tech Access Way",
+        "length_km": 1.2,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_15",
+        "v": "INT_HYD_08",
+        "road_id": "R_HYD_10",
+        "name": "Hyderabad Sector Arterial",
+        "length_km": 1.3,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_06",
+        "v": "INT_HYD_08",
+        "road_id": "R_HYD_11",
+        "name": "Hyderabad Southern Corridor",
+        "length_km": 2.1,
+        "speed_kmh": 55,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_05",
+        "v": "INT_HYD_10",
+        "road_id": "R_HYD_12",
+        "name": "PVNR Elevated Expressway Bypass",
+        "length_km": 2.3,
+        "speed_kmh": 60,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_HYD_08",
+        "v": "INT_HYD_09",
+        "road_id": "R_HYD_13",
+        "name": "Hyderabad Tech Corridor Road",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_09",
+        "v": "INT_HYD_10",
+        "road_id": "R_HYD_14",
+        "name": "Hyderabad Basin Flyover",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_08",
+        "v": "INT_HYD_11",
+        "road_id": "R_HYD_15",
+        "name": "Hyderabad Low-Lying Causeway",
+        "length_km": 1.3,
+        "speed_kmh": 30,
+        "road_type": "LOCAL"
+      },
+      {
+        "u": "INT_HYD_11",
+        "v": "INT_HYD_16",
+        "road_id": "R_HYD_16",
+        "name": "KIMS Hospital Ministers Road Southern Link",
+        "length_km": 1.5,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_09",
+        "v": "INT_HYD_16",
+        "road_id": "R_HYD_17",
+        "name": "Hyderabad Eastern Medical Corridor",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_HYD_10",
+        "v": "INT_HYD_12",
+        "road_id": "R_HYD_18",
+        "name": "Hyderabad Outer Elevated Expressway",
+        "length_km": 1.8,
+        "speed_kmh": 65,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_HYD_03",
+        "v": "INT_HYD_04",
+        "road_id": "R_HYD_19",
+        "name": "Hyderabad Central Bypass Overpass",
+        "length_km": 0.9,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_HYD_16",
+        "v": "INT_HYD_12",
+        "road_id": "R_HYD_20",
+        "name": "Hyderabad East Terminal Flyover",
+        "length_km": 1.9,
+        "speed_kmh": 55,
+        "road_type": "ELEVATED_BYPASS"
+      }
+    ]
+  },
+  "facilities": {
+    "source": "Hyderabad Disaster Management Authority",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "HOSP_HYD_01",
+        "name": "Yashoda Hospital Secunderabad",
+        "type": "HOSPITAL",
+        "lat": 17.4495,
+        "lon": 78.4874,
+        "capacity_beds": 800,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_HYD_02",
+        "name": "KIMS Hospital Ministers Road",
+        "type": "HOSPITAL",
+        "lat": 17.442,
+        "lon": 78.4734,
+        "capacity_beds": 1000,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_HYD_03",
+        "name": "Nizam's Institute of Medical Sciences (NIMS)",
+        "type": "HOSPITAL",
+        "lat": 17.431,
+        "lon": 78.4545,
+        "capacity_beds": 1500,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_HYD_04",
+        "name": "Sunshine Hospital Secunderabad",
+        "type": "HOSPITAL",
+        "lat": 17.452,
+        "lon": 78.4825,
+        "capacity_beds": 350,
+        "has_emergency_trauma": false,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "FIRE_HYD_01",
+        "name": "Hyderabad Central Fire & Rescue Station",
+        "type": "FIRE_STATION",
+        "lat": 17.441,
+        "lon": 78.458,
+        "engines": 4,
+        "boats": 2
+      },
+      {
+        "id": "FIRE_HYD_02",
+        "name": "Hyderabad East Industrial Fire Post",
+        "type": "FIRE_STATION",
+        "lat": 17.436,
+        "lon": 78.4895,
+        "engines": 3,
+        "boats": 1
+      },
+      {
+        "id": "POL_HYD_01",
+        "name": "Hyderabad Central Division Police HQ",
+        "type": "POLICE_STATION",
+        "lat": 17.443,
+        "lon": 78.4566,
+        "personnel": 45
+      },
+      {
+        "id": "POL_HYD_02",
+        "name": "Hyderabad Basin Traffic Police Post",
+        "type": "POLICE_STATION",
+        "lat": 17.438,
+        "lon": 78.4804,
+        "personnel": 25
+      },
+      {
+        "id": "SHELTER_HYD_01",
+        "name": "Hyderabad Community Flood Relief Shelter",
+        "type": "SHELTER",
+        "lat": 17.452,
+        "lon": 78.4545,
+        "capacity_people": 800
+      },
+      {
+        "id": "SHELTER_HYD_02",
+        "name": "Hyderabad Indoor Stadium Emergency Camp",
+        "type": "SHELTER",
+        "lat": 17.447,
+        "lon": 78.493,
+        "capacity_people": 1500
+      }
+    ]
+  },
+  "sensors": {
+    "source": "Hyderabad Smart City IoT Telemetry Network",
+    "status": "ONLINE",
+    "items": [
+      {
+        "id": "SENS_HYD_01",
+        "name": "Begumpet SP Road Railway Underpass Ultrasonic Depth Gauge",
+        "type": "ULTRASONIC_DEPTH",
+        "lat": 17.443,
+        "lon": 78.4636,
+        "unit": "cm",
+        "sampling_rate_sec": 30,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_HYD_02",
+        "name": "Balkapur Nala Main Sluice Invert Pressure Sensor",
+        "type": "PRESSURE_TRANSDUCER",
+        "lat": 17.443,
+        "lon": 78.4636,
+        "unit": "kPa",
+        "sampling_rate_sec": 15,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_HYD_03",
+        "name": "Hussain Sagar Wetland Discharge Basin Outfall Flow Sensor",
+        "type": "DOPPLER_FLOW",
+        "lat": 17.437,
+        "lon": 78.486,
+        "unit": "m3/s",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_HYD_04",
+        "name": "Hyderabad Western Ridge Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 17.4595,
+        "lon": 78.4475,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_HYD_05",
+        "name": "Hyderabad Basin Central Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 17.442,
+        "lon": 78.472,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_HYD_06",
+        "name": "Hyderabad Traffic Inundation CCTV AI Camera",
+        "type": "AI_SURVEILLANCE_CAMERA",
+        "lat": 17.442,
+        "lon": 78.465,
+        "unit": "status",
+        "sampling_rate_sec": 5,
+        "status": "ONLINE"
+      }
+    ]
+  },
+  "water_bodies": {
+    "features": [
+      {
+        "name": "Hussain Sagar Lake",
+        "type": "LAKE",
+        "coords": [
+          [
+            78.465,
+            17.42
+          ],
+          [
+            78.475,
+            17.418
+          ],
+          [
+            78.482,
+            17.428
+          ],
+          [
+            78.478,
+            17.435
+          ],
+          [
+            78.468,
+            17.432
+          ],
+          [
+            78.465,
+            17.42
+          ]
+        ]
+      },
+      {
+        "name": "Balkapur Nala Channel",
+        "type": "CANAL",
+        "coords": [
+          [
+            78.445,
+            17.448
+          ],
+          [
+            78.455,
+            17.442
+          ],
+          [
+            78.468,
+            17.432
+          ]
+        ]
+      }
+    ]
+  },
+  "buildings": {
+    "source": "OpenStreetMap 3D Urban Fabric",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "BLD_HYD_001",
+        "name": "Hyderabad Urban Parcel #1",
+        "height_m": 12.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4498,
+            17.4258
+          ],
+          [
+            78.4522,
+            17.4258
+          ],
+          [
+            78.4522,
+            17.4282
+          ],
+          [
+            78.4498,
+            17.4282
+          ],
+          [
+            78.4498,
+            17.4258
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_002",
+        "name": "Hyderabad Urban Parcel #2",
+        "height_m": 19.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4575,
+            17.4258
+          ],
+          [
+            78.4599,
+            17.4258
+          ],
+          [
+            78.4599,
+            17.4282
+          ],
+          [
+            78.4575,
+            17.4282
+          ],
+          [
+            78.4575,
+            17.4258
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_003",
+        "name": "Hyderabad Urban Parcel #3",
+        "height_m": 26.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4652,
+            17.4258
+          ],
+          [
+            78.4676,
+            17.4258
+          ],
+          [
+            78.4676,
+            17.4282
+          ],
+          [
+            78.4652,
+            17.4282
+          ],
+          [
+            78.4652,
+            17.4258
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_004",
+        "name": "Hyderabad Urban Parcel #4",
+        "height_m": 33.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4729,
+            17.4258
+          ],
+          [
+            78.4753,
+            17.4258
+          ],
+          [
+            78.4753,
+            17.4282
+          ],
+          [
+            78.4729,
+            17.4282
+          ],
+          [
+            78.4729,
+            17.4258
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_005",
+        "name": "Hyderabad Urban Parcel #5",
+        "height_m": 40.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4806,
+            17.4258
+          ],
+          [
+            78.483,
+            17.4258
+          ],
+          [
+            78.483,
+            17.4282
+          ],
+          [
+            78.4806,
+            17.4282
+          ],
+          [
+            78.4806,
+            17.4258
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_006",
+        "name": "Hyderabad Urban Parcel #6",
+        "height_m": 47.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4883,
+            17.4258
+          ],
+          [
+            78.4907,
+            17.4258
+          ],
+          [
+            78.4907,
+            17.4282
+          ],
+          [
+            78.4883,
+            17.4282
+          ],
+          [
+            78.4883,
+            17.4258
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_007",
+        "name": "Hyderabad Urban Parcel #7",
+        "height_m": 16.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4498,
+            17.4313
+          ],
+          [
+            78.4522,
+            17.4313
+          ],
+          [
+            78.4522,
+            17.4337
+          ],
+          [
+            78.4498,
+            17.4337
+          ],
+          [
+            78.4498,
+            17.4313
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_008",
+        "name": "Hyderabad Urban Parcel #8",
+        "height_m": 23.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4575,
+            17.4313
+          ],
+          [
+            78.4599,
+            17.4313
+          ],
+          [
+            78.4599,
+            17.4337
+          ],
+          [
+            78.4575,
+            17.4337
+          ],
+          [
+            78.4575,
+            17.4313
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_009",
+        "name": "Hyderabad Urban Parcel #9",
+        "height_m": 30.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4652,
+            17.4313
+          ],
+          [
+            78.4676,
+            17.4313
+          ],
+          [
+            78.4676,
+            17.4337
+          ],
+          [
+            78.4652,
+            17.4337
+          ],
+          [
+            78.4652,
+            17.4313
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_010",
+        "name": "Hyderabad Urban Parcel #10",
+        "height_m": 37.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4729,
+            17.4313
+          ],
+          [
+            78.4753,
+            17.4313
+          ],
+          [
+            78.4753,
+            17.4337
+          ],
+          [
+            78.4729,
+            17.4337
+          ],
+          [
+            78.4729,
+            17.4313
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_011",
+        "name": "Hyderabad Urban Parcel #11",
+        "height_m": 44.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4806,
+            17.4313
+          ],
+          [
+            78.483,
+            17.4313
+          ],
+          [
+            78.483,
+            17.4337
+          ],
+          [
+            78.4806,
+            17.4337
+          ],
+          [
+            78.4806,
+            17.4313
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_012",
+        "name": "Hyderabad Urban Parcel #12",
+        "height_m": 13.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4883,
+            17.4313
+          ],
+          [
+            78.4907,
+            17.4313
+          ],
+          [
+            78.4907,
+            17.4337
+          ],
+          [
+            78.4883,
+            17.4337
+          ],
+          [
+            78.4883,
+            17.4313
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_013",
+        "name": "Hyderabad Urban Parcel #13",
+        "height_m": 20.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4498,
+            17.4368
+          ],
+          [
+            78.4522,
+            17.4368
+          ],
+          [
+            78.4522,
+            17.4392
+          ],
+          [
+            78.4498,
+            17.4392
+          ],
+          [
+            78.4498,
+            17.4368
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_014",
+        "name": "Hyderabad Urban Parcel #14",
+        "height_m": 27.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4575,
+            17.4368
+          ],
+          [
+            78.4599,
+            17.4368
+          ],
+          [
+            78.4599,
+            17.4392
+          ],
+          [
+            78.4575,
+            17.4392
+          ],
+          [
+            78.4575,
+            17.4368
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_015",
+        "name": "Hyderabad Urban Parcel #15",
+        "height_m": 34.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4652,
+            17.4368
+          ],
+          [
+            78.4676,
+            17.4368
+          ],
+          [
+            78.4676,
+            17.4392
+          ],
+          [
+            78.4652,
+            17.4392
+          ],
+          [
+            78.4652,
+            17.4368
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_016",
+        "name": "Hyderabad Urban Parcel #16",
+        "height_m": 41.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4729,
+            17.4368
+          ],
+          [
+            78.4753,
+            17.4368
+          ],
+          [
+            78.4753,
+            17.4392
+          ],
+          [
+            78.4729,
+            17.4392
+          ],
+          [
+            78.4729,
+            17.4368
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_017",
+        "name": "Hyderabad Urban Parcel #17",
+        "height_m": 48.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4806,
+            17.4368
+          ],
+          [
+            78.483,
+            17.4368
+          ],
+          [
+            78.483,
+            17.4392
+          ],
+          [
+            78.4806,
+            17.4392
+          ],
+          [
+            78.4806,
+            17.4368
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_018",
+        "name": "Hyderabad Urban Parcel #18",
+        "height_m": 17.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4883,
+            17.4368
+          ],
+          [
+            78.4907,
+            17.4368
+          ],
+          [
+            78.4907,
+            17.4392
+          ],
+          [
+            78.4883,
+            17.4392
+          ],
+          [
+            78.4883,
+            17.4368
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_019",
+        "name": "Hyderabad Urban Parcel #19",
+        "height_m": 24.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4498,
+            17.4423
+          ],
+          [
+            78.4522,
+            17.4423
+          ],
+          [
+            78.4522,
+            17.4447
+          ],
+          [
+            78.4498,
+            17.4447
+          ],
+          [
+            78.4498,
+            17.4423
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_020",
+        "name": "Hyderabad Urban Parcel #20",
+        "height_m": 31.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4575,
+            17.4423
+          ],
+          [
+            78.4599,
+            17.4423
+          ],
+          [
+            78.4599,
+            17.4447
+          ],
+          [
+            78.4575,
+            17.4447
+          ],
+          [
+            78.4575,
+            17.4423
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_021",
+        "name": "Hyderabad Urban Parcel #21",
+        "height_m": 38.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4652,
+            17.4423
+          ],
+          [
+            78.4676,
+            17.4423
+          ],
+          [
+            78.4676,
+            17.4447
+          ],
+          [
+            78.4652,
+            17.4447
+          ],
+          [
+            78.4652,
+            17.4423
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_022",
+        "name": "Hyderabad Urban Parcel #22",
+        "height_m": 45.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4729,
+            17.4423
+          ],
+          [
+            78.4753,
+            17.4423
+          ],
+          [
+            78.4753,
+            17.4447
+          ],
+          [
+            78.4729,
+            17.4447
+          ],
+          [
+            78.4729,
+            17.4423
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_023",
+        "name": "Hyderabad Urban Parcel #23",
+        "height_m": 14.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4806,
+            17.4423
+          ],
+          [
+            78.483,
+            17.4423
+          ],
+          [
+            78.483,
+            17.4447
+          ],
+          [
+            78.4806,
+            17.4447
+          ],
+          [
+            78.4806,
+            17.4423
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_024",
+        "name": "Hyderabad Urban Parcel #24",
+        "height_m": 21.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4883,
+            17.4423
+          ],
+          [
+            78.4907,
+            17.4423
+          ],
+          [
+            78.4907,
+            17.4447
+          ],
+          [
+            78.4883,
+            17.4447
+          ],
+          [
+            78.4883,
+            17.4423
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_025",
+        "name": "Hyderabad Urban Parcel #25",
+        "height_m": 28.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4498,
+            17.4478
+          ],
+          [
+            78.4522,
+            17.4478
+          ],
+          [
+            78.4522,
+            17.4502
+          ],
+          [
+            78.4498,
+            17.4502
+          ],
+          [
+            78.4498,
+            17.4478
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_026",
+        "name": "Hyderabad Urban Parcel #26",
+        "height_m": 35.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4575,
+            17.4478
+          ],
+          [
+            78.4599,
+            17.4478
+          ],
+          [
+            78.4599,
+            17.4502
+          ],
+          [
+            78.4575,
+            17.4502
+          ],
+          [
+            78.4575,
+            17.4478
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_027",
+        "name": "Hyderabad Urban Parcel #27",
+        "height_m": 42.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4652,
+            17.4478
+          ],
+          [
+            78.4676,
+            17.4478
+          ],
+          [
+            78.4676,
+            17.4502
+          ],
+          [
+            78.4652,
+            17.4502
+          ],
+          [
+            78.4652,
+            17.4478
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_028",
+        "name": "Hyderabad Urban Parcel #28",
+        "height_m": 49.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4729,
+            17.4478
+          ],
+          [
+            78.4753,
+            17.4478
+          ],
+          [
+            78.4753,
+            17.4502
+          ],
+          [
+            78.4729,
+            17.4502
+          ],
+          [
+            78.4729,
+            17.4478
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_029",
+        "name": "Hyderabad Urban Parcel #29",
+        "height_m": 18.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4806,
+            17.4478
+          ],
+          [
+            78.483,
+            17.4478
+          ],
+          [
+            78.483,
+            17.4502
+          ],
+          [
+            78.4806,
+            17.4502
+          ],
+          [
+            78.4806,
+            17.4478
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_030",
+        "name": "Hyderabad Urban Parcel #30",
+        "height_m": 25.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4883,
+            17.4478
+          ],
+          [
+            78.4907,
+            17.4478
+          ],
+          [
+            78.4907,
+            17.4502
+          ],
+          [
+            78.4883,
+            17.4502
+          ],
+          [
+            78.4883,
+            17.4478
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_031",
+        "name": "Hyderabad Urban Parcel #31",
+        "height_m": 32.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4498,
+            17.4533
+          ],
+          [
+            78.4522,
+            17.4533
+          ],
+          [
+            78.4522,
+            17.4557
+          ],
+          [
+            78.4498,
+            17.4557
+          ],
+          [
+            78.4498,
+            17.4533
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_032",
+        "name": "Hyderabad Urban Parcel #32",
+        "height_m": 39.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4575,
+            17.4533
+          ],
+          [
+            78.4599,
+            17.4533
+          ],
+          [
+            78.4599,
+            17.4557
+          ],
+          [
+            78.4575,
+            17.4557
+          ],
+          [
+            78.4575,
+            17.4533
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_033",
+        "name": "Hyderabad Urban Parcel #33",
+        "height_m": 46.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4652,
+            17.4533
+          ],
+          [
+            78.4676,
+            17.4533
+          ],
+          [
+            78.4676,
+            17.4557
+          ],
+          [
+            78.4652,
+            17.4557
+          ],
+          [
+            78.4652,
+            17.4533
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_034",
+        "name": "Hyderabad Urban Parcel #34",
+        "height_m": 15.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            78.4729,
+            17.4533
+          ],
+          [
+            78.4753,
+            17.4533
+          ],
+          [
+            78.4753,
+            17.4557
+          ],
+          [
+            78.4729,
+            17.4557
+          ],
+          [
+            78.4729,
+            17.4533
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_035",
+        "name": "Hyderabad Urban Parcel #35",
+        "height_m": 22.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4806,
+            17.4533
+          ],
+          [
+            78.483,
+            17.4533
+          ],
+          [
+            78.483,
+            17.4557
+          ],
+          [
+            78.4806,
+            17.4557
+          ],
+          [
+            78.4806,
+            17.4533
+          ]
+        ]
+      },
+      {
+        "id": "BLD_HYD_036",
+        "name": "Hyderabad Urban Parcel #36",
+        "height_m": 29.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            78.4883,
+            17.4533
+          ],
+          [
+            78.4907,
+            17.4533
+          ],
+          [
+            78.4907,
+            17.4557
+          ],
+          [
+            78.4883,
+            17.4557
+          ],
+          [
+            78.4883,
+            17.4533
+          ]
+        ]
+      }
+    ]
+  },
+  "flood_model": {
+    "level1_model": "UFNS Kinematic Wave & Horton Infiltration Engine (v2.4)",
+    "level2_city_adaptation": {
+      "imperviousness_mean": 0.82,
+      "soil_infiltration_rate_mm_hr": 3.8,
+      "manning_surface_roughness": 0.028,
+      "calibration_factor": 1.04
+    }
+  },
+  "routing": {
+    "default_origin_node": "INT_HYD_13",
+    "default_destination_node": "INT_HYD_16",
+    "critical_blocked_road": "R_HYD_04",
+    "recommended_safe_road": "R_HYD_12",
+    "vehicle_clearance_limits_cm": {
+      "ambulance": 25.0,
+      "fire_truck": 50.0,
+      "police": 35.0,
+      "standard_vehicle": 20.0,
+      "pedestrian": 10.0
+    }
+  },
+  "predicted_flood_zone": [
+    [
+      78.4566,
+      17.437
+    ],
+    [
+      78.458,
+      17.448
+    ],
+    [
+      78.4706,
+      17.4505
+    ],
+    [
+      78.4895,
+      17.443
+    ],
+    [
+      78.4965,
+      17.4395
+    ],
+    [
+      78.4944,
+      17.432
+    ],
+    [
+      78.4825,
+      17.4295
+    ],
+    [
+      78.4671,
+      17.439
+    ],
+    [
+      78.4566,
+      17.437
+    ]
+  ],
+  "story": {
+    "basin_name": "Begumpet \u2013 Hussain Sagar \u2013 Musi Basin",
+    "hotspot_road": "Begumpet SP Road Railway Underpass",
+    "surcharge_node": "Junction HYD02 (Balkapur Nala Main Sluice)",
+    "hospital_origin": "Yashoda Hospital Secunderabad",
+    "hospital_dest": "KIMS Hospital Ministers Road",
+    "safe_bypass": "PVNR Elevated Expressway Bypass",
+    "elevation_high": 535.0,
+    "elevation_low": 495.0,
+    "camera_poses": {
+      "city_view": {
+        "center": [
+          17.442,
+          78.472
+        ],
+        "zoom": 13.0,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "storm_focus": {
+        "center": [
+          17.443,
+          78.4636
+        ],
+        "zoom": 13.8,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "altitude_focus": {
+        "center": [
+          17.442,
+          78.472
+        ],
+        "zoom": 14.4,
+        "pitch": 50,
+        "bearing": 20
+      },
+      "runoff_focus": {
+        "center": [
+          17.4405,
+          78.4601
+        ],
+        "zoom": 14.5,
+        "pitch": 55,
+        "bearing": 25
+      },
+      "flood_trough": {
+        "center": [
+          17.443,
+          78.4636
+        ],
+        "zoom": 14.8,
+        "pitch": 50,
+        "bearing": 15
+      },
+      "drainage_subterranean": {
+        "center": [
+          17.443,
+          78.4636
+        ],
+        "zoom": 15.0,
+        "pitch": 60,
+        "bearing": 30
+      },
+      "surcharge_manhole": {
+        "center": [
+          17.443,
+          78.4636
+        ],
+        "zoom": 15.8,
+        "pitch": 65,
+        "bearing": 35
+      },
+      "road_submerged": {
+        "center": [
+          17.443,
+          78.4636
+        ],
+        "zoom": 15.0,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "route_tracking": {
+        "center": [
+          17.442,
+          78.4755
+        ],
+        "zoom": 13.8,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "solution_overview": {
+        "center": [
+          17.442,
+          78.472
+        ],
+        "zoom": 13.0,
+        "pitch": 35,
+        "bearing": 0
+      }
+    }
+  }
+}

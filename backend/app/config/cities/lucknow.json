@@ -1,0 +1,2012 @@
+{
+  "city_id": "lucknow",
+  "city": "Lucknow",
+  "state": "Uttar Pradesh",
+  "country": "India",
+  "timezone": "Asia/Kolkata",
+  "center": {
+    "latitude": 26.848,
+    "longitude": 80.938
+  },
+  "bounding_box": {
+    "min_lat": 26.823,
+    "max_lat": 26.873,
+    "min_lon": 80.903,
+    "max_lon": 80.973,
+    "center_lat": 26.848,
+    "center_lon": 80.938
+  },
+  "focus_basin": {
+    "name": "Mawaiya \u2013 Charbagh \u2013 Gomti Riverfront Basin",
+    "area_sqkm": 31.0,
+    "description": "Historic administrative heart connecting Charbagh junction to the Gomti Riverfront lowlands."
+  },
+  "data_sources": {
+    "rainfall": {
+      "dataset": "Lucknow Real-Time Precipitation Feed",
+      "source": "Open-Meteo REST API / IMD Doppler Radar Feed",
+      "api_endpoint": "https://api.open-meteo.com/v1/forecast?latitude=26.848&longitude=80.938&hourly=precipitation",
+      "spatial_resolution": "0.1\u00b0 (~10km) / Downscaled 350m",
+      "temporal_resolution": "15 minutes",
+      "status": "LIVE",
+      "radar_station": "IMD Lucknow Amausi Doppler Radar"
+    },
+    "dem": {
+      "dataset": "Lucknow High-Resolution Urban Terrain Model",
+      "source": "Copernicus DEM GLO-30 / ISRO Cartosat-1 DSM",
+      "spatial_resolution": "30m",
+      "vertical_accuracy": "\u00b11.5m",
+      "status": "AVAILABLE",
+      "license": "Open Access (Copernicus / ISRO Bhuvan)"
+    },
+    "drainage": {
+      "dataset": "Lucknow Stormwater Trunk Network",
+      "source": "LMC & Jal Sansthan Stormwater Division Master Drainage Plan",
+      "status": "AVAILABLE",
+      "completeness": "Primary Arterial Conduits (12 Nodes, 11 Outfalls)",
+      "modeling_standard": "Manning-Strickler 1D Pipe Flow with 2-Way Surface Spill"
+    },
+    "roads": {
+      "dataset": "Lucknow Arterial Highway & Transport Graph",
+      "source": "OpenStreetMap Road Network (OSM 2024)",
+      "status": "AVAILABLE",
+      "features_count": 20,
+      "routing_profile": "Emergency Multi-Modal Clearance-Aware"
+    }
+  },
+  "dem": {
+    "source": "Copernicus DEM GLO-30",
+    "status": "AVAILABLE",
+    "base_elevation_m": 128.0,
+    "min_elevation_m": 116.0,
+    "max_elevation_m": 136.0,
+    "contour_interval_m": 3.0,
+    "markers": [
+      {
+        "lat": 26.8655,
+        "lon": 80.9135,
+        "elevM": 128.0,
+        "label": "128 m AMSL",
+        "tag": "\u25b2 HIGH (Ridge)"
+      },
+      {
+        "lat": 26.8555,
+        "lon": 80.9275,
+        "elevM": 125.0,
+        "label": "125 m AMSL",
+        "tag": "\u25b2 UPPER SLOPE"
+      },
+      {
+        "lat": 26.848,
+        "lon": 80.938,
+        "elevM": 122.0,
+        "label": "122 m AMSL",
+        "tag": "\u25cf MID SLOPE"
+      },
+      {
+        "lat": 26.8405,
+        "lon": 80.9485,
+        "elevM": 119.0,
+        "label": "119 m AMSL",
+        "tag": "\u25cf LOWER BASIN"
+      },
+      {
+        "lat": 26.833,
+        "lon": 80.9625,
+        "elevM": 116.0,
+        "label": "116 m AMSL",
+        "tag": "\u25bc LOW POINT (Trough)"
+      }
+    ],
+    "troughs": [
+      {
+        "lat": 26.8455,
+        "lon": 80.9254,
+        "depth_m": 6.5,
+        "name": "Mawaiya Railway Underpass"
+      },
+      {
+        "lat": 26.8555,
+        "lon": 80.9555,
+        "depth_m": 8.5,
+        "name": "Gomti Riverfront Floodplain Terrace"
+      }
+    ]
+  },
+  "rainfall": {
+    "source": "Open-Meteo & IMD Radar",
+    "status": "LIVE",
+    "default_intensity_mm_hr": 78.5,
+    "radar_station": "IMD Lucknow Amausi Doppler Radar",
+    "horizons": [
+      "0m",
+      "15m",
+      "30m",
+      "45m",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "drainage": {
+    "source": "LMC & Jal Sansthan Stormwater Division",
+    "status": "AVAILABLE",
+    "capacity_multiplier": 1.0,
+    "surcharge_node_id": "LUC_M02",
+    "nodes": [
+      {
+        "id": "LUC_M01",
+        "name": "Lucknow Western Trunk Inlet",
+        "node_type": "Inlet",
+        "lat": 26.863,
+        "lon": 80.917,
+        "elev": 126.5,
+        "inlet_cap": 2.5,
+        "row": 12,
+        "col": 3
+      },
+      {
+        "id": "LUC_M02",
+        "name": "Gomti Left Bank Storm Collector",
+        "node_type": "Junction",
+        "lat": 26.8455,
+        "lon": 80.9254,
+        "elev": 124.4,
+        "inlet_cap": 3.2,
+        "row": 6,
+        "col": 4
+      },
+      {
+        "id": "LUC_M03",
+        "name": "Lucknow Central Crossing Manhole",
+        "node_type": "Manhole",
+        "lat": 26.8505,
+        "lon": 80.9345,
+        "elev": 122.6,
+        "inlet_cap": 4.0,
+        "row": 8,
+        "col": 7
+      },
+      {
+        "id": "LUC_M04",
+        "name": "Lucknow Arterial Sump Junction",
+        "node_type": "Junction",
+        "lat": 26.853,
+        "lon": 80.9436,
+        "elev": 121.4,
+        "inlet_cap": 4.5,
+        "row": 9,
+        "col": 9
+      },
+      {
+        "id": "LUC_M05",
+        "name": "Lucknow North Relief Collector",
+        "node_type": "Manhole",
+        "lat": 26.858,
+        "lon": 80.931,
+        "elev": 123.5,
+        "inlet_cap": 3.8,
+        "row": 10,
+        "col": 6
+      },
+      {
+        "id": "LUC_M06",
+        "name": "Lucknow South Basin Sluice",
+        "node_type": "Inlet",
+        "lat": 26.8355,
+        "lon": 80.931,
+        "elev": 120.8,
+        "inlet_cap": 5.0,
+        "row": 4,
+        "col": 6
+      },
+      {
+        "id": "LUC_M07",
+        "name": "Lucknow Ring Road Storm Conduit",
+        "node_type": "Manhole",
+        "lat": 26.838,
+        "lon": 80.9415,
+        "elev": 119.6,
+        "inlet_cap": 3.5,
+        "row": 4,
+        "col": 8
+      },
+      {
+        "id": "LUC_M08",
+        "name": "Lucknow Mid-Channel Sump Pit",
+        "node_type": "Manhole",
+        "lat": 26.842,
+        "lon": 80.9485,
+        "elev": 118.7,
+        "inlet_cap": 3.0,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "LUC_M09",
+        "name": "Lucknow Intermediate Chamber",
+        "node_type": "Junction",
+        "lat": 26.8455,
+        "lon": 80.952,
+        "elev": 117.8,
+        "inlet_cap": 4.2,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "LUC_M10",
+        "name": "Lucknow Trough Inflow Pit",
+        "node_type": "Manhole",
+        "lat": 26.853,
+        "lon": 80.952,
+        "elev": 116.9,
+        "inlet_cap": 3.8,
+        "row": 9,
+        "col": 11
+      },
+      {
+        "id": "LUC_M11",
+        "name": "Lucknow Floodplain Storm Bypass",
+        "node_type": "Inlet",
+        "lat": 26.832,
+        "lon": 80.9576,
+        "elev": 116.6,
+        "inlet_cap": 2.8,
+        "row": 2,
+        "col": 12
+      },
+      {
+        "id": "LUC_M12",
+        "name": "Gomti Riverfront Floodplain Terrace Outfall Sluice",
+        "node_type": "Outfall",
+        "lat": 26.8555,
+        "lon": 80.9555,
+        "elev": 116.0,
+        "inlet_cap": 7.5,
+        "row": 8,
+        "col": 14
+      }
+    ],
+    "pipes": [
+      {
+        "from": "LUC_M01",
+        "to": "LUC_M02",
+        "pipe_id": "P-LU-01",
+        "diameter_m": 1.2,
+        "slope": 0.007,
+        "length_m": 1100
+      },
+      {
+        "from": "LUC_M02",
+        "to": "LUC_M03",
+        "pipe_id": "P-LU-02",
+        "diameter_m": 1.5,
+        "slope": 0.006,
+        "length_m": 850
+      },
+      {
+        "from": "LUC_M05",
+        "to": "LUC_M03",
+        "pipe_id": "P-LU-03",
+        "diameter_m": 1.2,
+        "slope": 0.005,
+        "length_m": 650
+      },
+      {
+        "from": "LUC_M03",
+        "to": "LUC_M04",
+        "pipe_id": "P-LU-04",
+        "diameter_m": 1.8,
+        "slope": 0.005,
+        "length_m": 920
+      },
+      {
+        "from": "LUC_M06",
+        "to": "LUC_M07",
+        "pipe_id": "P-LU-05",
+        "diameter_m": 1.4,
+        "slope": 0.004,
+        "length_m": 780
+      },
+      {
+        "from": "LUC_M07",
+        "to": "LUC_M08",
+        "pipe_id": "P-LU-06",
+        "diameter_m": 1.5,
+        "slope": 0.004,
+        "length_m": 1100
+      },
+      {
+        "from": "LUC_M08",
+        "to": "LUC_M09",
+        "pipe_id": "P-LU-07",
+        "diameter_m": 1.6,
+        "slope": 0.003,
+        "length_m": 820
+      },
+      {
+        "from": "LUC_M04",
+        "to": "LUC_M09",
+        "pipe_id": "P-LU-08",
+        "diameter_m": 2.0,
+        "slope": 0.004,
+        "length_m": 1450
+      },
+      {
+        "from": "LUC_M09",
+        "to": "LUC_M10",
+        "pipe_id": "P-LU-09",
+        "diameter_m": 1.8,
+        "slope": 0.003,
+        "length_m": 900
+      },
+      {
+        "from": "LUC_M11",
+        "to": "LUC_M10",
+        "pipe_id": "P-LU-10",
+        "diameter_m": 1.4,
+        "slope": 0.002,
+        "length_m": 850
+      },
+      {
+        "from": "LUC_M10",
+        "to": "LUC_M12",
+        "pipe_id": "P-LU-11",
+        "diameter_m": 2.4,
+        "slope": 0.003,
+        "length_m": 1200
+      }
+    ]
+  },
+  "roads": {
+    "source": "OpenStreetMap",
+    "status": "AVAILABLE",
+    "critical_hotspot_road_id": "R_LUC_04",
+    "intersections": {
+      "INT_LUC_01": {
+        "name": "Lucknow West Highway Junction",
+        "lat": 26.8655,
+        "lon": 80.9135
+      },
+      "INT_LUC_02": {
+        "name": "Lucknow Central Commercial Crossing",
+        "lat": 26.8505,
+        "lon": 80.9275
+      },
+      "INT_LUC_03": {
+        "name": "Lucknow Market West Intersection",
+        "lat": 26.8455,
+        "lon": 80.9184
+      },
+      "INT_LUC_04": {
+        "name": "Lucknow North Relief Signal",
+        "lat": 26.858,
+        "lon": 80.931
+      },
+      "INT_LUC_05": {
+        "name": "Lucknow Ring Road North Junction",
+        "lat": 26.8605,
+        "lon": 80.945
+      },
+      "INT_LUC_06": {
+        "name": "Lucknow South Canal Junction",
+        "lat": 26.838,
+        "lon": 80.9275
+      },
+      "INT_LUC_07": {
+        "name": "Lucknow Residential Sector 1",
+        "lat": 26.8355,
+        "lon": 80.938
+      },
+      "INT_LUC_08": {
+        "name": "Lucknow Expressway Interchange",
+        "lat": 26.843,
+        "lon": 80.9485
+      },
+      "INT_LUC_09": {
+        "name": "Lucknow Tech Corridor Gate",
+        "lat": 26.8455,
+        "lon": 80.959
+      },
+      "INT_LUC_10": {
+        "name": "Lucknow Lake Overpass Crossing",
+        "lat": 26.8555,
+        "lon": 80.9555
+      },
+      "INT_LUC_11": {
+        "name": "Lucknow Low-Lying Access Road",
+        "lat": 26.8505,
+        "lon": 80.952
+      },
+      "INT_LUC_12": {
+        "name": "Lucknow East Terminal Bridge",
+        "lat": 26.8655,
+        "lon": 80.9625
+      },
+      "INT_LUC_13": {
+        "name": "KGMU Trauma Centre Chowk Gate",
+        "lat": 26.8605,
+        "lon": 80.9205
+      },
+      "INT_LUC_14": {
+        "name": "Lucknow Central Police Station",
+        "lat": 26.848,
+        "lon": 80.9226
+      },
+      "INT_LUC_15": {
+        "name": "Lucknow South Tech Hub",
+        "lat": 26.837,
+        "lon": 80.9464
+      },
+      "INT_LUC_16": {
+        "name": "Sanjay Gandhi PGIMS (SGPGI) Gate",
+        "lat": 26.8305,
+        "lon": 80.9625
+      }
+    },
+    "road_segments": [
+      {
+        "u": "INT_LUC_01",
+        "v": "INT_LUC_13",
+        "road_id": "R_LUC_01",
+        "name": "Lucknow Western Arterial",
+        "length_km": 1.1,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_13",
+        "v": "INT_LUC_14",
+        "road_id": "R_LUC_02",
+        "name": "KGMU Trauma Centre Chowk Link",
+        "length_km": 0.8,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_14",
+        "v": "INT_LUC_02",
+        "road_id": "R_LUC_03",
+        "name": "Lucknow Civic Avenue",
+        "length_km": 0.7,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_02",
+        "v": "INT_LUC_03",
+        "road_id": "R_LUC_04",
+        "name": "Mawaiya Railway Underpass",
+        "length_km": 0.9,
+        "speed_kmh": 40,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_02",
+        "v": "INT_LUC_04",
+        "road_id": "R_LUC_05",
+        "name": "Lucknow North Relief Road",
+        "length_km": 1.1,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_04",
+        "v": "INT_LUC_05",
+        "road_id": "R_LUC_06",
+        "name": "Lucknow Ring Road Arterial",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_02",
+        "v": "INT_LUC_06",
+        "road_id": "R_LUC_07",
+        "name": "Lucknow South Canal Link",
+        "length_km": 1.6,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_06",
+        "v": "INT_LUC_07",
+        "road_id": "R_LUC_08",
+        "name": "Lucknow Sector 1 Collector",
+        "length_km": 1.0,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_07",
+        "v": "INT_LUC_15",
+        "road_id": "R_LUC_09",
+        "name": "Lucknow Tech Access Way",
+        "length_km": 1.2,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_15",
+        "v": "INT_LUC_08",
+        "road_id": "R_LUC_10",
+        "name": "Lucknow Sector Arterial",
+        "length_km": 1.3,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_06",
+        "v": "INT_LUC_08",
+        "road_id": "R_LUC_11",
+        "name": "Lucknow Southern Corridor",
+        "length_km": 2.1,
+        "speed_kmh": 55,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_05",
+        "v": "INT_LUC_10",
+        "road_id": "R_LUC_12",
+        "name": "Shaheed Path Elevated Expressway Corridor",
+        "length_km": 2.3,
+        "speed_kmh": 60,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_LUC_08",
+        "v": "INT_LUC_09",
+        "road_id": "R_LUC_13",
+        "name": "Lucknow Tech Corridor Road",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_09",
+        "v": "INT_LUC_10",
+        "road_id": "R_LUC_14",
+        "name": "Lucknow Basin Flyover",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_08",
+        "v": "INT_LUC_11",
+        "road_id": "R_LUC_15",
+        "name": "Lucknow Low-Lying Causeway",
+        "length_km": 1.3,
+        "speed_kmh": 30,
+        "road_type": "LOCAL"
+      },
+      {
+        "u": "INT_LUC_11",
+        "v": "INT_LUC_16",
+        "road_id": "R_LUC_16",
+        "name": "Sanjay Gandhi PGIMS (SGPGI) Southern Link",
+        "length_km": 1.5,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_09",
+        "v": "INT_LUC_16",
+        "road_id": "R_LUC_17",
+        "name": "Lucknow Eastern Medical Corridor",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_LUC_10",
+        "v": "INT_LUC_12",
+        "road_id": "R_LUC_18",
+        "name": "Lucknow Outer Elevated Expressway",
+        "length_km": 1.8,
+        "speed_kmh": 65,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_LUC_03",
+        "v": "INT_LUC_04",
+        "road_id": "R_LUC_19",
+        "name": "Lucknow Central Bypass Overpass",
+        "length_km": 0.9,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_LUC_16",
+        "v": "INT_LUC_12",
+        "road_id": "R_LUC_20",
+        "name": "Lucknow East Terminal Flyover",
+        "length_km": 1.9,
+        "speed_kmh": 55,
+        "road_type": "ELEVATED_BYPASS"
+      }
+    ]
+  },
+  "facilities": {
+    "source": "Lucknow Disaster Management Authority",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "HOSP_LUC_01",
+        "name": "KGMU Trauma Centre Chowk",
+        "type": "HOSPITAL",
+        "lat": 26.8605,
+        "lon": 80.9205,
+        "capacity_beds": 2500,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_LUC_02",
+        "name": "Sanjay Gandhi PGIMS (SGPGI)",
+        "type": "HOSPITAL",
+        "lat": 26.8305,
+        "lon": 80.9625,
+        "capacity_beds": 1400,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_LUC_03",
+        "name": "Medanta Hospital Lucknow",
+        "type": "HOSPITAL",
+        "lat": 26.833,
+        "lon": 80.966,
+        "capacity_beds": 1000,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_LUC_04",
+        "name": "Civil Hospital Hazratganj",
+        "type": "HOSPITAL",
+        "lat": 26.852,
+        "lon": 80.9415,
+        "capacity_beds": 400,
+        "has_emergency_trauma": false,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "FIRE_LUC_01",
+        "name": "Lucknow Central Fire & Rescue Station",
+        "type": "FIRE_STATION",
+        "lat": 26.847,
+        "lon": 80.924,
+        "engines": 4,
+        "boats": 2
+      },
+      {
+        "id": "FIRE_LUC_02",
+        "name": "Lucknow East Industrial Fire Post",
+        "type": "FIRE_STATION",
+        "lat": 26.842,
+        "lon": 80.9555,
+        "engines": 3,
+        "boats": 1
+      },
+      {
+        "id": "POL_LUC_01",
+        "name": "Lucknow Central Division Police HQ",
+        "type": "POLICE_STATION",
+        "lat": 26.849,
+        "lon": 80.9226,
+        "personnel": 45
+      },
+      {
+        "id": "POL_LUC_02",
+        "name": "Lucknow Basin Traffic Police Post",
+        "type": "POLICE_STATION",
+        "lat": 26.844,
+        "lon": 80.9464,
+        "personnel": 25
+      },
+      {
+        "id": "SHELTER_LUC_01",
+        "name": "Lucknow Community Flood Relief Shelter",
+        "type": "SHELTER",
+        "lat": 26.858,
+        "lon": 80.9205,
+        "capacity_people": 800
+      },
+      {
+        "id": "SHELTER_LUC_02",
+        "name": "Lucknow Indoor Stadium Emergency Camp",
+        "type": "SHELTER",
+        "lat": 26.853,
+        "lon": 80.959,
+        "capacity_people": 1500
+      }
+    ]
+  },
+  "sensors": {
+    "source": "Lucknow Smart City IoT Telemetry Network",
+    "status": "ONLINE",
+    "items": [
+      {
+        "id": "SENS_LUC_01",
+        "name": "Mawaiya Railway Underpass Ultrasonic Depth Gauge",
+        "type": "ULTRASONIC_DEPTH",
+        "lat": 26.8455,
+        "lon": 80.9254,
+        "unit": "cm",
+        "sampling_rate_sec": 30,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_LUC_02",
+        "name": "Gomti Left Bank Storm Collector Invert Pressure Sensor",
+        "type": "PRESSURE_TRANSDUCER",
+        "lat": 26.8455,
+        "lon": 80.9254,
+        "unit": "kPa",
+        "sampling_rate_sec": 15,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_LUC_03",
+        "name": "Gomti Riverfront Floodplain Terrace Outfall Flow Sensor",
+        "type": "DOPPLER_FLOW",
+        "lat": 26.8555,
+        "lon": 80.9555,
+        "unit": "m3/s",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_LUC_04",
+        "name": "Lucknow Western Ridge Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 26.8655,
+        "lon": 80.9135,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_LUC_05",
+        "name": "Lucknow Basin Central Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 26.848,
+        "lon": 80.938,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_LUC_06",
+        "name": "Lucknow Traffic Inundation CCTV AI Camera",
+        "type": "AI_SURVEILLANCE_CAMERA",
+        "lat": 26.8445,
+        "lon": 80.9268,
+        "unit": "status",
+        "sampling_rate_sec": 5,
+        "status": "ONLINE"
+      }
+    ]
+  },
+  "water_bodies": {
+    "features": [
+      {
+        "name": "Gomti River Meander",
+        "type": "RIVER",
+        "coords": [
+          [
+            80.92,
+            26.865
+          ],
+          [
+            80.935,
+            26.87
+          ],
+          [
+            80.95,
+            26.86
+          ],
+          [
+            80.96,
+            26.845
+          ]
+        ]
+      },
+      {
+        "name": "Haider Canal Drainage Trunk",
+        "type": "CANAL",
+        "coords": [
+          [
+            80.91,
+            26.835
+          ],
+          [
+            80.925,
+            26.838
+          ],
+          [
+            80.945,
+            26.842
+          ]
+        ]
+      }
+    ]
+  },
+  "buildings": {
+    "source": "OpenStreetMap 3D Urban Fabric",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "BLD_LUC_001",
+        "name": "Lucknow Urban Parcel #1",
+        "height_m": 12.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9158,
+            26.8318
+          ],
+          [
+            80.9182,
+            26.8318
+          ],
+          [
+            80.9182,
+            26.8342
+          ],
+          [
+            80.9158,
+            26.8342
+          ],
+          [
+            80.9158,
+            26.8318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_002",
+        "name": "Lucknow Urban Parcel #2",
+        "height_m": 19.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9235,
+            26.8318
+          ],
+          [
+            80.9259,
+            26.8318
+          ],
+          [
+            80.9259,
+            26.8342
+          ],
+          [
+            80.9235,
+            26.8342
+          ],
+          [
+            80.9235,
+            26.8318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_003",
+        "name": "Lucknow Urban Parcel #3",
+        "height_m": 26.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9312,
+            26.8318
+          ],
+          [
+            80.9336,
+            26.8318
+          ],
+          [
+            80.9336,
+            26.8342
+          ],
+          [
+            80.9312,
+            26.8342
+          ],
+          [
+            80.9312,
+            26.8318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_004",
+        "name": "Lucknow Urban Parcel #4",
+        "height_m": 33.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9389,
+            26.8318
+          ],
+          [
+            80.9413,
+            26.8318
+          ],
+          [
+            80.9413,
+            26.8342
+          ],
+          [
+            80.9389,
+            26.8342
+          ],
+          [
+            80.9389,
+            26.8318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_005",
+        "name": "Lucknow Urban Parcel #5",
+        "height_m": 40.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9466,
+            26.8318
+          ],
+          [
+            80.949,
+            26.8318
+          ],
+          [
+            80.949,
+            26.8342
+          ],
+          [
+            80.9466,
+            26.8342
+          ],
+          [
+            80.9466,
+            26.8318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_006",
+        "name": "Lucknow Urban Parcel #6",
+        "height_m": 47.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9543,
+            26.8318
+          ],
+          [
+            80.9567,
+            26.8318
+          ],
+          [
+            80.9567,
+            26.8342
+          ],
+          [
+            80.9543,
+            26.8342
+          ],
+          [
+            80.9543,
+            26.8318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_007",
+        "name": "Lucknow Urban Parcel #7",
+        "height_m": 16.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9158,
+            26.8373
+          ],
+          [
+            80.9182,
+            26.8373
+          ],
+          [
+            80.9182,
+            26.8397
+          ],
+          [
+            80.9158,
+            26.8397
+          ],
+          [
+            80.9158,
+            26.8373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_008",
+        "name": "Lucknow Urban Parcel #8",
+        "height_m": 23.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9235,
+            26.8373
+          ],
+          [
+            80.9259,
+            26.8373
+          ],
+          [
+            80.9259,
+            26.8397
+          ],
+          [
+            80.9235,
+            26.8397
+          ],
+          [
+            80.9235,
+            26.8373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_009",
+        "name": "Lucknow Urban Parcel #9",
+        "height_m": 30.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9312,
+            26.8373
+          ],
+          [
+            80.9336,
+            26.8373
+          ],
+          [
+            80.9336,
+            26.8397
+          ],
+          [
+            80.9312,
+            26.8397
+          ],
+          [
+            80.9312,
+            26.8373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_010",
+        "name": "Lucknow Urban Parcel #10",
+        "height_m": 37.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9389,
+            26.8373
+          ],
+          [
+            80.9413,
+            26.8373
+          ],
+          [
+            80.9413,
+            26.8397
+          ],
+          [
+            80.9389,
+            26.8397
+          ],
+          [
+            80.9389,
+            26.8373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_011",
+        "name": "Lucknow Urban Parcel #11",
+        "height_m": 44.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9466,
+            26.8373
+          ],
+          [
+            80.949,
+            26.8373
+          ],
+          [
+            80.949,
+            26.8397
+          ],
+          [
+            80.9466,
+            26.8397
+          ],
+          [
+            80.9466,
+            26.8373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_012",
+        "name": "Lucknow Urban Parcel #12",
+        "height_m": 13.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9543,
+            26.8373
+          ],
+          [
+            80.9567,
+            26.8373
+          ],
+          [
+            80.9567,
+            26.8397
+          ],
+          [
+            80.9543,
+            26.8397
+          ],
+          [
+            80.9543,
+            26.8373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_013",
+        "name": "Lucknow Urban Parcel #13",
+        "height_m": 20.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9158,
+            26.8428
+          ],
+          [
+            80.9182,
+            26.8428
+          ],
+          [
+            80.9182,
+            26.8452
+          ],
+          [
+            80.9158,
+            26.8452
+          ],
+          [
+            80.9158,
+            26.8428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_014",
+        "name": "Lucknow Urban Parcel #14",
+        "height_m": 27.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9235,
+            26.8428
+          ],
+          [
+            80.9259,
+            26.8428
+          ],
+          [
+            80.9259,
+            26.8452
+          ],
+          [
+            80.9235,
+            26.8452
+          ],
+          [
+            80.9235,
+            26.8428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_015",
+        "name": "Lucknow Urban Parcel #15",
+        "height_m": 34.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9312,
+            26.8428
+          ],
+          [
+            80.9336,
+            26.8428
+          ],
+          [
+            80.9336,
+            26.8452
+          ],
+          [
+            80.9312,
+            26.8452
+          ],
+          [
+            80.9312,
+            26.8428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_016",
+        "name": "Lucknow Urban Parcel #16",
+        "height_m": 41.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9389,
+            26.8428
+          ],
+          [
+            80.9413,
+            26.8428
+          ],
+          [
+            80.9413,
+            26.8452
+          ],
+          [
+            80.9389,
+            26.8452
+          ],
+          [
+            80.9389,
+            26.8428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_017",
+        "name": "Lucknow Urban Parcel #17",
+        "height_m": 48.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9466,
+            26.8428
+          ],
+          [
+            80.949,
+            26.8428
+          ],
+          [
+            80.949,
+            26.8452
+          ],
+          [
+            80.9466,
+            26.8452
+          ],
+          [
+            80.9466,
+            26.8428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_018",
+        "name": "Lucknow Urban Parcel #18",
+        "height_m": 17.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9543,
+            26.8428
+          ],
+          [
+            80.9567,
+            26.8428
+          ],
+          [
+            80.9567,
+            26.8452
+          ],
+          [
+            80.9543,
+            26.8452
+          ],
+          [
+            80.9543,
+            26.8428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_019",
+        "name": "Lucknow Urban Parcel #19",
+        "height_m": 24.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9158,
+            26.8483
+          ],
+          [
+            80.9182,
+            26.8483
+          ],
+          [
+            80.9182,
+            26.8507
+          ],
+          [
+            80.9158,
+            26.8507
+          ],
+          [
+            80.9158,
+            26.8483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_020",
+        "name": "Lucknow Urban Parcel #20",
+        "height_m": 31.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9235,
+            26.8483
+          ],
+          [
+            80.9259,
+            26.8483
+          ],
+          [
+            80.9259,
+            26.8507
+          ],
+          [
+            80.9235,
+            26.8507
+          ],
+          [
+            80.9235,
+            26.8483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_021",
+        "name": "Lucknow Urban Parcel #21",
+        "height_m": 38.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9312,
+            26.8483
+          ],
+          [
+            80.9336,
+            26.8483
+          ],
+          [
+            80.9336,
+            26.8507
+          ],
+          [
+            80.9312,
+            26.8507
+          ],
+          [
+            80.9312,
+            26.8483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_022",
+        "name": "Lucknow Urban Parcel #22",
+        "height_m": 45.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9389,
+            26.8483
+          ],
+          [
+            80.9413,
+            26.8483
+          ],
+          [
+            80.9413,
+            26.8507
+          ],
+          [
+            80.9389,
+            26.8507
+          ],
+          [
+            80.9389,
+            26.8483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_023",
+        "name": "Lucknow Urban Parcel #23",
+        "height_m": 14.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9466,
+            26.8483
+          ],
+          [
+            80.949,
+            26.8483
+          ],
+          [
+            80.949,
+            26.8507
+          ],
+          [
+            80.9466,
+            26.8507
+          ],
+          [
+            80.9466,
+            26.8483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_024",
+        "name": "Lucknow Urban Parcel #24",
+        "height_m": 21.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9543,
+            26.8483
+          ],
+          [
+            80.9567,
+            26.8483
+          ],
+          [
+            80.9567,
+            26.8507
+          ],
+          [
+            80.9543,
+            26.8507
+          ],
+          [
+            80.9543,
+            26.8483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_025",
+        "name": "Lucknow Urban Parcel #25",
+        "height_m": 28.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9158,
+            26.8538
+          ],
+          [
+            80.9182,
+            26.8538
+          ],
+          [
+            80.9182,
+            26.8562
+          ],
+          [
+            80.9158,
+            26.8562
+          ],
+          [
+            80.9158,
+            26.8538
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_026",
+        "name": "Lucknow Urban Parcel #26",
+        "height_m": 35.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9235,
+            26.8538
+          ],
+          [
+            80.9259,
+            26.8538
+          ],
+          [
+            80.9259,
+            26.8562
+          ],
+          [
+            80.9235,
+            26.8562
+          ],
+          [
+            80.9235,
+            26.8538
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_027",
+        "name": "Lucknow Urban Parcel #27",
+        "height_m": 42.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9312,
+            26.8538
+          ],
+          [
+            80.9336,
+            26.8538
+          ],
+          [
+            80.9336,
+            26.8562
+          ],
+          [
+            80.9312,
+            26.8562
+          ],
+          [
+            80.9312,
+            26.8538
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_028",
+        "name": "Lucknow Urban Parcel #28",
+        "height_m": 49.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9389,
+            26.8538
+          ],
+          [
+            80.9413,
+            26.8538
+          ],
+          [
+            80.9413,
+            26.8562
+          ],
+          [
+            80.9389,
+            26.8562
+          ],
+          [
+            80.9389,
+            26.8538
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_029",
+        "name": "Lucknow Urban Parcel #29",
+        "height_m": 18.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9466,
+            26.8538
+          ],
+          [
+            80.949,
+            26.8538
+          ],
+          [
+            80.949,
+            26.8562
+          ],
+          [
+            80.9466,
+            26.8562
+          ],
+          [
+            80.9466,
+            26.8538
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_030",
+        "name": "Lucknow Urban Parcel #30",
+        "height_m": 25.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9543,
+            26.8538
+          ],
+          [
+            80.9567,
+            26.8538
+          ],
+          [
+            80.9567,
+            26.8562
+          ],
+          [
+            80.9543,
+            26.8562
+          ],
+          [
+            80.9543,
+            26.8538
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_031",
+        "name": "Lucknow Urban Parcel #31",
+        "height_m": 32.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9158,
+            26.8593
+          ],
+          [
+            80.9182,
+            26.8593
+          ],
+          [
+            80.9182,
+            26.8617
+          ],
+          [
+            80.9158,
+            26.8617
+          ],
+          [
+            80.9158,
+            26.8593
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_032",
+        "name": "Lucknow Urban Parcel #32",
+        "height_m": 39.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9235,
+            26.8593
+          ],
+          [
+            80.9259,
+            26.8593
+          ],
+          [
+            80.9259,
+            26.8617
+          ],
+          [
+            80.9235,
+            26.8617
+          ],
+          [
+            80.9235,
+            26.8593
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_033",
+        "name": "Lucknow Urban Parcel #33",
+        "height_m": 46.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9312,
+            26.8593
+          ],
+          [
+            80.9336,
+            26.8593
+          ],
+          [
+            80.9336,
+            26.8617
+          ],
+          [
+            80.9312,
+            26.8617
+          ],
+          [
+            80.9312,
+            26.8593
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_034",
+        "name": "Lucknow Urban Parcel #34",
+        "height_m": 15.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            80.9389,
+            26.8593
+          ],
+          [
+            80.9413,
+            26.8593
+          ],
+          [
+            80.9413,
+            26.8617
+          ],
+          [
+            80.9389,
+            26.8617
+          ],
+          [
+            80.9389,
+            26.8593
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_035",
+        "name": "Lucknow Urban Parcel #35",
+        "height_m": 22.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9466,
+            26.8593
+          ],
+          [
+            80.949,
+            26.8593
+          ],
+          [
+            80.949,
+            26.8617
+          ],
+          [
+            80.9466,
+            26.8617
+          ],
+          [
+            80.9466,
+            26.8593
+          ]
+        ]
+      },
+      {
+        "id": "BLD_LUC_036",
+        "name": "Lucknow Urban Parcel #36",
+        "height_m": 29.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            80.9543,
+            26.8593
+          ],
+          [
+            80.9567,
+            26.8593
+          ],
+          [
+            80.9567,
+            26.8617
+          ],
+          [
+            80.9543,
+            26.8617
+          ],
+          [
+            80.9543,
+            26.8593
+          ]
+        ]
+      }
+    ]
+  },
+  "flood_model": {
+    "level1_model": "UFNS Kinematic Wave & Horton Infiltration Engine (v2.4)",
+    "level2_city_adaptation": {
+      "imperviousness_mean": 0.82,
+      "soil_infiltration_rate_mm_hr": 3.8,
+      "manning_surface_roughness": 0.028,
+      "calibration_factor": 1.04
+    }
+  },
+  "routing": {
+    "default_origin_node": "INT_LUC_13",
+    "default_destination_node": "INT_LUC_16",
+    "critical_blocked_road": "R_LUC_04",
+    "recommended_safe_road": "R_LUC_12",
+    "vehicle_clearance_limits_cm": {
+      "ambulance": 25.0,
+      "fire_truck": 50.0,
+      "police": 35.0,
+      "standard_vehicle": 20.0,
+      "pedestrian": 10.0
+    }
+  },
+  "predicted_flood_zone": [
+    [
+      80.9184,
+      26.8395
+    ],
+    [
+      80.9198,
+      26.8505
+    ],
+    [
+      80.9324,
+      26.853
+    ],
+    [
+      80.959,
+      26.8615
+    ],
+    [
+      80.966,
+      26.858
+    ],
+    [
+      80.9639,
+      26.8505
+    ],
+    [
+      80.952,
+      26.848
+    ],
+    [
+      80.9289,
+      26.8415
+    ],
+    [
+      80.9184,
+      26.8395
+    ]
+  ],
+  "story": {
+    "basin_name": "Mawaiya \u2013 Charbagh \u2013 Gomti Riverfront Basin",
+    "hotspot_road": "Mawaiya Railway Underpass",
+    "surcharge_node": "Junction LKO02 (Gomti Left Bank Storm Collector)",
+    "hospital_origin": "KGMU Trauma Centre Chowk",
+    "hospital_dest": "SGPGI Lucknow",
+    "safe_bypass": "Shaheed Path Elevated Expressway Corridor",
+    "elevation_high": 128.0,
+    "elevation_low": 116.0,
+    "camera_poses": {
+      "city_view": {
+        "center": [
+          26.848,
+          80.938
+        ],
+        "zoom": 13.0,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "storm_focus": {
+        "center": [
+          26.8455,
+          80.9254
+        ],
+        "zoom": 13.8,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "altitude_focus": {
+        "center": [
+          26.848,
+          80.938
+        ],
+        "zoom": 14.4,
+        "pitch": 50,
+        "bearing": 20
+      },
+      "runoff_focus": {
+        "center": [
+          26.843,
+          80.9219
+        ],
+        "zoom": 14.5,
+        "pitch": 55,
+        "bearing": 25
+      },
+      "flood_trough": {
+        "center": [
+          26.8455,
+          80.9254
+        ],
+        "zoom": 14.8,
+        "pitch": 50,
+        "bearing": 15
+      },
+      "drainage_subterranean": {
+        "center": [
+          26.8455,
+          80.9254
+        ],
+        "zoom": 15.0,
+        "pitch": 60,
+        "bearing": 30
+      },
+      "surcharge_manhole": {
+        "center": [
+          26.8455,
+          80.9254
+        ],
+        "zoom": 15.8,
+        "pitch": 65,
+        "bearing": 35
+      },
+      "road_submerged": {
+        "center": [
+          26.8455,
+          80.9254
+        ],
+        "zoom": 15.0,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "route_tracking": {
+        "center": [
+          26.848,
+          80.9415
+        ],
+        "zoom": 13.8,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "solution_overview": {
+        "center": [
+          26.848,
+          80.938
+        ],
+        "zoom": 13.0,
+        "pitch": 35,
+        "bearing": 0
+      }
+    }
+  }
+}

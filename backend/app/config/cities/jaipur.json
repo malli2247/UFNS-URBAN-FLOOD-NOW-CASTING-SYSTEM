@@ -1,0 +1,2012 @@
+{
+  "city_id": "jaipur",
+  "city": "Jaipur",
+  "state": "Rajasthan",
+  "country": "India",
+  "timezone": "Asia/Kolkata",
+  "center": {
+    "latitude": 26.872,
+    "longitude": 75.795
+  },
+  "bounding_box": {
+    "min_lat": 26.847,
+    "max_lat": 26.897,
+    "min_lon": 75.76,
+    "max_lon": 75.83,
+    "center_lat": 26.872,
+    "center_lon": 75.795
+  },
+  "focus_basin": {
+    "name": "Gopalpura Bypass \u2013 Sanganer \u2013 Dravyavati Basin",
+    "area_sqkm": 37.5,
+    "description": "Rapidly expanding southern metropolitan basin flanking the revitalized Dravyavati River canal corridor."
+  },
+  "data_sources": {
+    "rainfall": {
+      "dataset": "Jaipur Real-Time Precipitation Feed",
+      "source": "Open-Meteo REST API / IMD Doppler Radar Feed",
+      "api_endpoint": "https://api.open-meteo.com/v1/forecast?latitude=26.872&longitude=75.795&hourly=precipitation",
+      "spatial_resolution": "0.1\u00b0 (~10km) / Downscaled 350m",
+      "temporal_resolution": "15 minutes",
+      "status": "LIVE",
+      "radar_station": "IMD Jaipur Sanganer Doppler Radar"
+    },
+    "dem": {
+      "dataset": "Jaipur High-Resolution Urban Terrain Model",
+      "source": "Copernicus DEM GLO-30 / ISRO Cartosat-1 DSM",
+      "spatial_resolution": "30m",
+      "vertical_accuracy": "\u00b11.5m",
+      "status": "AVAILABLE",
+      "license": "Open Access (Copernicus / ISRO Bhuvan)"
+    },
+    "drainage": {
+      "dataset": "Jaipur Stormwater Trunk Network",
+      "source": "JDA & JMC Drainage Works Division Master Drainage Plan",
+      "status": "AVAILABLE",
+      "completeness": "Primary Arterial Conduits (12 Nodes, 11 Outfalls)",
+      "modeling_standard": "Manning-Strickler 1D Pipe Flow with 2-Way Surface Spill"
+    },
+    "roads": {
+      "dataset": "Jaipur Arterial Highway & Transport Graph",
+      "source": "OpenStreetMap Road Network (OSM 2024)",
+      "status": "AVAILABLE",
+      "features_count": 20,
+      "routing_profile": "Emergency Multi-Modal Clearance-Aware"
+    }
+  },
+  "dem": {
+    "source": "Copernicus DEM GLO-30",
+    "status": "AVAILABLE",
+    "base_elevation_m": 450.0,
+    "min_elevation_m": 420.0,
+    "max_elevation_m": 472.0,
+    "contour_interval_m": 7.5,
+    "markers": [
+      {
+        "lat": 26.8895,
+        "lon": 75.7705,
+        "elevM": 450.0,
+        "label": "450 m AMSL",
+        "tag": "\u25b2 HIGH (Ridge)"
+      },
+      {
+        "lat": 26.8795,
+        "lon": 75.7845,
+        "elevM": 442.5,
+        "label": "442 m AMSL",
+        "tag": "\u25b2 UPPER SLOPE"
+      },
+      {
+        "lat": 26.872,
+        "lon": 75.795,
+        "elevM": 435.0,
+        "label": "435 m AMSL",
+        "tag": "\u25cf MID SLOPE"
+      },
+      {
+        "lat": 26.8645,
+        "lon": 75.8055,
+        "elevM": 427.5,
+        "label": "428 m AMSL",
+        "tag": "\u25cf LOWER BASIN"
+      },
+      {
+        "lat": 26.857,
+        "lon": 75.8195,
+        "elevM": 420.0,
+        "label": "420 m AMSL",
+        "tag": "\u25bc LOW POINT (Trough)"
+      }
+    ],
+    "troughs": [
+      {
+        "lat": 26.872,
+        "lon": 75.7866,
+        "depth_m": 6.5,
+        "name": "Gopalpura Bypass Underpass"
+      },
+      {
+        "lat": 26.867,
+        "lon": 75.8125,
+        "depth_m": 8.5,
+        "name": "Dravyavati River Catchment Trough"
+      }
+    ]
+  },
+  "rainfall": {
+    "source": "Open-Meteo & IMD Radar",
+    "status": "LIVE",
+    "default_intensity_mm_hr": 78.5,
+    "radar_station": "IMD Jaipur Sanganer Doppler Radar",
+    "horizons": [
+      "0m",
+      "15m",
+      "30m",
+      "45m",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "drainage": {
+    "source": "JDA & JMC Drainage Works Division",
+    "status": "AVAILABLE",
+    "capacity_multiplier": 1.0,
+    "surcharge_node_id": "JAI_M02",
+    "nodes": [
+      {
+        "id": "JAI_M01",
+        "name": "Jaipur Western Trunk Inlet",
+        "node_type": "Inlet",
+        "lat": 26.887,
+        "lon": 75.774,
+        "elev": 446.2,
+        "inlet_cap": 2.5,
+        "row": 12,
+        "col": 3
+      },
+      {
+        "id": "JAI_M02",
+        "name": "Dravyavati Sump Sluice",
+        "node_type": "Junction",
+        "lat": 26.872,
+        "lon": 75.7866,
+        "elev": 441.0,
+        "inlet_cap": 3.2,
+        "row": 7,
+        "col": 5
+      },
+      {
+        "id": "JAI_M03",
+        "name": "Jaipur Central Crossing Manhole",
+        "node_type": "Manhole",
+        "lat": 26.8745,
+        "lon": 75.7915,
+        "elev": 436.5,
+        "inlet_cap": 4.0,
+        "row": 8,
+        "col": 7
+      },
+      {
+        "id": "JAI_M04",
+        "name": "Jaipur Arterial Sump Junction",
+        "node_type": "Junction",
+        "lat": 26.877,
+        "lon": 75.8006,
+        "elev": 433.5,
+        "inlet_cap": 4.5,
+        "row": 9,
+        "col": 9
+      },
+      {
+        "id": "JAI_M05",
+        "name": "Jaipur North Relief Collector",
+        "node_type": "Manhole",
+        "lat": 26.882,
+        "lon": 75.788,
+        "elev": 438.8,
+        "inlet_cap": 3.8,
+        "row": 10,
+        "col": 6
+      },
+      {
+        "id": "JAI_M06",
+        "name": "Jaipur South Basin Sluice",
+        "node_type": "Inlet",
+        "lat": 26.8595,
+        "lon": 75.788,
+        "elev": 432.0,
+        "inlet_cap": 5.0,
+        "row": 4,
+        "col": 6
+      },
+      {
+        "id": "JAI_M07",
+        "name": "Jaipur Ring Road Storm Conduit",
+        "node_type": "Manhole",
+        "lat": 26.862,
+        "lon": 75.7985,
+        "elev": 429.0,
+        "inlet_cap": 3.5,
+        "row": 4,
+        "col": 8
+      },
+      {
+        "id": "JAI_M08",
+        "name": "Jaipur Mid-Channel Sump Pit",
+        "node_type": "Manhole",
+        "lat": 26.866,
+        "lon": 75.8055,
+        "elev": 426.8,
+        "inlet_cap": 3.0,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "JAI_M09",
+        "name": "Jaipur Intermediate Chamber",
+        "node_type": "Junction",
+        "lat": 26.8695,
+        "lon": 75.809,
+        "elev": 424.5,
+        "inlet_cap": 4.2,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "JAI_M10",
+        "name": "Jaipur Trough Inflow Pit",
+        "node_type": "Manhole",
+        "lat": 26.8645,
+        "lon": 75.809,
+        "elev": 422.2,
+        "inlet_cap": 3.8,
+        "row": 6,
+        "col": 11
+      },
+      {
+        "id": "JAI_M11",
+        "name": "Jaipur Floodplain Storm Bypass",
+        "node_type": "Inlet",
+        "lat": 26.856,
+        "lon": 75.8146,
+        "elev": 421.5,
+        "inlet_cap": 2.8,
+        "row": 2,
+        "col": 12
+      },
+      {
+        "id": "JAI_M12",
+        "name": "Dravyavati River Catchment Trough Outfall Sluice",
+        "node_type": "Outfall",
+        "lat": 26.867,
+        "lon": 75.8125,
+        "elev": 420.0,
+        "inlet_cap": 7.5,
+        "row": 8,
+        "col": 14
+      }
+    ],
+    "pipes": [
+      {
+        "from": "JAI_M01",
+        "to": "JAI_M02",
+        "pipe_id": "P-JA-01",
+        "diameter_m": 1.2,
+        "slope": 0.007,
+        "length_m": 1100
+      },
+      {
+        "from": "JAI_M02",
+        "to": "JAI_M03",
+        "pipe_id": "P-JA-02",
+        "diameter_m": 1.5,
+        "slope": 0.006,
+        "length_m": 850
+      },
+      {
+        "from": "JAI_M05",
+        "to": "JAI_M03",
+        "pipe_id": "P-JA-03",
+        "diameter_m": 1.2,
+        "slope": 0.005,
+        "length_m": 650
+      },
+      {
+        "from": "JAI_M03",
+        "to": "JAI_M04",
+        "pipe_id": "P-JA-04",
+        "diameter_m": 1.8,
+        "slope": 0.005,
+        "length_m": 920
+      },
+      {
+        "from": "JAI_M06",
+        "to": "JAI_M07",
+        "pipe_id": "P-JA-05",
+        "diameter_m": 1.4,
+        "slope": 0.004,
+        "length_m": 780
+      },
+      {
+        "from": "JAI_M07",
+        "to": "JAI_M08",
+        "pipe_id": "P-JA-06",
+        "diameter_m": 1.5,
+        "slope": 0.004,
+        "length_m": 1100
+      },
+      {
+        "from": "JAI_M08",
+        "to": "JAI_M09",
+        "pipe_id": "P-JA-07",
+        "diameter_m": 1.6,
+        "slope": 0.003,
+        "length_m": 820
+      },
+      {
+        "from": "JAI_M04",
+        "to": "JAI_M09",
+        "pipe_id": "P-JA-08",
+        "diameter_m": 2.0,
+        "slope": 0.004,
+        "length_m": 1450
+      },
+      {
+        "from": "JAI_M09",
+        "to": "JAI_M10",
+        "pipe_id": "P-JA-09",
+        "diameter_m": 1.8,
+        "slope": 0.003,
+        "length_m": 900
+      },
+      {
+        "from": "JAI_M11",
+        "to": "JAI_M10",
+        "pipe_id": "P-JA-10",
+        "diameter_m": 1.4,
+        "slope": 0.002,
+        "length_m": 850
+      },
+      {
+        "from": "JAI_M10",
+        "to": "JAI_M12",
+        "pipe_id": "P-JA-11",
+        "diameter_m": 2.4,
+        "slope": 0.003,
+        "length_m": 1200
+      }
+    ]
+  },
+  "roads": {
+    "source": "OpenStreetMap",
+    "status": "AVAILABLE",
+    "critical_hotspot_road_id": "R_JAI_04",
+    "intersections": {
+      "INT_JAI_01": {
+        "name": "Jaipur West Highway Junction",
+        "lat": 26.8895,
+        "lon": 75.7705
+      },
+      "INT_JAI_02": {
+        "name": "Jaipur Central Commercial Crossing",
+        "lat": 26.8745,
+        "lon": 75.7845
+      },
+      "INT_JAI_03": {
+        "name": "Jaipur Market West Intersection",
+        "lat": 26.872,
+        "lon": 75.7796
+      },
+      "INT_JAI_04": {
+        "name": "Jaipur North Relief Signal",
+        "lat": 26.882,
+        "lon": 75.788
+      },
+      "INT_JAI_05": {
+        "name": "Jaipur Ring Road North Junction",
+        "lat": 26.8845,
+        "lon": 75.802
+      },
+      "INT_JAI_06": {
+        "name": "Jaipur South Canal Junction",
+        "lat": 26.862,
+        "lon": 75.7845
+      },
+      "INT_JAI_07": {
+        "name": "Jaipur Residential Sector 1",
+        "lat": 26.8595,
+        "lon": 75.795
+      },
+      "INT_JAI_08": {
+        "name": "Jaipur Expressway Interchange",
+        "lat": 26.867,
+        "lon": 75.8055
+      },
+      "INT_JAI_09": {
+        "name": "Jaipur Tech Corridor Gate",
+        "lat": 26.8695,
+        "lon": 75.816
+      },
+      "INT_JAI_10": {
+        "name": "Jaipur Lake Overpass Crossing",
+        "lat": 26.8795,
+        "lon": 75.8125
+      },
+      "INT_JAI_11": {
+        "name": "Jaipur Low-Lying Access Road",
+        "lat": 26.862,
+        "lon": 75.809
+      },
+      "INT_JAI_12": {
+        "name": "Jaipur East Terminal Bridge",
+        "lat": 26.8895,
+        "lon": 75.8195
+      },
+      "INT_JAI_13": {
+        "name": "SMS Hospital JLN Marg Gate",
+        "lat": 26.8895,
+        "lon": 75.802
+      },
+      "INT_JAI_14": {
+        "name": "Jaipur Central Police Station",
+        "lat": 26.872,
+        "lon": 75.7796
+      },
+      "INT_JAI_15": {
+        "name": "Jaipur South Tech Hub",
+        "lat": 26.861,
+        "lon": 75.8034
+      },
+      "INT_JAI_16": {
+        "name": "Eternal Heart Care Hospital (EHCC) Gate",
+        "lat": 26.8645,
+        "lon": 75.8195
+      }
+    },
+    "road_segments": [
+      {
+        "u": "INT_JAI_01",
+        "v": "INT_JAI_13",
+        "road_id": "R_JAI_01",
+        "name": "Jaipur Western Arterial",
+        "length_km": 1.1,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_13",
+        "v": "INT_JAI_14",
+        "road_id": "R_JAI_02",
+        "name": "SMS Hospital JLN Marg Link",
+        "length_km": 0.8,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_14",
+        "v": "INT_JAI_02",
+        "road_id": "R_JAI_03",
+        "name": "Jaipur Civic Avenue",
+        "length_km": 0.7,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_02",
+        "v": "INT_JAI_03",
+        "road_id": "R_JAI_04",
+        "name": "Gopalpura Bypass Underpass",
+        "length_km": 0.9,
+        "speed_kmh": 40,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_02",
+        "v": "INT_JAI_04",
+        "road_id": "R_JAI_05",
+        "name": "Jaipur North Relief Road",
+        "length_km": 1.1,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_04",
+        "v": "INT_JAI_05",
+        "road_id": "R_JAI_06",
+        "name": "Jaipur Ring Road Arterial",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_02",
+        "v": "INT_JAI_06",
+        "road_id": "R_JAI_07",
+        "name": "Jaipur South Canal Link",
+        "length_km": 1.6,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_06",
+        "v": "INT_JAI_07",
+        "road_id": "R_JAI_08",
+        "name": "Jaipur Sector 1 Collector",
+        "length_km": 1.0,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_07",
+        "v": "INT_JAI_15",
+        "road_id": "R_JAI_09",
+        "name": "Jaipur Tech Access Way",
+        "length_km": 1.2,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_15",
+        "v": "INT_JAI_08",
+        "road_id": "R_JAI_10",
+        "name": "Jaipur Sector Arterial",
+        "length_km": 1.3,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_06",
+        "v": "INT_JAI_08",
+        "road_id": "R_JAI_11",
+        "name": "Jaipur Southern Corridor",
+        "length_km": 2.1,
+        "speed_kmh": 55,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_05",
+        "v": "INT_JAI_10",
+        "road_id": "R_JAI_12",
+        "name": "Elevated Ajmer Road Expressway Corridor",
+        "length_km": 2.3,
+        "speed_kmh": 60,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_JAI_08",
+        "v": "INT_JAI_09",
+        "road_id": "R_JAI_13",
+        "name": "Jaipur Tech Corridor Road",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_09",
+        "v": "INT_JAI_10",
+        "road_id": "R_JAI_14",
+        "name": "Jaipur Basin Flyover",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_08",
+        "v": "INT_JAI_11",
+        "road_id": "R_JAI_15",
+        "name": "Jaipur Low-Lying Causeway",
+        "length_km": 1.3,
+        "speed_kmh": 30,
+        "road_type": "LOCAL"
+      },
+      {
+        "u": "INT_JAI_11",
+        "v": "INT_JAI_16",
+        "road_id": "R_JAI_16",
+        "name": "Eternal Heart Care Hospital (EHCC) Southern Link",
+        "length_km": 1.5,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_09",
+        "v": "INT_JAI_16",
+        "road_id": "R_JAI_17",
+        "name": "Jaipur Eastern Medical Corridor",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_JAI_10",
+        "v": "INT_JAI_12",
+        "road_id": "R_JAI_18",
+        "name": "Jaipur Outer Elevated Expressway",
+        "length_km": 1.8,
+        "speed_kmh": 65,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_JAI_03",
+        "v": "INT_JAI_04",
+        "road_id": "R_JAI_19",
+        "name": "Jaipur Central Bypass Overpass",
+        "length_km": 0.9,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_JAI_16",
+        "v": "INT_JAI_12",
+        "road_id": "R_JAI_20",
+        "name": "Jaipur East Terminal Flyover",
+        "length_km": 1.9,
+        "speed_kmh": 55,
+        "road_type": "ELEVATED_BYPASS"
+      }
+    ]
+  },
+  "facilities": {
+    "source": "Jaipur Disaster Management Authority",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "HOSP_JAI_01",
+        "name": "SMS Hospital JLN Marg",
+        "type": "HOSPITAL",
+        "lat": 26.8895,
+        "lon": 75.802,
+        "capacity_beds": 2500,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_JAI_02",
+        "name": "Eternal Heart Care Hospital (EHCC)",
+        "type": "HOSPITAL",
+        "lat": 26.8645,
+        "lon": 75.8195,
+        "capacity_beds": 450,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_JAI_03",
+        "name": "Fortis Escorts Hospital Malviya Nagar",
+        "type": "HOSPITAL",
+        "lat": 26.867,
+        "lon": 75.816,
+        "capacity_beds": 350,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_JAI_04",
+        "name": "Apex Hospital Malviya Nagar",
+        "type": "HOSPITAL",
+        "lat": 26.868,
+        "lon": 75.8104,
+        "capacity_beds": 200,
+        "has_emergency_trauma": false,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "FIRE_JAI_01",
+        "name": "Jaipur Central Fire & Rescue Station",
+        "type": "FIRE_STATION",
+        "lat": 26.871,
+        "lon": 75.781,
+        "engines": 4,
+        "boats": 2
+      },
+      {
+        "id": "FIRE_JAI_02",
+        "name": "Jaipur East Industrial Fire Post",
+        "type": "FIRE_STATION",
+        "lat": 26.866,
+        "lon": 75.8125,
+        "engines": 3,
+        "boats": 1
+      },
+      {
+        "id": "POL_JAI_01",
+        "name": "Jaipur Central Division Police HQ",
+        "type": "POLICE_STATION",
+        "lat": 26.873,
+        "lon": 75.7796,
+        "personnel": 45
+      },
+      {
+        "id": "POL_JAI_02",
+        "name": "Jaipur Basin Traffic Police Post",
+        "type": "POLICE_STATION",
+        "lat": 26.868,
+        "lon": 75.8034,
+        "personnel": 25
+      },
+      {
+        "id": "SHELTER_JAI_01",
+        "name": "Jaipur Community Flood Relief Shelter",
+        "type": "SHELTER",
+        "lat": 26.882,
+        "lon": 75.7775,
+        "capacity_people": 800
+      },
+      {
+        "id": "SHELTER_JAI_02",
+        "name": "Jaipur Indoor Stadium Emergency Camp",
+        "type": "SHELTER",
+        "lat": 26.877,
+        "lon": 75.816,
+        "capacity_people": 1500
+      }
+    ]
+  },
+  "sensors": {
+    "source": "Jaipur Smart City IoT Telemetry Network",
+    "status": "ONLINE",
+    "items": [
+      {
+        "id": "SENS_JAI_01",
+        "name": "Gopalpura Bypass Underpass Ultrasonic Depth Gauge",
+        "type": "ULTRASONIC_DEPTH",
+        "lat": 26.872,
+        "lon": 75.7866,
+        "unit": "cm",
+        "sampling_rate_sec": 30,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_JAI_02",
+        "name": "Dravyavati Sump Sluice Invert Pressure Sensor",
+        "type": "PRESSURE_TRANSDUCER",
+        "lat": 26.872,
+        "lon": 75.7866,
+        "unit": "kPa",
+        "sampling_rate_sec": 15,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_JAI_03",
+        "name": "Dravyavati River Catchment Trough Outfall Flow Sensor",
+        "type": "DOPPLER_FLOW",
+        "lat": 26.867,
+        "lon": 75.8125,
+        "unit": "m3/s",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_JAI_04",
+        "name": "Jaipur Western Ridge Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 26.8895,
+        "lon": 75.7705,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_JAI_05",
+        "name": "Jaipur Basin Central Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 26.872,
+        "lon": 75.795,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_JAI_06",
+        "name": "Jaipur Traffic Inundation CCTV AI Camera",
+        "type": "AI_SURVEILLANCE_CAMERA",
+        "lat": 26.871,
+        "lon": 75.788,
+        "unit": "status",
+        "sampling_rate_sec": 5,
+        "status": "ONLINE"
+      }
+    ]
+  },
+  "water_bodies": {
+    "features": [
+      {
+        "name": "Dravyavati River Canal",
+        "type": "RIVER",
+        "coords": [
+          [
+            75.77,
+            26.89
+          ],
+          [
+            75.785,
+            26.875
+          ],
+          [
+            75.795,
+            26.86
+          ],
+          [
+            75.81,
+            26.845
+          ]
+        ]
+      },
+      {
+        "name": "Amanishah Nala Wetland",
+        "type": "WETLAND",
+        "coords": [
+          [
+            75.765,
+            26.885
+          ],
+          [
+            75.775,
+            26.88
+          ],
+          [
+            75.78,
+            26.888
+          ]
+        ]
+      }
+    ]
+  },
+  "buildings": {
+    "source": "OpenStreetMap 3D Urban Fabric",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "BLD_JAI_001",
+        "name": "Jaipur Urban Parcel #1",
+        "height_m": 12.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7728,
+            26.8558
+          ],
+          [
+            75.7752,
+            26.8558
+          ],
+          [
+            75.7752,
+            26.8582
+          ],
+          [
+            75.7728,
+            26.8582
+          ],
+          [
+            75.7728,
+            26.8558
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_002",
+        "name": "Jaipur Urban Parcel #2",
+        "height_m": 19.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7805,
+            26.8558
+          ],
+          [
+            75.7829,
+            26.8558
+          ],
+          [
+            75.7829,
+            26.8582
+          ],
+          [
+            75.7805,
+            26.8582
+          ],
+          [
+            75.7805,
+            26.8558
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_003",
+        "name": "Jaipur Urban Parcel #3",
+        "height_m": 26.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7882,
+            26.8558
+          ],
+          [
+            75.7906,
+            26.8558
+          ],
+          [
+            75.7906,
+            26.8582
+          ],
+          [
+            75.7882,
+            26.8582
+          ],
+          [
+            75.7882,
+            26.8558
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_004",
+        "name": "Jaipur Urban Parcel #4",
+        "height_m": 33.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7959,
+            26.8558
+          ],
+          [
+            75.7983,
+            26.8558
+          ],
+          [
+            75.7983,
+            26.8582
+          ],
+          [
+            75.7959,
+            26.8582
+          ],
+          [
+            75.7959,
+            26.8558
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_005",
+        "name": "Jaipur Urban Parcel #5",
+        "height_m": 40.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8036,
+            26.8558
+          ],
+          [
+            75.806,
+            26.8558
+          ],
+          [
+            75.806,
+            26.8582
+          ],
+          [
+            75.8036,
+            26.8582
+          ],
+          [
+            75.8036,
+            26.8558
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_006",
+        "name": "Jaipur Urban Parcel #6",
+        "height_m": 47.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8113,
+            26.8558
+          ],
+          [
+            75.8137,
+            26.8558
+          ],
+          [
+            75.8137,
+            26.8582
+          ],
+          [
+            75.8113,
+            26.8582
+          ],
+          [
+            75.8113,
+            26.8558
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_007",
+        "name": "Jaipur Urban Parcel #7",
+        "height_m": 16.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7728,
+            26.8613
+          ],
+          [
+            75.7752,
+            26.8613
+          ],
+          [
+            75.7752,
+            26.8637
+          ],
+          [
+            75.7728,
+            26.8637
+          ],
+          [
+            75.7728,
+            26.8613
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_008",
+        "name": "Jaipur Urban Parcel #8",
+        "height_m": 23.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7805,
+            26.8613
+          ],
+          [
+            75.7829,
+            26.8613
+          ],
+          [
+            75.7829,
+            26.8637
+          ],
+          [
+            75.7805,
+            26.8637
+          ],
+          [
+            75.7805,
+            26.8613
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_009",
+        "name": "Jaipur Urban Parcel #9",
+        "height_m": 30.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7882,
+            26.8613
+          ],
+          [
+            75.7906,
+            26.8613
+          ],
+          [
+            75.7906,
+            26.8637
+          ],
+          [
+            75.7882,
+            26.8637
+          ],
+          [
+            75.7882,
+            26.8613
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_010",
+        "name": "Jaipur Urban Parcel #10",
+        "height_m": 37.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7959,
+            26.8613
+          ],
+          [
+            75.7983,
+            26.8613
+          ],
+          [
+            75.7983,
+            26.8637
+          ],
+          [
+            75.7959,
+            26.8637
+          ],
+          [
+            75.7959,
+            26.8613
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_011",
+        "name": "Jaipur Urban Parcel #11",
+        "height_m": 44.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8036,
+            26.8613
+          ],
+          [
+            75.806,
+            26.8613
+          ],
+          [
+            75.806,
+            26.8637
+          ],
+          [
+            75.8036,
+            26.8637
+          ],
+          [
+            75.8036,
+            26.8613
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_012",
+        "name": "Jaipur Urban Parcel #12",
+        "height_m": 13.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8113,
+            26.8613
+          ],
+          [
+            75.8137,
+            26.8613
+          ],
+          [
+            75.8137,
+            26.8637
+          ],
+          [
+            75.8113,
+            26.8637
+          ],
+          [
+            75.8113,
+            26.8613
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_013",
+        "name": "Jaipur Urban Parcel #13",
+        "height_m": 20.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7728,
+            26.8668
+          ],
+          [
+            75.7752,
+            26.8668
+          ],
+          [
+            75.7752,
+            26.8692
+          ],
+          [
+            75.7728,
+            26.8692
+          ],
+          [
+            75.7728,
+            26.8668
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_014",
+        "name": "Jaipur Urban Parcel #14",
+        "height_m": 27.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7805,
+            26.8668
+          ],
+          [
+            75.7829,
+            26.8668
+          ],
+          [
+            75.7829,
+            26.8692
+          ],
+          [
+            75.7805,
+            26.8692
+          ],
+          [
+            75.7805,
+            26.8668
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_015",
+        "name": "Jaipur Urban Parcel #15",
+        "height_m": 34.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7882,
+            26.8668
+          ],
+          [
+            75.7906,
+            26.8668
+          ],
+          [
+            75.7906,
+            26.8692
+          ],
+          [
+            75.7882,
+            26.8692
+          ],
+          [
+            75.7882,
+            26.8668
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_016",
+        "name": "Jaipur Urban Parcel #16",
+        "height_m": 41.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7959,
+            26.8668
+          ],
+          [
+            75.7983,
+            26.8668
+          ],
+          [
+            75.7983,
+            26.8692
+          ],
+          [
+            75.7959,
+            26.8692
+          ],
+          [
+            75.7959,
+            26.8668
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_017",
+        "name": "Jaipur Urban Parcel #17",
+        "height_m": 48.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8036,
+            26.8668
+          ],
+          [
+            75.806,
+            26.8668
+          ],
+          [
+            75.806,
+            26.8692
+          ],
+          [
+            75.8036,
+            26.8692
+          ],
+          [
+            75.8036,
+            26.8668
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_018",
+        "name": "Jaipur Urban Parcel #18",
+        "height_m": 17.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8113,
+            26.8668
+          ],
+          [
+            75.8137,
+            26.8668
+          ],
+          [
+            75.8137,
+            26.8692
+          ],
+          [
+            75.8113,
+            26.8692
+          ],
+          [
+            75.8113,
+            26.8668
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_019",
+        "name": "Jaipur Urban Parcel #19",
+        "height_m": 24.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7728,
+            26.8723
+          ],
+          [
+            75.7752,
+            26.8723
+          ],
+          [
+            75.7752,
+            26.8747
+          ],
+          [
+            75.7728,
+            26.8747
+          ],
+          [
+            75.7728,
+            26.8723
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_020",
+        "name": "Jaipur Urban Parcel #20",
+        "height_m": 31.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7805,
+            26.8723
+          ],
+          [
+            75.7829,
+            26.8723
+          ],
+          [
+            75.7829,
+            26.8747
+          ],
+          [
+            75.7805,
+            26.8747
+          ],
+          [
+            75.7805,
+            26.8723
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_021",
+        "name": "Jaipur Urban Parcel #21",
+        "height_m": 38.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7882,
+            26.8723
+          ],
+          [
+            75.7906,
+            26.8723
+          ],
+          [
+            75.7906,
+            26.8747
+          ],
+          [
+            75.7882,
+            26.8747
+          ],
+          [
+            75.7882,
+            26.8723
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_022",
+        "name": "Jaipur Urban Parcel #22",
+        "height_m": 45.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7959,
+            26.8723
+          ],
+          [
+            75.7983,
+            26.8723
+          ],
+          [
+            75.7983,
+            26.8747
+          ],
+          [
+            75.7959,
+            26.8747
+          ],
+          [
+            75.7959,
+            26.8723
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_023",
+        "name": "Jaipur Urban Parcel #23",
+        "height_m": 14.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8036,
+            26.8723
+          ],
+          [
+            75.806,
+            26.8723
+          ],
+          [
+            75.806,
+            26.8747
+          ],
+          [
+            75.8036,
+            26.8747
+          ],
+          [
+            75.8036,
+            26.8723
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_024",
+        "name": "Jaipur Urban Parcel #24",
+        "height_m": 21.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8113,
+            26.8723
+          ],
+          [
+            75.8137,
+            26.8723
+          ],
+          [
+            75.8137,
+            26.8747
+          ],
+          [
+            75.8113,
+            26.8747
+          ],
+          [
+            75.8113,
+            26.8723
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_025",
+        "name": "Jaipur Urban Parcel #25",
+        "height_m": 28.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7728,
+            26.8778
+          ],
+          [
+            75.7752,
+            26.8778
+          ],
+          [
+            75.7752,
+            26.8802
+          ],
+          [
+            75.7728,
+            26.8802
+          ],
+          [
+            75.7728,
+            26.8778
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_026",
+        "name": "Jaipur Urban Parcel #26",
+        "height_m": 35.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7805,
+            26.8778
+          ],
+          [
+            75.7829,
+            26.8778
+          ],
+          [
+            75.7829,
+            26.8802
+          ],
+          [
+            75.7805,
+            26.8802
+          ],
+          [
+            75.7805,
+            26.8778
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_027",
+        "name": "Jaipur Urban Parcel #27",
+        "height_m": 42.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7882,
+            26.8778
+          ],
+          [
+            75.7906,
+            26.8778
+          ],
+          [
+            75.7906,
+            26.8802
+          ],
+          [
+            75.7882,
+            26.8802
+          ],
+          [
+            75.7882,
+            26.8778
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_028",
+        "name": "Jaipur Urban Parcel #28",
+        "height_m": 49.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7959,
+            26.8778
+          ],
+          [
+            75.7983,
+            26.8778
+          ],
+          [
+            75.7983,
+            26.8802
+          ],
+          [
+            75.7959,
+            26.8802
+          ],
+          [
+            75.7959,
+            26.8778
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_029",
+        "name": "Jaipur Urban Parcel #29",
+        "height_m": 18.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8036,
+            26.8778
+          ],
+          [
+            75.806,
+            26.8778
+          ],
+          [
+            75.806,
+            26.8802
+          ],
+          [
+            75.8036,
+            26.8802
+          ],
+          [
+            75.8036,
+            26.8778
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_030",
+        "name": "Jaipur Urban Parcel #30",
+        "height_m": 25.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8113,
+            26.8778
+          ],
+          [
+            75.8137,
+            26.8778
+          ],
+          [
+            75.8137,
+            26.8802
+          ],
+          [
+            75.8113,
+            26.8802
+          ],
+          [
+            75.8113,
+            26.8778
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_031",
+        "name": "Jaipur Urban Parcel #31",
+        "height_m": 32.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7728,
+            26.8833
+          ],
+          [
+            75.7752,
+            26.8833
+          ],
+          [
+            75.7752,
+            26.8857
+          ],
+          [
+            75.7728,
+            26.8857
+          ],
+          [
+            75.7728,
+            26.8833
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_032",
+        "name": "Jaipur Urban Parcel #32",
+        "height_m": 39.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7805,
+            26.8833
+          ],
+          [
+            75.7829,
+            26.8833
+          ],
+          [
+            75.7829,
+            26.8857
+          ],
+          [
+            75.7805,
+            26.8857
+          ],
+          [
+            75.7805,
+            26.8833
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_033",
+        "name": "Jaipur Urban Parcel #33",
+        "height_m": 46.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.7882,
+            26.8833
+          ],
+          [
+            75.7906,
+            26.8833
+          ],
+          [
+            75.7906,
+            26.8857
+          ],
+          [
+            75.7882,
+            26.8857
+          ],
+          [
+            75.7882,
+            26.8833
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_034",
+        "name": "Jaipur Urban Parcel #34",
+        "height_m": 15.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            75.7959,
+            26.8833
+          ],
+          [
+            75.7983,
+            26.8833
+          ],
+          [
+            75.7983,
+            26.8857
+          ],
+          [
+            75.7959,
+            26.8857
+          ],
+          [
+            75.7959,
+            26.8833
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_035",
+        "name": "Jaipur Urban Parcel #35",
+        "height_m": 22.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8036,
+            26.8833
+          ],
+          [
+            75.806,
+            26.8833
+          ],
+          [
+            75.806,
+            26.8857
+          ],
+          [
+            75.8036,
+            26.8857
+          ],
+          [
+            75.8036,
+            26.8833
+          ]
+        ]
+      },
+      {
+        "id": "BLD_JAI_036",
+        "name": "Jaipur Urban Parcel #36",
+        "height_m": 29.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            75.8113,
+            26.8833
+          ],
+          [
+            75.8137,
+            26.8833
+          ],
+          [
+            75.8137,
+            26.8857
+          ],
+          [
+            75.8113,
+            26.8857
+          ],
+          [
+            75.8113,
+            26.8833
+          ]
+        ]
+      }
+    ]
+  },
+  "flood_model": {
+    "level1_model": "UFNS Kinematic Wave & Horton Infiltration Engine (v2.4)",
+    "level2_city_adaptation": {
+      "imperviousness_mean": 0.82,
+      "soil_infiltration_rate_mm_hr": 3.8,
+      "manning_surface_roughness": 0.028,
+      "calibration_factor": 1.04
+    }
+  },
+  "routing": {
+    "default_origin_node": "INT_JAI_13",
+    "default_destination_node": "INT_JAI_16",
+    "critical_blocked_road": "R_JAI_04",
+    "recommended_safe_road": "R_JAI_12",
+    "vehicle_clearance_limits_cm": {
+      "ambulance": 25.0,
+      "fire_truck": 50.0,
+      "police": 35.0,
+      "standard_vehicle": 20.0,
+      "pedestrian": 10.0
+    }
+  },
+  "predicted_flood_zone": [
+    [
+      75.7796,
+      26.866
+    ],
+    [
+      75.781,
+      26.877
+    ],
+    [
+      75.7936,
+      26.8795
+    ],
+    [
+      75.816,
+      26.873
+    ],
+    [
+      75.823,
+      26.8695
+    ],
+    [
+      75.8209,
+      26.862
+    ],
+    [
+      75.809,
+      26.8595
+    ],
+    [
+      75.7901,
+      26.868
+    ],
+    [
+      75.7796,
+      26.866
+    ]
+  ],
+  "story": {
+    "basin_name": "Gopalpura Bypass \u2013 Sanganer \u2013 Dravyavati Basin",
+    "hotspot_road": "Gopalpura Bypass Underpass",
+    "surcharge_node": "Junction JAI02 (Dravyavati Sump Sluice)",
+    "hospital_origin": "SMS Hospital JLN Marg",
+    "hospital_dest": "EHCC Malviya Nagar",
+    "safe_bypass": "Elevated Ajmer Road Expressway Corridor",
+    "elevation_high": 450.0,
+    "elevation_low": 420.0,
+    "camera_poses": {
+      "city_view": {
+        "center": [
+          26.872,
+          75.795
+        ],
+        "zoom": 13.0,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "storm_focus": {
+        "center": [
+          26.872,
+          75.7866
+        ],
+        "zoom": 13.8,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "altitude_focus": {
+        "center": [
+          26.872,
+          75.795
+        ],
+        "zoom": 14.4,
+        "pitch": 50,
+        "bearing": 20
+      },
+      "runoff_focus": {
+        "center": [
+          26.8695,
+          75.7831
+        ],
+        "zoom": 14.5,
+        "pitch": 55,
+        "bearing": 25
+      },
+      "flood_trough": {
+        "center": [
+          26.872,
+          75.7866
+        ],
+        "zoom": 14.8,
+        "pitch": 50,
+        "bearing": 15
+      },
+      "drainage_subterranean": {
+        "center": [
+          26.872,
+          75.7866
+        ],
+        "zoom": 15.0,
+        "pitch": 60,
+        "bearing": 30
+      },
+      "surcharge_manhole": {
+        "center": [
+          26.872,
+          75.7866
+        ],
+        "zoom": 15.8,
+        "pitch": 65,
+        "bearing": 35
+      },
+      "road_submerged": {
+        "center": [
+          26.872,
+          75.7866
+        ],
+        "zoom": 15.0,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "route_tracking": {
+        "center": [
+          26.872,
+          75.7985
+        ],
+        "zoom": 13.8,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "solution_overview": {
+        "center": [
+          26.872,
+          75.795
+        ],
+        "zoom": 13.0,
+        "pitch": 35,
+        "bearing": 0
+      }
+    }
+  }
+}

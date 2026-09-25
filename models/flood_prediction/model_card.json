@@ -1,0 +1,62 @@
+{
+  "model_details": {
+    "name": "UFNS Multi-City Urban Flood Extent & Depth Nowcaster",
+    "version": "v2.0.0-metropolitan",
+    "date": "2026-09-24T00:02:09.019056",
+    "license": "Apache 2.0 (SIH 2026 Open Source Project)",
+    "model_type": "Coupled Regularized Hydrologic Ensemble (Classifier + Regressor)",
+    "framework": "UFNS Native Python/NumPy (Zero External Heavy Dependencies, CPU Optimized)"
+  },
+  "intended_use": {
+    "primary_use": "Real-time 0-3 hour urban flood depth and road impassability prediction for emergency dispatch and civic alerts.",
+    "users": "Disaster Management Authorities (DDMA/BDMA/MCGM), Emergency Responders, Citizens",
+    "out_of_scope": "Coastal storm surge wave modeling without inland precipitation, or long-term climate projections beyond 6 hours."
+  },
+  "training_data": {
+    "training_period": "2019-2022 Verified Cloudburst and Monsoon Floods",
+    "validation_period": "2023 Monsoon Extreme Inundation Events",
+    "test_period": "2024 Unseen Flood Events (Recent Overpasses)",
+    "temporal_split_rationale": "Strict temporal sequence prevents temporal data leakage across sequential storm overpasses.",
+    "total_records": 35,
+    "train_samples": 17,
+    "val_samples": 9,
+    "test_samples": 9
+  },
+  "quantitative_metrics": {
+    "validation_results_2023": {
+      "mae_cm": 3.4,
+      "rmse_cm": 4.6,
+      "r2_score": 0.971,
+      "f1_score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "test_results_2024_unseen": {
+      "mae_cm": 4.15,
+      "rmse_cm": 5.85,
+      "r2_score": 0.952,
+      "f1_score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "data_provenance_summary": {
+    "rainfall": "IMD High-Resolution Gridded & AWS 15-min / CHIRPS v3.0-p05",
+    "terrain": "Copernicus DEM GLO-30 Public 2024 Edition",
+    "ground_truth_extent": "Sentinel-1 SAR GRD Level-1 Dual-Pol 10m Water Extent",
+    "ground_truth_depth": "Municipal Ultrasonic Gauges & Ground Surveys",
+    "urban_topology": "OpenStreetMap 2024 Extracts & ESA WorldCover 10m v200"
+  },
+  "top_predictive_features": [
+    "drainage_bottleneck_interaction",
+    "drainage_load",
+    "flow_accumulation",
+    "building_density",
+    "drainage_capacity"
+  ],
+  "limitations_and_caveats": [
+    "Conduit flow calculations assume clean drainage unless manual choke factor is set.",
+    "Subterranean municipal drainage is marked as SIMULATED/UNAVAILABLE if authoritative GIS is missing.",
+    "Predictions are updated continuously on fresh rainfall observations without mutating training weights."
+  ]
+}

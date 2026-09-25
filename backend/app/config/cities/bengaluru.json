@@ -1,0 +1,2074 @@
+{
+  "city_id": "bengaluru",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "country": "India",
+  "timezone": "Asia/Kolkata",
+  "center": {
+    "latitude": 12.937,
+    "longitude": 77.64
+  },
+  "bounding_box": {
+    "min_lat": 12.912,
+    "max_lat": 12.962,
+    "min_lon": 77.605,
+    "max_lon": 77.675,
+    "center_lat": 12.937,
+    "center_lon": 77.64
+  },
+  "focus_basin": {
+    "name": "Koramangala \u2013 Bellandur Urban Watershed",
+    "area_sqkm": 32.4,
+    "description": "High-density tech corridor traversing Koramangala 80ft Road down to Bellandur Lake wetland."
+  },
+  "data_sources": {
+    "rainfall": {
+      "dataset": "Bengaluru Real-Time Precipitation Feed",
+      "source": "Open-Meteo REST API / IMD Doppler Radar Feed",
+      "api_endpoint": "https://api.open-meteo.com/v1/forecast?latitude=12.937&longitude=77.64&hourly=precipitation",
+      "spatial_resolution": "0.1\u00b0 (~10km) / Downscaled 350m",
+      "temporal_resolution": "15 minutes",
+      "status": "LIVE",
+      "radar_station": "Bengaluru Doppler Weather Radar (DWR-BLR)"
+    },
+    "dem": {
+      "dataset": "Bengaluru High-Resolution Urban Terrain Model",
+      "source": "Copernicus DEM GLO-30 / ISRO Cartosat-1 DSM",
+      "spatial_resolution": "30m",
+      "vertical_accuracy": "\u00b11.5m",
+      "status": "AVAILABLE",
+      "license": "Open Access (Copernicus / ISRO Bhuvan)"
+    },
+    "drainage": {
+      "dataset": "Bengaluru Stormwater Trunk Network",
+      "source": "BBMP Stormwater Drainage Cell Master Drainage Plan",
+      "status": "AVAILABLE",
+      "completeness": "Primary Arterial Conduits (12 Nodes, 11 Outfalls)",
+      "modeling_standard": "Manning-Strickler 1D Pipe Flow with 2-Way Surface Spill"
+    },
+    "roads": {
+      "dataset": "Bengaluru Arterial Highway & Transport Graph",
+      "source": "OpenStreetMap Road Network (OSM 2024)",
+      "status": "AVAILABLE",
+      "features_count": 20,
+      "routing_profile": "Emergency Multi-Modal Clearance-Aware"
+    }
+  },
+  "dem": {
+    "source": "Copernicus DEM GLO-30",
+    "status": "AVAILABLE",
+    "base_elevation_m": 915.0,
+    "min_elevation_m": 875.0,
+    "max_elevation_m": 922.0,
+    "contour_interval_m": 10.0,
+    "markers": [
+      {
+        "lat": 12.9545,
+        "lon": 77.6155,
+        "elevM": 915.0,
+        "label": "915 m AMSL",
+        "tag": "\u25b2 HIGH (Ridge)"
+      },
+      {
+        "lat": 12.9445,
+        "lon": 77.6295,
+        "elevM": 905.0,
+        "label": "905 m AMSL",
+        "tag": "\u25b2 UPPER SLOPE"
+      },
+      {
+        "lat": 12.937,
+        "lon": 77.64,
+        "elevM": 895.0,
+        "label": "895 m AMSL",
+        "tag": "\u25cf MID SLOPE"
+      },
+      {
+        "lat": 12.9295,
+        "lon": 77.6505,
+        "elevM": 885.0,
+        "label": "885 m AMSL",
+        "tag": "\u25cf LOWER BASIN"
+      },
+      {
+        "lat": 12.922,
+        "lon": 77.6645,
+        "elevM": 875.0,
+        "label": "875 m AMSL",
+        "tag": "\u25bc LOW POINT (Trough)"
+      }
+    ],
+    "troughs": [
+      {
+        "lat": 12.9345,
+        "lon": 77.6295,
+        "depth_m": 6.5,
+        "name": "Koramangala 80ft Road"
+      },
+      {
+        "lat": 12.937,
+        "lon": 77.6575,
+        "depth_m": 8.5,
+        "name": "Bellandur Lake Basin"
+      }
+    ]
+  },
+  "rainfall": {
+    "source": "Open-Meteo & IMD Radar",
+    "status": "LIVE",
+    "default_intensity_mm_hr": 78.5,
+    "radar_station": "Bengaluru Doppler Weather Radar (DWR-BLR)",
+    "horizons": [
+      "0m",
+      "15m",
+      "30m",
+      "45m",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "drainage": {
+    "source": "BBMP Stormwater Drainage Cell",
+    "status": "AVAILABLE",
+    "capacity_multiplier": 1.0,
+    "surcharge_node_id": "BEN_M02",
+    "nodes": [
+      {
+        "id": "BEN_M01",
+        "name": "Bengaluru Western Trunk Inlet",
+        "node_type": "Inlet",
+        "lat": 12.952,
+        "lon": 77.619,
+        "elev": 910.0,
+        "inlet_cap": 2.5,
+        "row": 12,
+        "col": 3
+      },
+      {
+        "id": "BEN_M02",
+        "name": "Koramangala 80ft Junction",
+        "node_type": "Junction",
+        "lat": 12.9345,
+        "lon": 77.6295,
+        "elev": 903.0,
+        "inlet_cap": 3.2,
+        "row": 6,
+        "col": 5
+      },
+      {
+        "id": "BEN_M03",
+        "name": "Bengaluru Central Crossing Manhole",
+        "node_type": "Manhole",
+        "lat": 12.9395,
+        "lon": 77.6365,
+        "elev": 897.0,
+        "inlet_cap": 4.0,
+        "row": 8,
+        "col": 7
+      },
+      {
+        "id": "BEN_M04",
+        "name": "Bengaluru Arterial Sump Junction",
+        "node_type": "Junction",
+        "lat": 12.942,
+        "lon": 77.6456,
+        "elev": 893.0,
+        "inlet_cap": 4.5,
+        "row": 9,
+        "col": 9
+      },
+      {
+        "id": "BEN_M05",
+        "name": "Bengaluru North Relief Collector",
+        "node_type": "Manhole",
+        "lat": 12.947,
+        "lon": 77.633,
+        "elev": 900.0,
+        "inlet_cap": 3.8,
+        "row": 10,
+        "col": 6
+      },
+      {
+        "id": "BEN_M06",
+        "name": "Bengaluru South Basin Sluice",
+        "node_type": "Inlet",
+        "lat": 12.9245,
+        "lon": 77.633,
+        "elev": 891.0,
+        "inlet_cap": 5.0,
+        "row": 4,
+        "col": 6
+      },
+      {
+        "id": "BEN_M07",
+        "name": "Bengaluru Ring Road Storm Conduit",
+        "node_type": "Manhole",
+        "lat": 12.927,
+        "lon": 77.6435,
+        "elev": 887.0,
+        "inlet_cap": 3.5,
+        "row": 4,
+        "col": 8
+      },
+      {
+        "id": "BEN_M08",
+        "name": "Bengaluru Mid-Channel Sump Pit",
+        "node_type": "Manhole",
+        "lat": 12.931,
+        "lon": 77.6505,
+        "elev": 884.0,
+        "inlet_cap": 3.0,
+        "row": 6,
+        "col": 10
+      },
+      {
+        "id": "BEN_M09",
+        "name": "Bengaluru Intermediate Chamber",
+        "node_type": "Junction",
+        "lat": 12.9345,
+        "lon": 77.654,
+        "elev": 881.0,
+        "inlet_cap": 4.2,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "BEN_M10",
+        "name": "Bengaluru Trough Inflow Pit",
+        "node_type": "Manhole",
+        "lat": 12.9345,
+        "lon": 77.654,
+        "elev": 878.0,
+        "inlet_cap": 3.8,
+        "row": 7,
+        "col": 11
+      },
+      {
+        "id": "BEN_M11",
+        "name": "Bengaluru Floodplain Storm Bypass",
+        "node_type": "Inlet",
+        "lat": 12.921,
+        "lon": 77.6596,
+        "elev": 877.0,
+        "inlet_cap": 2.8,
+        "row": 2,
+        "col": 12
+      },
+      {
+        "id": "BEN_M12",
+        "name": "Bellandur Lake Basin Outfall Sluice",
+        "node_type": "Outfall",
+        "lat": 12.937,
+        "lon": 77.6575,
+        "elev": 875.0,
+        "inlet_cap": 7.5,
+        "row": 8,
+        "col": 14
+      }
+    ],
+    "pipes": [
+      {
+        "from": "BEN_M01",
+        "to": "BEN_M02",
+        "pipe_id": "P-BE-01",
+        "diameter_m": 1.2,
+        "slope": 0.007,
+        "length_m": 1100
+      },
+      {
+        "from": "BEN_M02",
+        "to": "BEN_M03",
+        "pipe_id": "P-BE-02",
+        "diameter_m": 1.5,
+        "slope": 0.006,
+        "length_m": 850
+      },
+      {
+        "from": "BEN_M05",
+        "to": "BEN_M03",
+        "pipe_id": "P-BE-03",
+        "diameter_m": 1.2,
+        "slope": 0.005,
+        "length_m": 650
+      },
+      {
+        "from": "BEN_M03",
+        "to": "BEN_M04",
+        "pipe_id": "P-BE-04",
+        "diameter_m": 1.8,
+        "slope": 0.005,
+        "length_m": 920
+      },
+      {
+        "from": "BEN_M06",
+        "to": "BEN_M07",
+        "pipe_id": "P-BE-05",
+        "diameter_m": 1.4,
+        "slope": 0.004,
+        "length_m": 780
+      },
+      {
+        "from": "BEN_M07",
+        "to": "BEN_M08",
+        "pipe_id": "P-BE-06",
+        "diameter_m": 1.5,
+        "slope": 0.004,
+        "length_m": 1100
+      },
+      {
+        "from": "BEN_M08",
+        "to": "BEN_M09",
+        "pipe_id": "P-BE-07",
+        "diameter_m": 1.6,
+        "slope": 0.003,
+        "length_m": 820
+      },
+      {
+        "from": "BEN_M04",
+        "to": "BEN_M09",
+        "pipe_id": "P-BE-08",
+        "diameter_m": 2.0,
+        "slope": 0.004,
+        "length_m": 1450
+      },
+      {
+        "from": "BEN_M09",
+        "to": "BEN_M10",
+        "pipe_id": "P-BE-09",
+        "diameter_m": 1.8,
+        "slope": 0.003,
+        "length_m": 900
+      },
+      {
+        "from": "BEN_M11",
+        "to": "BEN_M10",
+        "pipe_id": "P-BE-10",
+        "diameter_m": 1.4,
+        "slope": 0.002,
+        "length_m": 850
+      },
+      {
+        "from": "BEN_M10",
+        "to": "BEN_M12",
+        "pipe_id": "P-BE-11",
+        "diameter_m": 2.4,
+        "slope": 0.003,
+        "length_m": 1200
+      }
+    ]
+  },
+  "roads": {
+    "source": "OpenStreetMap",
+    "status": "AVAILABLE",
+    "critical_hotspot_road_id": "R_BEN_04",
+    "intersections": {
+      "INT_BEN_01": {
+        "name": "Bengaluru West Highway Junction",
+        "lat": 12.9545,
+        "lon": 77.6155
+      },
+      "INT_BEN_02": {
+        "name": "Bengaluru Central Commercial Crossing",
+        "lat": 12.9395,
+        "lon": 77.6295
+      },
+      "INT_BEN_03": {
+        "name": "Bengaluru Market West Intersection",
+        "lat": 12.9345,
+        "lon": 77.6225
+      },
+      "INT_BEN_04": {
+        "name": "Bengaluru North Relief Signal",
+        "lat": 12.947,
+        "lon": 77.633
+      },
+      "INT_BEN_05": {
+        "name": "Bengaluru Ring Road North Junction",
+        "lat": 12.9495,
+        "lon": 77.647
+      },
+      "INT_BEN_06": {
+        "name": "Bengaluru South Canal Junction",
+        "lat": 12.927,
+        "lon": 77.6295
+      },
+      "INT_BEN_07": {
+        "name": "Bengaluru Residential Sector 1",
+        "lat": 12.9245,
+        "lon": 77.64
+      },
+      "INT_BEN_08": {
+        "name": "Bengaluru Expressway Interchange",
+        "lat": 12.932,
+        "lon": 77.6505
+      },
+      "INT_BEN_09": {
+        "name": "Bengaluru Tech Corridor Gate",
+        "lat": 12.9345,
+        "lon": 77.661
+      },
+      "INT_BEN_10": {
+        "name": "Bengaluru Lake Overpass Crossing",
+        "lat": 12.9445,
+        "lon": 77.6575
+      },
+      "INT_BEN_11": {
+        "name": "Bengaluru Low-Lying Access Road",
+        "lat": 12.932,
+        "lon": 77.654
+      },
+      "INT_BEN_12": {
+        "name": "Bengaluru East Terminal Bridge",
+        "lat": 12.9545,
+        "lon": 77.6645
+      },
+      "INT_BEN_13": {
+        "name": "St. John's Medical College Hospital Gate",
+        "lat": 12.929,
+        "lon": 77.6176
+      },
+      "INT_BEN_14": {
+        "name": "Bengaluru Central Police Station",
+        "lat": 12.937,
+        "lon": 77.6246
+      },
+      "INT_BEN_15": {
+        "name": "Bengaluru South Tech Hub",
+        "lat": 12.926,
+        "lon": 77.6484
+      },
+      "INT_BEN_16": {
+        "name": "Sakra World Hospital Gate",
+        "lat": 12.928,
+        "lon": 77.6694
+      }
+    },
+    "road_segments": [
+      {
+        "u": "INT_BEN_01",
+        "v": "INT_BEN_13",
+        "road_id": "R_BEN_01",
+        "name": "Bengaluru Western Arterial",
+        "length_km": 1.1,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_13",
+        "v": "INT_BEN_14",
+        "road_id": "R_BEN_02",
+        "name": "St. John's Medical College Hospital Link",
+        "length_km": 0.8,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_14",
+        "v": "INT_BEN_02",
+        "road_id": "R_BEN_03",
+        "name": "Bengaluru Civic Avenue",
+        "length_km": 0.7,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_02",
+        "v": "INT_BEN_03",
+        "road_id": "R_BEN_04",
+        "name": "Koramangala 80ft Road",
+        "length_km": 0.9,
+        "speed_kmh": 40,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_02",
+        "v": "INT_BEN_04",
+        "road_id": "R_BEN_05",
+        "name": "Bengaluru North Relief Road",
+        "length_km": 1.1,
+        "speed_kmh": 35,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_04",
+        "v": "INT_BEN_05",
+        "road_id": "R_BEN_06",
+        "name": "Bengaluru Ring Road Arterial",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_02",
+        "v": "INT_BEN_06",
+        "road_id": "R_BEN_07",
+        "name": "Bengaluru South Canal Link",
+        "length_km": 1.6,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_06",
+        "v": "INT_BEN_07",
+        "road_id": "R_BEN_08",
+        "name": "Bengaluru Sector 1 Collector",
+        "length_km": 1.0,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_07",
+        "v": "INT_BEN_15",
+        "road_id": "R_BEN_09",
+        "name": "Bengaluru Tech Access Way",
+        "length_km": 1.2,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_15",
+        "v": "INT_BEN_08",
+        "road_id": "R_BEN_10",
+        "name": "Bengaluru Sector Arterial",
+        "length_km": 1.3,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_06",
+        "v": "INT_BEN_08",
+        "road_id": "R_BEN_11",
+        "name": "Bengaluru Southern Corridor",
+        "length_km": 2.1,
+        "speed_kmh": 55,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_05",
+        "v": "INT_BEN_10",
+        "road_id": "R_BEN_12",
+        "name": "Challaghatta \u2013 Bellandur Elevated Bypass",
+        "length_km": 2.3,
+        "speed_kmh": 60,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_BEN_08",
+        "v": "INT_BEN_09",
+        "road_id": "R_BEN_13",
+        "name": "Bengaluru Tech Corridor Road",
+        "length_km": 1.4,
+        "speed_kmh": 50,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_09",
+        "v": "INT_BEN_10",
+        "road_id": "R_BEN_14",
+        "name": "Bengaluru Basin Flyover",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_08",
+        "v": "INT_BEN_11",
+        "road_id": "R_BEN_15",
+        "name": "Bengaluru Low-Lying Causeway",
+        "length_km": 1.3,
+        "speed_kmh": 30,
+        "road_type": "LOCAL"
+      },
+      {
+        "u": "INT_BEN_11",
+        "v": "INT_BEN_16",
+        "road_id": "R_BEN_16",
+        "name": "Sakra World Hospital Southern Link",
+        "length_km": 1.5,
+        "speed_kmh": 40,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_09",
+        "v": "INT_BEN_16",
+        "road_id": "R_BEN_17",
+        "name": "Bengaluru Eastern Medical Corridor",
+        "length_km": 1.2,
+        "speed_kmh": 45,
+        "road_type": "PRIMARY"
+      },
+      {
+        "u": "INT_BEN_10",
+        "v": "INT_BEN_12",
+        "road_id": "R_BEN_18",
+        "name": "Bengaluru Outer Elevated Expressway",
+        "length_km": 1.8,
+        "speed_kmh": 65,
+        "road_type": "ELEVATED_BYPASS"
+      },
+      {
+        "u": "INT_BEN_03",
+        "v": "INT_BEN_04",
+        "road_id": "R_BEN_19",
+        "name": "Bengaluru Central Bypass Overpass",
+        "length_km": 0.9,
+        "speed_kmh": 45,
+        "road_type": "SECONDARY"
+      },
+      {
+        "u": "INT_BEN_16",
+        "v": "INT_BEN_12",
+        "road_id": "R_BEN_20",
+        "name": "Bengaluru East Terminal Flyover",
+        "length_km": 1.9,
+        "speed_kmh": 55,
+        "road_type": "ELEVATED_BYPASS"
+      }
+    ]
+  },
+  "facilities": {
+    "source": "Bengaluru Disaster Management Authority",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "HOSP_BEN_01",
+        "name": "St. John's Medical College Hospital",
+        "type": "HOSPITAL",
+        "lat": 12.929,
+        "lon": 77.6176,
+        "capacity_beds": 1200,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_BEN_02",
+        "name": "Sakra World Hospital",
+        "type": "HOSPITAL",
+        "lat": 12.928,
+        "lon": 77.6694,
+        "capacity_beds": 350,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_BEN_03",
+        "name": "Manipal Hospital Old Airport Rd",
+        "type": "HOSPITAL",
+        "lat": 12.9545,
+        "lon": 77.654,
+        "capacity_beds": 600,
+        "has_emergency_trauma": true,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "HOSP_BEN_04",
+        "name": "Apollo Spectra Hospital Koramangala",
+        "type": "HOSPITAL",
+        "lat": 12.9395,
+        "lon": 77.6246,
+        "capacity_beds": 150,
+        "has_emergency_trauma": false,
+        "access_clearance_req_cm": 25.0
+      },
+      {
+        "id": "FIRE_BEN_01",
+        "name": "Bengaluru Central Fire & Rescue Station",
+        "type": "FIRE_STATION",
+        "lat": 12.936,
+        "lon": 77.626,
+        "engines": 4,
+        "boats": 2
+      },
+      {
+        "id": "FIRE_BEN_02",
+        "name": "Bengaluru East Industrial Fire Post",
+        "type": "FIRE_STATION",
+        "lat": 12.931,
+        "lon": 77.6575,
+        "engines": 3,
+        "boats": 1
+      },
+      {
+        "id": "POL_BEN_01",
+        "name": "Bengaluru Central Division Police HQ",
+        "type": "POLICE_STATION",
+        "lat": 12.938,
+        "lon": 77.6246,
+        "personnel": 45
+      },
+      {
+        "id": "POL_BEN_02",
+        "name": "Bengaluru Basin Traffic Police Post",
+        "type": "POLICE_STATION",
+        "lat": 12.933,
+        "lon": 77.6484,
+        "personnel": 25
+      },
+      {
+        "id": "SHELTER_BEN_01",
+        "name": "Bengaluru Community Flood Relief Shelter",
+        "type": "SHELTER",
+        "lat": 12.947,
+        "lon": 77.6225,
+        "capacity_people": 800
+      },
+      {
+        "id": "SHELTER_BEN_02",
+        "name": "Bengaluru Indoor Stadium Emergency Camp",
+        "type": "SHELTER",
+        "lat": 12.942,
+        "lon": 77.661,
+        "capacity_people": 1500
+      }
+    ]
+  },
+  "sensors": {
+    "source": "Bengaluru Smart City IoT Telemetry Network",
+    "status": "ONLINE",
+    "items": [
+      {
+        "id": "SENS_BEN_01",
+        "name": "Koramangala 80ft Road Ultrasonic Depth Gauge",
+        "type": "ULTRASONIC_DEPTH",
+        "lat": 12.9345,
+        "lon": 77.6295,
+        "unit": "cm",
+        "sampling_rate_sec": 30,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_BEN_02",
+        "name": "Koramangala 80ft Junction Invert Pressure Sensor",
+        "type": "PRESSURE_TRANSDUCER",
+        "lat": 12.9345,
+        "lon": 77.6295,
+        "unit": "kPa",
+        "sampling_rate_sec": 15,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_BEN_03",
+        "name": "Bellandur Lake Basin Outfall Flow Sensor",
+        "type": "DOPPLER_FLOW",
+        "lat": 12.937,
+        "lon": 77.6575,
+        "unit": "m3/s",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_BEN_04",
+        "name": "Bengaluru Western Ridge Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 12.9545,
+        "lon": 77.6155,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_BEN_05",
+        "name": "Bengaluru Basin Central Rain Gauge",
+        "type": "TIPPING_BUCKET",
+        "lat": 12.937,
+        "lon": 77.64,
+        "unit": "mm/hr",
+        "sampling_rate_sec": 60,
+        "status": "ONLINE"
+      },
+      {
+        "id": "SENS_BEN_06",
+        "name": "Bengaluru Traffic Inundation CCTV AI Camera",
+        "type": "AI_SURVEILLANCE_CAMERA",
+        "lat": 12.9335,
+        "lon": 77.6309,
+        "unit": "status",
+        "sampling_rate_sec": 5,
+        "status": "ONLINE"
+      }
+    ]
+  },
+  "water_bodies": {
+    "features": [
+      {
+        "name": "Bellandur Lake Basin",
+        "type": "LAKE",
+        "coords": [
+          [
+            77.661,
+            12.9345
+          ],
+          [
+            77.6655,
+            12.933
+          ],
+          [
+            77.671,
+            12.936
+          ],
+          [
+            77.675,
+            12.941
+          ],
+          [
+            77.673,
+            12.9465
+          ],
+          [
+            77.666,
+            12.947
+          ],
+          [
+            77.6615,
+            12.942
+          ],
+          [
+            77.661,
+            12.9345
+          ]
+        ]
+      },
+      {
+        "name": "Agara Lake Wetland",
+        "type": "LAKE",
+        "coords": [
+          [
+            77.6335,
+            12.9205
+          ],
+          [
+            77.639,
+            12.9185
+          ],
+          [
+            77.6435,
+            12.9215
+          ],
+          [
+            77.644,
+            12.9265
+          ],
+          [
+            77.6385,
+            12.9275
+          ],
+          [
+            77.634,
+            12.9245
+          ],
+          [
+            77.6335,
+            12.9205
+          ]
+        ]
+      },
+      {
+        "name": "Koramangala Valley Rajakaluve",
+        "type": "CANAL",
+        "coords": [
+          [
+            77.62,
+            12.937
+          ],
+          [
+            77.628,
+            12.9385
+          ],
+          [
+            77.636,
+            12.939
+          ],
+          [
+            77.648,
+            12.936
+          ],
+          [
+            77.658,
+            12.935
+          ],
+          [
+            77.662,
+            12.9365
+          ]
+        ]
+      }
+    ]
+  },
+  "buildings": {
+    "source": "OpenStreetMap 3D Urban Fabric",
+    "status": "AVAILABLE",
+    "items": [
+      {
+        "id": "BLD_BEN_001",
+        "name": "Bengaluru Urban Parcel #1",
+        "height_m": 12.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6178,
+            12.9208
+          ],
+          [
+            77.6202,
+            12.9208
+          ],
+          [
+            77.6202,
+            12.9232
+          ],
+          [
+            77.6178,
+            12.9232
+          ],
+          [
+            77.6178,
+            12.9208
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_002",
+        "name": "Bengaluru Urban Parcel #2",
+        "height_m": 19.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6255,
+            12.9208
+          ],
+          [
+            77.6279,
+            12.9208
+          ],
+          [
+            77.6279,
+            12.9232
+          ],
+          [
+            77.6255,
+            12.9232
+          ],
+          [
+            77.6255,
+            12.9208
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_003",
+        "name": "Bengaluru Urban Parcel #3",
+        "height_m": 26.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6332,
+            12.9208
+          ],
+          [
+            77.6356,
+            12.9208
+          ],
+          [
+            77.6356,
+            12.9232
+          ],
+          [
+            77.6332,
+            12.9232
+          ],
+          [
+            77.6332,
+            12.9208
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_004",
+        "name": "Bengaluru Urban Parcel #4",
+        "height_m": 33.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6409,
+            12.9208
+          ],
+          [
+            77.6433,
+            12.9208
+          ],
+          [
+            77.6433,
+            12.9232
+          ],
+          [
+            77.6409,
+            12.9232
+          ],
+          [
+            77.6409,
+            12.9208
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_005",
+        "name": "Bengaluru Urban Parcel #5",
+        "height_m": 40.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6486,
+            12.9208
+          ],
+          [
+            77.651,
+            12.9208
+          ],
+          [
+            77.651,
+            12.9232
+          ],
+          [
+            77.6486,
+            12.9232
+          ],
+          [
+            77.6486,
+            12.9208
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_006",
+        "name": "Bengaluru Urban Parcel #6",
+        "height_m": 47.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6563,
+            12.9208
+          ],
+          [
+            77.6587,
+            12.9208
+          ],
+          [
+            77.6587,
+            12.9232
+          ],
+          [
+            77.6563,
+            12.9232
+          ],
+          [
+            77.6563,
+            12.9208
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_007",
+        "name": "Bengaluru Urban Parcel #7",
+        "height_m": 16.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6178,
+            12.9263
+          ],
+          [
+            77.6202,
+            12.9263
+          ],
+          [
+            77.6202,
+            12.9287
+          ],
+          [
+            77.6178,
+            12.9287
+          ],
+          [
+            77.6178,
+            12.9263
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_008",
+        "name": "Bengaluru Urban Parcel #8",
+        "height_m": 23.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6255,
+            12.9263
+          ],
+          [
+            77.6279,
+            12.9263
+          ],
+          [
+            77.6279,
+            12.9287
+          ],
+          [
+            77.6255,
+            12.9287
+          ],
+          [
+            77.6255,
+            12.9263
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_009",
+        "name": "Bengaluru Urban Parcel #9",
+        "height_m": 30.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6332,
+            12.9263
+          ],
+          [
+            77.6356,
+            12.9263
+          ],
+          [
+            77.6356,
+            12.9287
+          ],
+          [
+            77.6332,
+            12.9287
+          ],
+          [
+            77.6332,
+            12.9263
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_010",
+        "name": "Bengaluru Urban Parcel #10",
+        "height_m": 37.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6409,
+            12.9263
+          ],
+          [
+            77.6433,
+            12.9263
+          ],
+          [
+            77.6433,
+            12.9287
+          ],
+          [
+            77.6409,
+            12.9287
+          ],
+          [
+            77.6409,
+            12.9263
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_011",
+        "name": "Bengaluru Urban Parcel #11",
+        "height_m": 44.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6486,
+            12.9263
+          ],
+          [
+            77.651,
+            12.9263
+          ],
+          [
+            77.651,
+            12.9287
+          ],
+          [
+            77.6486,
+            12.9287
+          ],
+          [
+            77.6486,
+            12.9263
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_012",
+        "name": "Bengaluru Urban Parcel #12",
+        "height_m": 13.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6563,
+            12.9263
+          ],
+          [
+            77.6587,
+            12.9263
+          ],
+          [
+            77.6587,
+            12.9287
+          ],
+          [
+            77.6563,
+            12.9287
+          ],
+          [
+            77.6563,
+            12.9263
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_013",
+        "name": "Bengaluru Urban Parcel #13",
+        "height_m": 20.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6178,
+            12.9318
+          ],
+          [
+            77.6202,
+            12.9318
+          ],
+          [
+            77.6202,
+            12.9342
+          ],
+          [
+            77.6178,
+            12.9342
+          ],
+          [
+            77.6178,
+            12.9318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_014",
+        "name": "Bengaluru Urban Parcel #14",
+        "height_m": 27.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6255,
+            12.9318
+          ],
+          [
+            77.6279,
+            12.9318
+          ],
+          [
+            77.6279,
+            12.9342
+          ],
+          [
+            77.6255,
+            12.9342
+          ],
+          [
+            77.6255,
+            12.9318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_015",
+        "name": "Bengaluru Urban Parcel #15",
+        "height_m": 34.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6332,
+            12.9318
+          ],
+          [
+            77.6356,
+            12.9318
+          ],
+          [
+            77.6356,
+            12.9342
+          ],
+          [
+            77.6332,
+            12.9342
+          ],
+          [
+            77.6332,
+            12.9318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_016",
+        "name": "Bengaluru Urban Parcel #16",
+        "height_m": 41.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6409,
+            12.9318
+          ],
+          [
+            77.6433,
+            12.9318
+          ],
+          [
+            77.6433,
+            12.9342
+          ],
+          [
+            77.6409,
+            12.9342
+          ],
+          [
+            77.6409,
+            12.9318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_017",
+        "name": "Bengaluru Urban Parcel #17",
+        "height_m": 48.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6486,
+            12.9318
+          ],
+          [
+            77.651,
+            12.9318
+          ],
+          [
+            77.651,
+            12.9342
+          ],
+          [
+            77.6486,
+            12.9342
+          ],
+          [
+            77.6486,
+            12.9318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_018",
+        "name": "Bengaluru Urban Parcel #18",
+        "height_m": 17.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6563,
+            12.9318
+          ],
+          [
+            77.6587,
+            12.9318
+          ],
+          [
+            77.6587,
+            12.9342
+          ],
+          [
+            77.6563,
+            12.9342
+          ],
+          [
+            77.6563,
+            12.9318
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_019",
+        "name": "Bengaluru Urban Parcel #19",
+        "height_m": 24.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6178,
+            12.9373
+          ],
+          [
+            77.6202,
+            12.9373
+          ],
+          [
+            77.6202,
+            12.9397
+          ],
+          [
+            77.6178,
+            12.9397
+          ],
+          [
+            77.6178,
+            12.9373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_020",
+        "name": "Bengaluru Urban Parcel #20",
+        "height_m": 31.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6255,
+            12.9373
+          ],
+          [
+            77.6279,
+            12.9373
+          ],
+          [
+            77.6279,
+            12.9397
+          ],
+          [
+            77.6255,
+            12.9397
+          ],
+          [
+            77.6255,
+            12.9373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_021",
+        "name": "Bengaluru Urban Parcel #21",
+        "height_m": 38.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6332,
+            12.9373
+          ],
+          [
+            77.6356,
+            12.9373
+          ],
+          [
+            77.6356,
+            12.9397
+          ],
+          [
+            77.6332,
+            12.9397
+          ],
+          [
+            77.6332,
+            12.9373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_022",
+        "name": "Bengaluru Urban Parcel #22",
+        "height_m": 45.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6409,
+            12.9373
+          ],
+          [
+            77.6433,
+            12.9373
+          ],
+          [
+            77.6433,
+            12.9397
+          ],
+          [
+            77.6409,
+            12.9397
+          ],
+          [
+            77.6409,
+            12.9373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_023",
+        "name": "Bengaluru Urban Parcel #23",
+        "height_m": 14.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6486,
+            12.9373
+          ],
+          [
+            77.651,
+            12.9373
+          ],
+          [
+            77.651,
+            12.9397
+          ],
+          [
+            77.6486,
+            12.9397
+          ],
+          [
+            77.6486,
+            12.9373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_024",
+        "name": "Bengaluru Urban Parcel #24",
+        "height_m": 21.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6563,
+            12.9373
+          ],
+          [
+            77.6587,
+            12.9373
+          ],
+          [
+            77.6587,
+            12.9397
+          ],
+          [
+            77.6563,
+            12.9397
+          ],
+          [
+            77.6563,
+            12.9373
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_025",
+        "name": "Bengaluru Urban Parcel #25",
+        "height_m": 28.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6178,
+            12.9428
+          ],
+          [
+            77.6202,
+            12.9428
+          ],
+          [
+            77.6202,
+            12.9452
+          ],
+          [
+            77.6178,
+            12.9452
+          ],
+          [
+            77.6178,
+            12.9428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_026",
+        "name": "Bengaluru Urban Parcel #26",
+        "height_m": 35.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6255,
+            12.9428
+          ],
+          [
+            77.6279,
+            12.9428
+          ],
+          [
+            77.6279,
+            12.9452
+          ],
+          [
+            77.6255,
+            12.9452
+          ],
+          [
+            77.6255,
+            12.9428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_027",
+        "name": "Bengaluru Urban Parcel #27",
+        "height_m": 42.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6332,
+            12.9428
+          ],
+          [
+            77.6356,
+            12.9428
+          ],
+          [
+            77.6356,
+            12.9452
+          ],
+          [
+            77.6332,
+            12.9452
+          ],
+          [
+            77.6332,
+            12.9428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_028",
+        "name": "Bengaluru Urban Parcel #28",
+        "height_m": 49.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6409,
+            12.9428
+          ],
+          [
+            77.6433,
+            12.9428
+          ],
+          [
+            77.6433,
+            12.9452
+          ],
+          [
+            77.6409,
+            12.9452
+          ],
+          [
+            77.6409,
+            12.9428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_029",
+        "name": "Bengaluru Urban Parcel #29",
+        "height_m": 18.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6486,
+            12.9428
+          ],
+          [
+            77.651,
+            12.9428
+          ],
+          [
+            77.651,
+            12.9452
+          ],
+          [
+            77.6486,
+            12.9452
+          ],
+          [
+            77.6486,
+            12.9428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_030",
+        "name": "Bengaluru Urban Parcel #30",
+        "height_m": 25.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6563,
+            12.9428
+          ],
+          [
+            77.6587,
+            12.9428
+          ],
+          [
+            77.6587,
+            12.9452
+          ],
+          [
+            77.6563,
+            12.9452
+          ],
+          [
+            77.6563,
+            12.9428
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_031",
+        "name": "Bengaluru Urban Parcel #31",
+        "height_m": 32.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6178,
+            12.9483
+          ],
+          [
+            77.6202,
+            12.9483
+          ],
+          [
+            77.6202,
+            12.9507
+          ],
+          [
+            77.6178,
+            12.9507
+          ],
+          [
+            77.6178,
+            12.9483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_032",
+        "name": "Bengaluru Urban Parcel #32",
+        "height_m": 39.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6255,
+            12.9483
+          ],
+          [
+            77.6279,
+            12.9483
+          ],
+          [
+            77.6279,
+            12.9507
+          ],
+          [
+            77.6255,
+            12.9507
+          ],
+          [
+            77.6255,
+            12.9483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_033",
+        "name": "Bengaluru Urban Parcel #33",
+        "height_m": 46.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6332,
+            12.9483
+          ],
+          [
+            77.6356,
+            12.9483
+          ],
+          [
+            77.6356,
+            12.9507
+          ],
+          [
+            77.6332,
+            12.9507
+          ],
+          [
+            77.6332,
+            12.9483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_034",
+        "name": "Bengaluru Urban Parcel #34",
+        "height_m": 15.0,
+        "type": "COMMERCIAL",
+        "polygon": [
+          [
+            77.6409,
+            12.9483
+          ],
+          [
+            77.6433,
+            12.9483
+          ],
+          [
+            77.6433,
+            12.9507
+          ],
+          [
+            77.6409,
+            12.9507
+          ],
+          [
+            77.6409,
+            12.9483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_035",
+        "name": "Bengaluru Urban Parcel #35",
+        "height_m": 22.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6486,
+            12.9483
+          ],
+          [
+            77.651,
+            12.9483
+          ],
+          [
+            77.651,
+            12.9507
+          ],
+          [
+            77.6486,
+            12.9507
+          ],
+          [
+            77.6486,
+            12.9483
+          ]
+        ]
+      },
+      {
+        "id": "BLD_BEN_036",
+        "name": "Bengaluru Urban Parcel #36",
+        "height_m": 29.0,
+        "type": "RESIDENTIAL",
+        "polygon": [
+          [
+            77.6563,
+            12.9483
+          ],
+          [
+            77.6587,
+            12.9483
+          ],
+          [
+            77.6587,
+            12.9507
+          ],
+          [
+            77.6563,
+            12.9507
+          ],
+          [
+            77.6563,
+            12.9483
+          ]
+        ]
+      }
+    ]
+  },
+  "flood_model": {
+    "level1_model": "UFNS Kinematic Wave & Horton Infiltration Engine (v2.4)",
+    "level2_city_adaptation": {
+      "imperviousness_mean": 0.82,
+      "soil_infiltration_rate_mm_hr": 3.8,
+      "manning_surface_roughness": 0.028,
+      "calibration_factor": 1.04
+    }
+  },
+  "routing": {
+    "default_origin_node": "INT_BEN_13",
+    "default_destination_node": "INT_BEN_16",
+    "critical_blocked_road": "R_BEN_04",
+    "recommended_safe_road": "R_BEN_12",
+    "vehicle_clearance_limits_cm": {
+      "ambulance": 25.0,
+      "fire_truck": 50.0,
+      "police": 35.0,
+      "standard_vehicle": 20.0,
+      "pedestrian": 10.0
+    }
+  },
+  "predicted_flood_zone": [
+    [
+      77.6225,
+      12.9285
+    ],
+    [
+      77.6239,
+      12.9395
+    ],
+    [
+      77.6365,
+      12.942
+    ],
+    [
+      77.661,
+      12.943
+    ],
+    [
+      77.668,
+      12.9395
+    ],
+    [
+      77.6659,
+      12.932
+    ],
+    [
+      77.654,
+      12.9295
+    ],
+    [
+      77.633,
+      12.9305
+    ],
+    [
+      77.6225,
+      12.9285
+    ]
+  ],
+  "story": {
+    "basin_name": "Koramangala \u2013 Bellandur Urban Watershed",
+    "hotspot_road": "Koramangala 80ft Road",
+    "surcharge_node": "Junction M02 (Koramangala 80ft Junction)",
+    "hospital_origin": "St. John's Medical College Hospital",
+    "hospital_dest": "Sakra World Hospital",
+    "safe_bypass": "Challaghatta \u2013 Bellandur Elevated Bypass",
+    "elevation_high": 915.0,
+    "elevation_low": 875.0,
+    "camera_poses": {
+      "city_view": {
+        "center": [
+          12.937,
+          77.64
+        ],
+        "zoom": 13.0,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "storm_focus": {
+        "center": [
+          12.9345,
+          77.6295
+        ],
+        "zoom": 13.8,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "altitude_focus": {
+        "center": [
+          12.937,
+          77.64
+        ],
+        "zoom": 14.4,
+        "pitch": 50,
+        "bearing": 20
+      },
+      "runoff_focus": {
+        "center": [
+          12.932,
+          77.626
+        ],
+        "zoom": 14.5,
+        "pitch": 55,
+        "bearing": 25
+      },
+      "flood_trough": {
+        "center": [
+          12.9345,
+          77.6295
+        ],
+        "zoom": 14.8,
+        "pitch": 50,
+        "bearing": 15
+      },
+      "drainage_subterranean": {
+        "center": [
+          12.9345,
+          77.6295
+        ],
+        "zoom": 15.0,
+        "pitch": 60,
+        "bearing": 30
+      },
+      "surcharge_manhole": {
+        "center": [
+          12.9345,
+          77.6295
+        ],
+        "zoom": 15.8,
+        "pitch": 65,
+        "bearing": 35
+      },
+      "road_submerged": {
+        "center": [
+          12.9345,
+          77.6295
+        ],
+        "zoom": 15.0,
+        "pitch": 45,
+        "bearing": 10
+      },
+      "route_tracking": {
+        "center": [
+          12.937,
+          77.6435
+        ],
+        "zoom": 13.8,
+        "pitch": 40,
+        "bearing": 0
+      },
+      "solution_overview": {
+        "center": [
+          12.937,
+          77.64
+        ],
+        "zoom": 13.0,
+        "pitch": 35,
+        "bearing": 0
+      }
+    }
+  }
+}

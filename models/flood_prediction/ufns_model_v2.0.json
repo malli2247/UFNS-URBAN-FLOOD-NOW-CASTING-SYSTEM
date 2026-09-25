@@ -1,0 +1,244 @@
+{
+  "model_name": "UFNS Unified Metropolitan Flood Nowcasting Model",
+  "model_version": "v2.0.0-metropolitan",
+  "trained_at": "2026-09-24T00:02:09.019056",
+  "dataset_name": "UFNS Unified Multi-City Urban Flood Training Dataset",
+  "dataset_version": "2.0.0",
+  "target_cities": [
+    "Delhi",
+    "Mumbai",
+    "Bengaluru"
+  ],
+  "expandable_cities": [
+    "Chennai",
+    "Hyderabad",
+    "Kolkata",
+    "Pune",
+    "Ahmedabad",
+    "Jaipur",
+    "Lucknow"
+  ],
+  "feature_transformer": {
+    "feature_columns": [
+      "rainfall_1h",
+      "rainfall_3h",
+      "rainfall_6h",
+      "rainfall_24h",
+      "elevation",
+      "slope",
+      "flow_direction",
+      "flow_accumulation",
+      "building_density",
+      "road_density",
+      "distance_to_drainage",
+      "drainage_capacity",
+      "drainage_load"
+    ],
+    "means": {
+      "rainfall_1h": 78.2647,
+      "rainfall_3h": 111.2059,
+      "rainfall_6h": 127.4471,
+      "rainfall_24h": 145.0882,
+      "elevation": 513.4647,
+      "slope": 2.2588,
+      "flow_direction": 155.2941,
+      "flow_accumulation": 689.8235,
+      "building_density": 0.7782,
+      "road_density": 0.7741,
+      "distance_to_drainage": 57.9412,
+      "drainage_capacity": 2.6941,
+      "drainage_load": 0.98
+    },
+    "stds": {
+      "rainfall_1h": 10.2342,
+      "rainfall_3h": 19.0132,
+      "rainfall_6h": 24.8321,
+      "rainfall_24h": 39.3716,
+      "elevation": 405.9621,
+      "slope": 2.0683,
+      "flow_direction": 57.8657,
+      "flow_accumulation": 614.9165,
+      "building_density": 0.2214,
+      "road_density": 0.1942,
+      "distance_to_drainage": 50.8186,
+      "drainage_capacity": 0.6847,
+      "drainage_load": 0.4813
+    },
+    "total_features": 15
+  },
+  "classifier": {
+    "weights": [
+      0.03992212936282158,
+      0.1164567768573761,
+      0.06338394433259964,
+      0.07490409910678864,
+      0.20181775093078613,
+      -0.8104057312011719,
+      -0.27728745341300964,
+      1.2782942056655884,
+      0.19970205426216125,
+      0.13721804320812225,
+      -1.1035151481628418,
+      0.05533134564757347,
+      1.7482028007507324,
+      0.12572725117206573,
+      0.4803193509578705
+    ],
+    "bias": -0.49745347628479475,
+    "threshold": 0.5
+  },
+  "regressor": {
+    "weights": [
+      2.14953351020813,
+      1.6455093622207642,
+      0.6144068837165833,
+      0.3515983819961548,
+      -1.2476603984832764,
+      -0.2767055928707123,
+      -0.17271775007247925,
+      5.393601894378662,
+      -2.374363899230957,
+      -1.168569564819336,
+      0.15682241320610046,
+      -2.257777690887451,
+      9.06332778930664,
+      -4.9449157813796774e-05,
+      10.801279067993164
+    ],
+    "bias": -10.235174931312638
+  },
+  "metrics": {
+    "validation": {
+      "regression": {
+        "mae_cm": 3.4,
+        "rmse_cm": 4.6,
+        "mean_bias_cm": 1.72,
+        "r2_score": 0.971
+      },
+      "classification": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "accuracy": 1.0,
+        "confusion_matrix": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        }
+      }
+    },
+    "test": {
+      "regression": {
+        "mae_cm": 4.15,
+        "rmse_cm": 5.85,
+        "mean_bias_cm": 2.23,
+        "r2_score": 0.952
+      },
+      "classification": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "accuracy": 1.0,
+        "confusion_matrix": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        }
+      }
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "drainage_bottleneck_interaction",
+      "reg_weight": 10.8013,
+      "clf_weight": 0.4803,
+      "importance_score": 11.2816
+    },
+    {
+      "feature": "drainage_load",
+      "reg_weight": 9.0633,
+      "clf_weight": 1.7482,
+      "importance_score": 10.8115
+    },
+    {
+      "feature": "flow_accumulation",
+      "reg_weight": 5.3936,
+      "clf_weight": 1.2783,
+      "importance_score": 6.6719
+    },
+    {
+      "feature": "building_density",
+      "reg_weight": -2.3744,
+      "clf_weight": 0.1997,
+      "importance_score": 2.5741
+    },
+    {
+      "feature": "drainage_capacity",
+      "reg_weight": -2.2578,
+      "clf_weight": 0.0553,
+      "importance_score": 2.3131
+    },
+    {
+      "feature": "rainfall_1h",
+      "reg_weight": 2.1495,
+      "clf_weight": 0.0399,
+      "importance_score": 2.1895
+    },
+    {
+      "feature": "rainfall_3h",
+      "reg_weight": 1.6455,
+      "clf_weight": 0.1165,
+      "importance_score": 1.762
+    },
+    {
+      "feature": "elevation",
+      "reg_weight": -1.2477,
+      "clf_weight": 0.2018,
+      "importance_score": 1.4495
+    },
+    {
+      "feature": "road_density",
+      "reg_weight": -1.1686,
+      "clf_weight": 0.1372,
+      "importance_score": 1.3058
+    },
+    {
+      "feature": "distance_to_drainage",
+      "reg_weight": 0.1568,
+      "clf_weight": -1.1035,
+      "importance_score": 1.2603
+    },
+    {
+      "feature": "slope",
+      "reg_weight": -0.2767,
+      "clf_weight": -0.8104,
+      "importance_score": 1.0871
+    },
+    {
+      "feature": "rainfall_6h",
+      "reg_weight": 0.6144,
+      "clf_weight": 0.0634,
+      "importance_score": 0.6778
+    },
+    {
+      "feature": "flow_direction",
+      "reg_weight": -0.1727,
+      "clf_weight": -0.2773,
+      "importance_score": 0.45
+    },
+    {
+      "feature": "rainfall_24h",
+      "reg_weight": 0.3516,
+      "clf_weight": 0.0749,
+      "importance_score": 0.4265
+    },
+    {
+      "feature": "overland_surge_interaction",
+      "reg_weight": -0.0,
+      "clf_weight": 0.1257,
+      "importance_score": 0.1258
+    }
+  ]
+}

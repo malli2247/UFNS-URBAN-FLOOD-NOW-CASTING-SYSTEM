@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* Custom GIS & Dashboard styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #0d1322 !important;
+  font-family: inherit;
+}
+
+/* Dark mode filter on standard OpenStreetMap tiles - 100% free, no API key, no watermark */
+.ufns-dark-tiles, .aquila-dark-tiles {
+  filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(120%) saturate(80%);
+}
+
+.leaflet-control-zoom a {
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #374151;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Surcharge pulsing halo animation */
+@keyframes ufns-pulse-halo {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.95;
+  }
+}
+
+.surcharge-pulse-halo {
+  animation: ufns-pulse-halo 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* Flow direction arrow vector */
+.flow-arrow-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Emergency Facilities Marker Badges */
+.facility-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  font-size: 13px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.facility-badge:hover {
+  transform: scale(1.15);
+}
+
+/* Road Blockage Warning Badge */
+.road-block-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ef4444;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.85);
+  cursor: pointer;
+}
+
+/* Sensor Marker Badge */
+.sensor-marker-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  font-size: 9px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
